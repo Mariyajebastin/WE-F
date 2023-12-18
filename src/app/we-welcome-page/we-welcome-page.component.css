@@ -1,0 +1,75 @@
+.we-container{
+  width:100%;
+}
+.we-center{
+  width:70%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 60px;
+}
+.square-con{
+  height: 50px;
+  width:50px;
+  background-color: blue;
+  display: inline-block;
+  margin-right: 3px;
+}
+.circle-con{
+  height: 50px;
+  width:50px;
+  background-color: blue;
+  border-radius: 30px;
+  display: inline-block;
+  margin-right: 3px;
+}
+.triangle-con{
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid blue;
+  rotate: 90deg;
+  display: inline-block;
+}
+.we-text-con{
+  margin-top:50px;
+}
+.we-textx{
+  font-size: 25px;
+  font-family: Lexend;
+  font-weight: 500;
+}
+.we-texty{
+  font-size: 25px;
+  font-family: Lexend;
+  font-weight: 300;
+}
+.go-button-con{
+  margin-top:50px;
+  text-align: center;
+}
+.go-button{
+  padding-top: 4px;
+  width: 70px;
+  height: 30px;
+  font-size: 16px;
+  font-family: Lexend;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+@media screen and (min-width: 600px){
+  .we-texty{
+    width:85%;
+  }
+}
+@media screen and (min-width: 900px){
+  .we-texty{
+    width:100%;
+  }
+  .we-center{
+    text-align: center;
+    margin-top:140px;
+    margin-bottom: 105px;
+  }
+}

@@ -1,0 +1,170 @@
+.footer-full-container{
+  width: 100%;
+  display: inline-block;
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-full-container-center{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.left-box{
+
+}
+.logo-container{
+  width: 100px;
+  height: 60px;
+  margin-left: -10px;
+}
+.logo{
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/img/footer logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.right-box{
+  margin-top: 40px;
+}
+.bold-txt{
+  font-size: 15px;
+  font-family: Inter;
+  font-weight: 600;
+  color: white;
+}
+.child-text-con{
+  margin-top: 5px;
+}
+.child-text-one{
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  color: white;
+  display: block;
+  line-height: 23px;
+}
+.box-two{
+  margin-top: 30px;
+}
+.addrs-con{
+  margin-top: 5px;
+}
+.addrs-header{
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 600;
+  color: white;
+  line-height: 23px;
+}
+.address{
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  color: white;
+  line-height: 20px;
+  width: 270px;
+}
+.follow-con{
+  margin-top: 20px;
+}
+.follow-txt{
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  color: white;
+}
+.follow-fb{
+  display: inline-block;
+}
+
+.follow-fb-icon{
+  height: 20px;
+  width: 11px;
+}
+.follow-in{
+  margin-left: 12px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.follow-in-icon{
+  height: 20px;
+  width: 20px;
+}
+.contact-box{
+  margin-top: 30px;
+}
+.number{
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  color: white;
+  margin-top: 7px;
+}
+.mail{
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 400;
+  color: white;
+  margin-top: 7px;
+}
+@media screen and (min-width: 600px){
+  .footer-full-container{
+    height: 330px;
+    padding-bottom: 0;
+  }
+  .left-box{
+    width: 40%;
+    display: block;
+    float: left;
+  }
+  .right-box{
+    width: 60%;
+    display: block;
+    float: left;
+    margin-top: 15px;
+  }
+  .box-one{
+    width: 50%;
+    display: block;
+    float: left;
+  }
+  .box-two{
+    width: 50%;
+    display: block;
+    float: left;
+    margin-top: 0;
+  }
+  .address{
+    width: 160px;
+  }
+  .follow-con{
+    margin-top: -45px;
+    float: left;
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer-full-container{
+    height: 300px;
+  }
+  .footer-full-container-center{
+    width: 70%;
+  }
+  .left-box{
+    width: 50%;
+  }
+  .right-box{
+    width: 50%;
+  }
+  .address{
+    width: 300px;
+  }
+  .contact-box{
+    margin-top: 15px;
+  }
+  .follow-con{
+    margin-top: -50px;
+  }
+}

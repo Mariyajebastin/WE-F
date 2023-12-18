@@ -1,0 +1,27 @@
+.text-area-con{
+  width:100%;
+  padding-top: 10px;
+}
+.top-name{
+  color: #424242;
+  font-family: Lexend;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  display: inline-block;
+  margin-right: 5px;
+}
+.text-area{
+  width:99%;
+  margin-top:5px;
+  resize:none;
+  font-size: 13px;
+  font-family: Lexend;
+  font-weight: 300;
+}
+.edit-icon{
+  display: inline-block;
+}
+.fa-pencil{
+  font-size: 11px;
+}

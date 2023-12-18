@@ -1,0 +1,63 @@
+.img-con{
+  width:100%;
+  height:320px;
+}
+.img{
+  height:100%;
+  width:100%;
+  background-image: url("/assets/img/candidate.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.top-text-con{
+  width:100%;
+  padding-left:6%;
+  padding-top:4%;
+}
+.top-text{
+  font-size:24px;
+  font-weight:600;
+  font-family:Inter;
+}
+.half-page{
+  width:100%;
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:2%;
+}
+.double-text{
+  width:100%;
+}
+@media screen and (min-width: 600px) {
+  .img-con{
+    height:230px;
+  }
+  .img {
+    background-image: url("/assets/img/candidate tab.png");
+  }
+  .half-page{
+    width:100%;
+    padding-left:6%;
+    margin-top:2%;
+  }
+
+}
+@media screen and (min-width: 900px) {
+  .img-con{
+    height:230px;
+  }
+  .img {
+    background-image: url("/assets/img/candidate desktop.png");
+  }
+  .top-text-con{
+    padding-left:13%;
+    padding-top: 2%;
+  }
+  .half-page{
+    width:100%;
+    padding-left:13%;
+    margin-top:0;
+  }
+
+}

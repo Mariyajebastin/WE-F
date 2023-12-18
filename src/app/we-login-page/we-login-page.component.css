@@ -1,0 +1,65 @@
+.login-con{
+  width:100%;
+}
+.login-center{
+  width:70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:60px;
+}
+.login-text{
+  font-size: 25px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.mail-con{
+  margin-top: 15px;
+}
+.login-button-con{
+  margin-top:40px;
+  text-align: center;
+}
+.login-button{
+  padding-top: 5px;
+  width: 70px;
+  height: 30px;
+  font-size: 13px;
+  font-family: Lexend;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+.lg-text-con{
+  margin-top:40px;
+  text-align: center;
+}
+.lg-text{
+  font-size: 14px;
+  font-family: Lexend;
+  font-weight: 300;
+  width:160px;
+  display: inline-block;
+}
+.sign-tag{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Lexend;
+  color: black;
+  display: inline-block;
+}
+@media screen and (min-width: 600px) {
+  .login-text{
+    text-align: center;
+  }
+  .login-center{
+    width:50%;
+  }
+}
+@media screen and (min-width: 900px){
+  .login-con{
+   margin-bottom: 130px;
+  }
+  .login-center{
+    width:23%;
+  }
+}

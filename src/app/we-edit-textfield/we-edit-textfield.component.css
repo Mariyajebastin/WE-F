@@ -1,0 +1,44 @@
+.text-field{
+  width:100%;
+  padding-top: 10px;
+}
+.top-name{
+  font-family: Lexend;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  display: inline-block;
+  margin-right: 5px;
+}
+.edit-icon{
+  display: inline-block;
+}
+.fa-pencil{
+  font-size: 11px;
+}
+.input-text{
+  font-weight: 300;
+  height: 30px;
+  width: 100%;
+  margin-top: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  font-size: 13px;
+  font-family: Lexend;
+  padding-left: 10px;
+}
+@media screen and (min-width: 600px) {
+  .text-field{
+    display:inline-block;
+    padding-right:3%;
+    margin-top:10px;
+    padding-top:0;
+  }
+}
+@media screen and (min-width: 900px) {
+  .text-field{
+    display:inline-block;
+    padding-right:3%;
+    padding-top:7px;
+  }
+}

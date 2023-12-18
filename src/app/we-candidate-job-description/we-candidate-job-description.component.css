@@ -1,0 +1,174 @@
+.job-dn-con{
+  width:100%;
+}
+.job-dn-center{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.company-c-feed-con{
+  width:100%;
+  height: 90px;
+}
+.company-feed-con{
+  width:100%;
+  height: 75px;
+}
+.logo-con{
+  width:30px;
+  height: 30px;
+  border-radius: 20px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/capgemini logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.name-text{
+  font-size: 15px;
+  font-family: Lexend;
+  font-weight: 500;
+}
+.dev-content{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-left:40px;
+  margin-top:5px;
+}
+.apply-button{
+  text-align: center;
+  font-size: 13px;
+  font-family: Lexend;
+  height: 30px;
+  width: 88px;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 0px;
+  padding-top: 5px;
+  display: block;
+  margin-left:40px;
+}
+.apply-button:hover{
+  background-color: #1400FF;
+}
+.para-con{
+  width:82%;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.topic{
+  font-size: 13px;
+  font-family: Lexend;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.para{
+  font-size: 11px;
+  font-family: Lexend;
+  font-weight: 300;
+  line-height: 16px;
+}
+.point-para{
+  display: list-item;
+  font-size: 11px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-left:15px;
+}
+.down-con{
+  width:100%;
+  height: 270px;
+  background-color: #EEE;
+  margin-top:25px;
+}
+.down-center{
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:30px;
+}
+.com-name{
+  font-size: 13px;
+  font-family: Lexend;
+  font-weight: 500;
+}
+.com-details{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-top:20px;
+}
+.web-tag{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  color: black;
+  display: block;
+  margin-top: 25px;
+}
+.similar-con{
+  width:100%;
+  margin-top:20px;
+}
+.similar-center{
+  width:100%;
+  margin-left:25%;
+}
+.similar-txt{
+  font-size: 14px;
+  font-family: Lexend;
+  font-weight: 300;
+  width:65%;
+  display: inline-block;
+}
+.fa-sort{
+  rotate: 90deg;
+  font-size: 20px;
+}
+.box-con-center{
+  display:block;
+  width:1700px;
+  height: 150px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.box-con{
+  width: 250px;
+  height: 105px;
+  border-style: solid;
+  border-width: 0.5px;
+  margin-right: 20px;
+  display: block;
+  float: left;
+  margin-top: 30px;
+}
+.c-name{
+  font-size: 13px;
+  font-family: Lexend;
+  font-weight: 400;
+  margin-left:10px;
+  margin-top:10px;
+}
+.dev-detail{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-left:10px;
+  margin-top:5px;
+}
+.salary-detail{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-left:10px;
+}

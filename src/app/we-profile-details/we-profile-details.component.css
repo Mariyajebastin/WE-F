@@ -1,0 +1,39 @@
+.detail-con{
+  width:100%;
+}
+.detail-center{
+  width:70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:75px;
+}
+.profile-pic-con{
+  width:70px;
+  height: 70px;
+  border-radius: 35px;
+}
+.profile-pic{
+  height: 100%;
+  width:100%;
+  background-image:url("/assets/img/profile img.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 600px) {
+  .profile-pic-con{
+    width: 90px;
+    height: 90px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .text-field-align{
+    width:50%;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 900px){
+  .detail-center{
+    width:60%;
+  }
+}

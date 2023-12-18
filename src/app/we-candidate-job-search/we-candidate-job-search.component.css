@@ -1,0 +1,121 @@
+.job-sh-con{
+  width:100%;
+}
+.job-sh-center{
+  width:70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:40px;
+}
+.feed-con{
+  width:100%;
+  margin-top:40px;
+}
+.company-c-feed-con{
+  width:100%;
+  height: 90px;
+}
+.company-feed-con{
+  width:100%;
+  height: 75px;
+}
+.logo-con{
+  width:30px;
+  height: 30px;
+  border-radius: 20px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/capgemini logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.name-text{
+  font-size: 13px;
+  font-family: Lexend;
+  font-weight: 500;
+}
+.dev-content{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-left:40px;
+  margin-top:5px;
+}
+.salary-details{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  margin-left: 40px;
+}
+.info-logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/infosys logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.vale-logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/vale logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.tcs-logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/tcs logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.acce-logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/acce logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.jepp-logo{
+  height: 100%;
+  width:100%;
+  background-image: url("/assets/img/jepp logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.load-more{
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  font-size: 14px;
+  font-family: Lexend;
+  color: white;
+  border-style: solid;
+  border-width: 0px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 900px) {
+  .job-sh-center{
+    width:60%;
+  }
+  .feed-con {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

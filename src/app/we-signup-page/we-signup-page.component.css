@@ -1,0 +1,44 @@
+.sign-con{
+  width:100%;
+}
+.sign-center{
+  width:70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:60px;
+}
+.sign-text{
+  font-family: Lexend;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+.details-con{
+  margin-top: 15px;
+}
+.sg-button-con{
+  margin-top: 40px;
+  text-align: center;
+}
+.sg-button{
+  padding-top: 5px;
+  width: 85px;
+  height: 30px;
+  font-size: 13px;
+  font-family: Lexend;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+@media screen and (min-width: 600px) {
+  .input-center{
+    width:50%;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 900px) {
+  .sign-center{
+    width:60%;
+    margin-top:45px;
+  }
+}

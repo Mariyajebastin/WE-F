@@ -1,0 +1,43 @@
+.emp-sign-con{
+  width:100%;
+}
+.emp-sign-center{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:45px;
+}
+.emp-sign-txt{
+  font-size: 20px;
+  font-family: Lexend;
+  font-weight: 500;
+}
+.emp-txt-center{
+  margin-top:15px;
+}
+.emp-sign-sum-btn{
+  font-size: 14px;
+  font-family: Lexend;
+  font-weight: 500;
+  width:100px;
+  height: 30px;
+  color:white;
+  background-color: black;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 600px) {
+  .text-field-align{
+    width:50%;
+    display: inline-block;
+  }
+  .emp-sign-txt{
+    text-align: center;
+    font-size: 28px;
+  }
+
+}

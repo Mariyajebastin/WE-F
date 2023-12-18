@@ -1,0 +1,91 @@
+.job-ad-con{
+  width:100%;
+}
+.job-ad-center{
+  width:80%;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top:30px;
+}
+.job-ad-txt-con{
+  margin-left:25px;
+}
+.job-ad-txt{
+  font-size: 15px;
+  font-family: Lexend;
+  font-weight: 400;
+  width: 60%;
+  display: inline-block;
+}
+.notification-txt{
+  font-size: 14px;
+  font-family: Lexend;
+  font-weight: 300;
+  display: inline-block;
+  margin-right: 5px;
+}
+.fa-bell-o{
+  font-size: 15px;
+}
+.notifi-con{
+  width:100%;
+  height: 80px;
+  background-color: #F2F2F2;
+  margin-top: 20px;
+}
+.notifi-bar-con{
+  width:100%;
+  height: 80px;
+  background-color: #F2F2F2;
+  margin-top: 3px;
+}
+.notifi-center{
+  width:100%;
+  padding-top: 10px;
+  padding-left: 11px;
+}
+.notifi-head-text{
+  font-size: 14px;
+  font-family: Lexend;
+  font-weight: 500;
+
+}
+.notifi-dev-text{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+  padding-top: 5px;
+}
+.date-con{
+  padding-top:5px;
+  float: right;
+  padding-right: 12px;
+}
+.date{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 300;
+}
+@media screen and (min-width: 600px) {
+  .job-ad-center {
+    width: 70%;
+  }
+  .job-ad-txt-con{
+    margin-left:0px;
+  }
+  .job-ad-txt{
+    width:75%;
+  }
+  .notifi-center{
+    width:95%;
+    padding-left:30px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .job-ad-txt-con{
+    margin-left:30px;
+  }
+  .job-ad-txt{
+    width:81%;
+  }
+}
