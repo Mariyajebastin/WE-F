@@ -35,8 +35,41 @@ import { WeEmployerProfileDetailsComponent } from './we-employer-profile-details
 import { WeEditDropdownComponent } from './we-edit-dropdown/we-edit-dropdown.component';
 import { WeEditTextareaComponent } from './we-edit-textarea/we-edit-textarea.component';
 import { WeBigTextareaComponent } from './we-big-textarea/we-big-textarea.component';
-import { UukFooterComponent } from './uuk-footer/uuk-footer.component';
+import {RouterModule, RouterOutlet, Routes} from "@angular/router";
+import { WeEmployerNewjobpostComponent } from './we-employer-newjobpost/we-employer-newjobpost.component';
+import { WeEmployerJobpostComponent } from './we-employer-jobpost/we-employer-jobpost.component';
+import { WeEmployerJobcreatedComponent } from './we-employer-jobcreated/we-employer-jobcreated.component';
+import { WeEmployerCreatedjobsComponent } from './we-employer-createdjobs/we-employer-createdjobs.component';
+import { WeEmployerCandidateAppliedComponent } from './we-employer-candidate-applied/we-employer-candidate-applied.component';
+import { WeEmployerAnalyticsComponent } from './we-employer-analytics/we-employer-analytics.component';
 
+
+const routes : Routes =[
+  {path:'',component:WeIndexPageComponent},
+  // Candidate portal
+  {path:'login',component:WeLoginPageComponent},
+  {path:'signup',component:WeSignupPageComponent},
+  {path:'welcome',component:WeWelcomePageComponent},
+  {path:'applied-jobs',component:WeCandidateJobAppliedComponent},
+  {path:'job-description',component:WeCandidateJobDescriptionComponent},
+  {path:'job-search',component:WeCandidateJobSearchComponent},
+  {path:'profile',component:WeProfileComponent},
+  {path:'profile-details',component:WeProfileDetailsComponent},
+
+  // Employer portal
+  {path: 'employer',component:WeEmployerLoginPageComponent},
+  {path:'employer-signup',component:WeEmployerSignupPageComponent},
+  {path:'register-success',component:WeEmployerWelcomePageComponent},
+  {path:'dashboard',component:WeEmployerProfilePageComponent},
+  {path:'employer-profile',component:WeEmployerProfileDetailsComponent},
+  {path:'job-post',component:WeJobpostComponent},
+  {path:'newjob-post',component:WeEmployerNewjobpostComponent},
+  {path:'employer-jobpost',component:WeEmployerJobpostComponent},
+  {path:'job-created',component:WeEmployerJobcreatedComponent},
+  {path:'created-jobs',component:WeEmployerCreatedjobsComponent},
+  {path:'employer-candidate-applied',component:WeEmployerCandidateAppliedComponent},
+  {path:'employer-analytics',component:WeEmployerAnalyticsComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,10 +106,17 @@ import { UukFooterComponent } from './uuk-footer/uuk-footer.component';
     WeEditDropdownComponent,
     WeEditTextareaComponent,
     WeBigTextareaComponent,
-    UukFooterComponent
+    WeEmployerNewjobpostComponent,
+    WeEmployerJobpostComponent,
+    WeEmployerJobcreatedComponent,
+    WeEmployerCreatedjobsComponent,
+    WeEmployerCandidateAppliedComponent,
+    WeEmployerAnalyticsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterOutlet,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

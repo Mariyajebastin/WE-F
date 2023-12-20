@@ -1,12 +1,12 @@
 .emp-we-con{
   width:100%;
-  margin-bottom: 240px;
+  height: 80dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .emp-we-center{
-  width:70%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10%;
+
 }
 .star-img-con{
   width:60px;

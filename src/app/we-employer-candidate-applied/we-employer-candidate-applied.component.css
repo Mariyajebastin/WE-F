@@ -1,0 +1,284 @@
+.head-top{
+  width: 100%;
+  height:60px;
+  box-shadow: 2px 2px gainsboro;
+}
+.header-con{
+  width:100%;
+  padding-left: 5%;
+  padding-top: 3px;
+}
+.header-text{
+  font-size:35px;
+  font-family:Lexend;
+  color:#1400FF;
+  font-weight: 900;
+  display: inline-block;
+}
+.profile-con{
+  display: inline-block;
+  float:right;
+  padding-right: 5%;
+  padding-top: 2px;
+}
+.profile-name{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 400;
+  margin-right: 5px;
+  display: block;
+  float:left;
+  color:black;
+  padding-top: 15px;
+}
+.profile-icon{
+  width:25px;
+  height: 25px;
+  display: block;
+  float: left;
+  background-color: #D9D9D9;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+.material-icons{
+  font-size: 15px;
+  padding:6px;
+}
+.emp-can-app-con{
+  width: 100%;
+  height: 650px;
+}
+.emp-can-app-center{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.dropdown-total-con{
+
+}
+.dropdown-icon-con{
+  width: 25px;
+  height: 25px;
+  background-color: #1400FF;
+  text-align: center;
+  float: left;
+}
+.dropdown-icon{
+  width: 12px;
+  height: 12px;
+  margin-top: 7px
+}
+.emp-jp-dropdown-con{
+  width: 90px;
+  height: 25px;
+  background-color: #D9D9D9;
+  float: left;
+  padding-top: 5px;
+}
+.dropdown-con{
+  display: inline-block;
+  position: relative;
+}
+.dropdown{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center
+}
+.jobpost-icon{
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.f-dropdown-content{
+  margin-top: 7px;
+}
+.dropdown-content{
+  display: none;
+}
+.option-con{
+  width: 90px;
+  height: 25px;
+  border-top: 0.5 solid #000;
+  padding-top: 5px;
+  background-color: #EEEEEE;
+}
+.dropdown-con:hover .dropdown-content {
+  display: block;
+}
+.option-con:hover{
+  background-color: #D9D9D9;
+}
+.emp-icon{
+  height: 12px;
+  width: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.analytics-icon{
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.candidate-icon{
+  width: 14px;
+  height: 13px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.table-container{
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+.table-header{
+  width: 100%;
+  height: 40px;
+  background-color: #1400FF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.child-header-one{
+  width: 100px;
+}
+.child-header-two{
+  width: 100px;
+}
+.child-header-three{
+  width: 90px;
+}
+.child-header-four{
+  width: 17px;
+}
+.applied-date{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 600;
+  color: white;
+}
+.applicant-name{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 600;
+  color: white;
+}
+.designation{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 600;
+  color: white;
+}
+.resume-icon{
+  height: 14px;
+  width: 14px;
+}
+.child-table{
+  width: 100%;
+  padding: 10px;
+  background-color: #EEEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2px;
+}
+.child-table:nth-child(2){
+  margin-top: 0;
+}
+.child-table-one{
+  width: 100px;
+}
+.child-table-two{
+  width: 100px;
+}
+.child-table-three{
+  width: 90px;
+}
+.child-table-four{
+  width: 17px;
+}
+.date{
+  font-size: 11px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: #505050;
+}
+.name{
+  font-size: 11px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: #505050;
+}
+.job-role{
+  font-size: 11px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: #505050;
+}
+.download-icon{
+  width: 13px;
+  height: 13px;
+}
+@media only screen and (min-width:600px) {
+  .child-header-one{
+    width: 120px;
+  }
+  .child-header-two{
+    width: 120px;
+  }
+  .child-header-three{
+    width: 120px;
+  }
+  .child-table-one{
+    width: 120px;
+  }
+  .child-table-two{
+    width: 120px;
+  }
+  .child-table-three{
+    width: 120px;
+  }
+  .applied-date{
+    font-size: 13px;
+  }
+  .applicant-name{
+    font-size: 13px;
+  }
+  .designation{
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width:900px) {
+  .head-text {
+    font-size: 35px;
+  }
+  .emp-can-app-center{
+    width: 70%;
+  }
+  .child-header-one{
+    width: 150px;
+  }
+  .child-header-two{
+    width: 150px;
+  }
+  .child-header-three{
+    width: 150px;
+  }
+  .child-table-one{
+    width: 150px;
+  }
+  .child-table-two{
+    width: 150px;
+  }
+  .child-table-three{
+    width: 150px;
+  }
+}

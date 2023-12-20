@@ -1,0 +1,354 @@
+.emp-analytics-center{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.dropdown-total-con{
+  display: flex;
+  align-items: center;
+}
+.dropdown-icon-con{
+  width: 25px;
+  height: 25px;
+  background-color: #1400FF;
+  text-align: center;
+}
+.dropdown-icon{
+  width: 12px;
+  height: 12px;
+  margin-top: 7px
+}
+.emp-jp-dropdown-con{
+  width: 90px;
+  height: 25px;
+  background-color: #D9D9D9;
+  padding-top: 5px;
+}
+.dropdown-con{
+  display: inline-block;
+  position: relative;
+}
+.dropdown{
+  font-size: 12px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center
+}
+.jobpost-icon{
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.f-dropdown-content{
+  margin-top: 7px;
+}
+.dropdown-content{
+  display: none;
+}
+.option-con{
+  width: 90px;
+  height: 25px;
+  padding-top: 5px;
+  background-color: #EEEEEE;
+}
+.dropdown-con:hover .dropdown-content {
+  display: block;
+}
+.option-con:hover{
+  background-color: #D9D9D9;
+}
+.emp-icon{
+  height: 12px;
+  width: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.analytics-icon{
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.candidate-icon{
+  width: 14px;
+  height: 13px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.tat-container{
+  width: 100%;
+  margin-top: 20px;
+}
+.text-container{
+  width: 300px
+}
+.content-text{
+  font-size: 22px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.flex-analytics{
+  width: 100%;
+  padding: 10px;
+  background-color: #ECECEC;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.analytics-table-one{
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+}
+.total-update{
+  font-size: 21px;
+  font-family: Lexend;
+  font-weight: 600;
+}
+.total-percentage-con{
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.total-percentage{
+  font-size: 48px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.child-percentage{
+  font-size: 25px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: #5FC83B;
+  margin-left: 20px
+}
+.increase-icon{
+  width: 14px;
+  height: 14px;
+}
+.time-period{
+  font-size: 16px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.analytics-table-two{
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  margin-top: 10px;
+}
+.impression{
+  font-size: 21px;
+  font-family: Lexend;
+  font-weight: 600;
+}
+.impression-count-con{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.impression-count{
+  font-size: 48px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.analytics-table-three{
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  margin-top: 10px;
+}
+.click{
+  font-size: 21px;
+  font-family: Lexend;
+  font-weight: 600;
+}
+.click-count-con{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.click-count{
+  font-size: 48px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.analytics-table-four{
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  margin-top: 10px;
+}
+.engagement-rate{
+  font-size: 21px;
+  font-family: Lexend;
+  font-weight: 600;
+}
+.engagement-count-con{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.engagement-count{
+  font-size: 48px;
+  font-family: Lexend;
+  font-weight: 400;
+}
+.graph-container{
+  width: 100%;
+  height: 245px;
+  padding: 15px;
+  background-color: #ECECEC;
+  margin-top: 20px;
+}
+.graph{
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  padding: 10px;
+}
+.graph-heading{
+  font-size: 16px;
+  font-family: Lexend;
+  font-weight: 400;
+  color: #505050;
+}
+@media only screen and (min-width:600px) {
+  .flex-analytics{
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .analytics-table-one{
+    width: 23%;
+    padding:10px;
+  }
+  .total-update{
+    font-size: 13px;
+  }
+  .total-percentage{
+    font-size: 25px;
+  }
+  .child-percentage{
+    font-size: 14px;
+  }
+  .time-period{
+    font-size: 11px;
+  }
+  .analytics-table-two{
+    width: 23%;
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .impression{
+    font-size: 13px;
+  }
+  .impression-count{
+    font-size: 25px;
+  }
+  .analytics-table-three{
+    width: 23%;
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .click{
+    font-size: 13px;
+  }
+  .click-count{
+    font-size: 25px;
+  }
+  .analytics-table-four{
+    width: 23%;
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .engagement-rate{
+    font-size: 13px;
+  }
+  .engagement-count{
+    font-size: 25px;
+  }
+  .footer-container{
+    display: inline-block;
+  }
+  .footer-con{
+    height: 240px;
+  }
+  .table{
+    width:27%;
+    padding-top: 0px;
+    display: block;
+    height: 100px;
+    float: left;
+  }
+  .hd-txt{
+    font-size: 13px;
+  }
+  .tag-type{
+    font-size: 13px;
+  }
+  .tag-typex{
+    font-size: 13px;
+  }
+  .tag-typey{
+    font-size: 13px;
+  }
+  .tablex{
+    width: 20%;
+    display: block;
+    float: left;
+    height: 100px;
+    padding-top: 10px;
+  }
+  .tabley{
+    width:32%;
+    display: block;
+    float: left;
+    height: 140px;
+  }
+  .tablez{
+    width:21%;
+    display: block;
+    float: left;
+  }
+}
+@media only screen and (min-width:900px) {
+  .head-top {
+    height: 55px;
+  }
+  .header-con {
+    padding-top: 0.5%;
+    padding-left: 15%;
+  }
+  .profile-con{
+    padding-right: 16%;
+  }
+  .head-text {
+    font-size: 35px;
+  }
+  .emp-analytics-center{
+    width: 70%;
+  }
+  .text-container{
+    width: 400px;
+  }
+  .analytics-table-one{
+    padding: 15px;
+  }
+  .analytics-table-two{
+    padding: 15px;
+  }
+  .analytics-table-three{
+    padding: 15px;
+  }
+  .analytics-table-four{
+    padding: 15px;
+  }
+}

@@ -29,13 +29,11 @@
 }
 .bg-txt{
   font-size: 35px;
-  font-family: Lexend;
 }
 .sl-con{
   margin-top:5%;
 }
 .search{
-  font-family: 'Lexend';
   width: 100%;
   height: 35px;
   font-size: 13px;
@@ -45,7 +43,6 @@
   margin-top:10px;
 }
 .location{
-  font-family: 'Lexend';
   width: 100%;
   height: 35px;
   font-size: 13px;
@@ -74,23 +71,15 @@
   margin-right: auto;
   padding-top: 10%;
 }
-.textx{
+.textx p{
   font-size: 27px;
-  font-family: Lexend;
-  line-height: 10px;
-}
-.we-txt{
-  font-family: Lexend;
-  font-size: 40px;
-  color: #1400FF;
-  font-weight: bold;
+  font-weight: 400;
 }
 .para-text-con{
   width:100%;
 }
 .para-text{
   font-size: 14px;
-  font-family: Lexend;
   font-weight: 300;
   padding-top: 15px;
   display: inline-block;
@@ -111,57 +100,40 @@
   background-position: center;
   background-size: contain;
 }
-.middle-txt{
+.middle-txt p{
   font-size: 23px;
-  font-family: Lexend;
   font-weight: 300;
-  width:173px;
   display: inline-block;
 }
 .middle-we{
   font-size: 23px;
   font-weight: 700;
-  font-family: Lexend;
   display: inline-block;
 }
 .pt-con{
   width: 100%;
-  height:200px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 30px;
 }
-.left-con{
-  width:160px;
-  height: 100px;
-  float:left;
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 45%;
+}
+.card p{
+  font-size: 13px;
+  font-weight: 300;
   text-align: center;
-  padding-top: 30px;
 }
-.text-a{
-  font-size: 14px;
-  font-family: Lexend;
-}
-.fa-comments-o{
-  font-size: 22px;
-}
-.text-f{
-  font-size: 14px;
-  font-family: Lexend;
-}
-.fa-briefcase{
-  font-size: 20px;
-}
-.fa-building-o{
-  font-size: 20px;
-}
-.text-c{
-  font-size: 14px;
-  font-family: Lexend;
-}
-.fa-rupee{
-  font-size: 22px;
-}
-.text-s{
-  font-size: 14px;
-  font-family: Lexend;
+.middle-container{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 @media screen and (min-width: 600px) {
   .image-con{
@@ -192,7 +164,6 @@
   }
   .middle-con{
     padding-top: 5%;
-    width:60%;
   }
   .textx{
     font-size: 29px;
@@ -203,49 +174,15 @@
   .para-text{
     font-size: 16px;
   }
-  .left-con{
-    width: 22%;
+  .pt-con{
+    flex-wrap: nowrap;
   }
-  .right-con{
-    width: 21%;
-    margin-left: 2%;
-  }
-  .down-left{
-   width: 25%;
-    margin-left: 2%;
-  }
-  .down-right{
+  .card{
     width: 25%;
-    margin-left: 2%;
   }
-  .text-a{
-    font-size: 10px;
-    font-family: Lexend;
+  .card p{
+    font-size: 11px;
   }
-  .fa-comments-o{
-    font-size: 22px;
-  }
-  .text-f{
-    font-size: 10px;
-    font-family: Lexend;
-  }
-  .fa-briefcase{
-    font-size: 20px;
-  }
-  .fa-building-o{
-    font-size: 20px;
-  }
-  .text-c{
-    font-size: 10px;
-    font-family: Lexend;
-  }
-  .fa-rupee{
-    font-size: 22px;
-  }
-  .text-s{
-    font-size: 10px;
-  }
-
 }
 @media screen and (min-width: 900px) {
   .image-con{
@@ -303,13 +240,8 @@
   .textx{
     font-size: 29px;
   }
-  .we-txt{
-    font-size: 45px;
-  }
   .para-text-con{
-    margin-left: 20%;
-    position: absolute;
-    top: 42px;
+    
   }
   .para-text{
     font-size: 17px;
@@ -318,23 +250,17 @@
   .arrow-con{
     margin-top: 0;
   }
-  .left-con{
-    width:150px;
+  .pt-con{
+    justify-content: space-around;
   }
-  .down-right{
-    width:80px;
+  .middle-txt{
+    text-align: center;
   }
-  .text-a{
-    font-size: 15px;
+  .card{
+    width: 16%;
   }
-  .text-f{
-    font-size: 15px;
-  }
-  .text-c{
-    font-size: 15px;
-  }
-  .text-s{
-    font-size: 15px;
+  .card p{
+    font-size: 14px;
   }
 }
 
