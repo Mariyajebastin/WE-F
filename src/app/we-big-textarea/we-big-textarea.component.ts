@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-we-big-textarea',
@@ -8,4 +9,5 @@ import {Component, Input} from '@angular/core';
 export class WeBigTextareaComponent {
     @Input() value : any;
     @Input() placeholder_value : any;
+    @Input() control : FormControl | any;
 }

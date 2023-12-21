@@ -3,13 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { WeTextfieldComponent } from './we-textfield/we-textfield.component';
-import { WeTopComponent } from './we-top/we-top.component';
 import { WeDropdownComponent } from './we-dropdown/we-dropdown.component';
 import { WeTextareaComponent } from './we-textarea/we-textarea.component';
 import { WeEmployerComponent } from './we-employer/we-employer.component';
 import { WeButtonComponent } from './we-button/we-button.component';
 import { WeCandidateComponent } from './we-candidate/we-candidate.component';
-import { WeResumeComponent } from './we-resume/we-resume.component';
 import { WeJobpostComponent } from './we-jobpost/we-jobpost.component';
 import { WeHeaderComponent } from './we-header/we-header.component';
 import { WeIndexPageComponent } from './we-index-page/we-index-page.component';
@@ -18,7 +16,6 @@ import { WeLoginPageComponent } from './we-login-page/we-login-page.component';
 import { WePasswordFieldComponent } from './we-password-field/we-password-field.component';
 import { WeSignupPageComponent } from './we-signup-page/we-signup-page.component';
 import { WeWelcomePageComponent } from './we-welcome-page/we-welcome-page.component';
-import { WeTopProfileComponent } from './we-top-profile/we-top-profile.component';
 import { WeProfileComponent } from './we-profile/we-profile.component';
 import { WeProfileDetailsComponent } from './we-profile-details/we-profile-details.component';
 import { WeCandidateJobSearchComponent } from './we-candidate-job-search/we-candidate-job-search.component';
@@ -29,7 +26,6 @@ import { WeCandidateJobStatusComponent } from './we-candidate-job-status/we-cand
 import { WeEmployerLoginPageComponent } from './we-employer-login-page/we-employer-login-page.component';
 import { WeEmployerSignupPageComponent } from './we-employer-signup-page/we-employer-signup-page.component';
 import { WeEmployerWelcomePageComponent } from './we-employer-welcome-page/we-employer-welcome-page.component';
-import { WeEmployerTopComponent } from './we-employer-top/we-employer-top.component';
 import { WeEmployerProfilePageComponent } from './we-employer-profile-page/we-employer-profile-page.component';
 import { WeEmployerProfileDetailsComponent } from './we-employer-profile-details/we-employer-profile-details.component';
 import { WeEditDropdownComponent } from './we-edit-dropdown/we-edit-dropdown.component';
@@ -42,6 +38,7 @@ import { WeEmployerJobcreatedComponent } from './we-employer-jobcreated/we-emplo
 import { WeEmployerCreatedjobsComponent } from './we-employer-createdjobs/we-employer-createdjobs.component';
 import { WeEmployerCandidateAppliedComponent } from './we-employer-candidate-applied/we-employer-candidate-applied.component';
 import { WeEmployerAnalyticsComponent } from './we-employer-analytics/we-employer-analytics.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 const routes : Routes =[
@@ -74,13 +71,11 @@ const routes : Routes =[
   declarations: [
     AppComponent,
     WeTextfieldComponent,
-    WeTopComponent,
     WeDropdownComponent,
     WeTextareaComponent,
     WeEmployerComponent,
     WeButtonComponent,
     WeCandidateComponent,
-    WeResumeComponent,
     WeJobpostComponent,
     WeHeaderComponent,
     WeIndexPageComponent,
@@ -89,7 +84,6 @@ const routes : Routes =[
     WePasswordFieldComponent,
     WeSignupPageComponent,
     WeWelcomePageComponent,
-    WeTopProfileComponent,
     WeProfileComponent,
     WeProfileDetailsComponent,
     WeCandidateJobSearchComponent,
@@ -100,7 +94,6 @@ const routes : Routes =[
     WeEmployerLoginPageComponent,
     WeEmployerSignupPageComponent,
     WeEmployerWelcomePageComponent,
-    WeEmployerTopComponent,
     WeEmployerProfilePageComponent,
     WeEmployerProfileDetailsComponent,
     WeEditDropdownComponent,
@@ -116,7 +109,8 @@ const routes : Routes =[
   imports: [
     BrowserModule,
     RouterOutlet,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

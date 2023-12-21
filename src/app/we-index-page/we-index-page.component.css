@@ -1,7 +1,7 @@
 .image-con{
   height: 450px;
   width:100%;
-  margin-top: 2px;
+  margin-top: 57px;
 }
 .bg-img{
   height: 100%;
@@ -138,7 +138,7 @@
 @media screen and (min-width: 600px) {
   .image-con{
     height: 440px;
-    margin-top:3px;
+    margin-top: 58px;
   }
   .bg-img{
     background-image:url("/assets/img/bg tab.png") ;
@@ -184,11 +184,7 @@
     font-size: 11px;
   }
 }
-@media screen and (min-width: 900px) {
-  .image-con{
-    height: 440px;
-    margin-top: 3px;
-  }
+@media screen and (min-width: 1024px) {
   .bg-img{
     background-image: url("/assets/img/bg desktop.png");
   }
@@ -241,7 +237,7 @@
     font-size: 29px;
   }
   .para-text-con{
-    
+
   }
   .para-text{
     font-size: 17px;

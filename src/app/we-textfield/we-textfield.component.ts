@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-we-textfield',
@@ -6,7 +7,7 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./we-textfield.component.css']
 })
 export class WeTextfieldComponent {
-
     @Input () name :any;
     @Input () placeholder_value : any;
+    @Input() control : FormControl | any;
 }

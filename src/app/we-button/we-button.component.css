@@ -1,23 +1,9 @@
 .button{
-  height: 30px;
-  width: 100px;
-  background-color: #5A19AE;
-  border-style: none;
-  border-radius: 10px;
-  margin-top: 5%;
+  padding: 6px 12px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
   font-size: 14px;
-  color: white;
-  margin-bottom: 5%;
-}
-@media screen and (min-width: 600px){
-  .button{
-    display: list-item;
-  }
-}
-@media screen and (min-width: 900px){
-  .button{
-    height:40px;
-    width:120px;
-    font-size:16px;
-  }
+  color: #fff;
+  cursor: pointer;
 }

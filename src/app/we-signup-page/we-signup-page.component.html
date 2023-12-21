@@ -1,36 +1,66 @@
-<app-we-top></app-we-top>
-<div class="sign-con">
-  <div class="sign-center">
-    <div class="sign-text">
-      Sign up
-    </div>
-    <div class="details-con">
-      <div class="input-center">
-        <app-we-textfield name="First Name"></app-we-textfield>
+<app-we-header></app-we-header>
+<form [formGroup]="signupForm">
+  <div class="sign-con">
+    <div class="sign-center">
+      <div class="sign-text">
+        Sign up
       </div>
-      <div class="input-center">
-        <app-we-textfield name="Last Name"></app-we-textfield>
-      </div>
-      <div class="input-center">
-        <app-we-textfield name="Job title"></app-we-textfield>
-      </div>
-      <div class="input-center">
-        <app-we-textfield name="Mobile No"></app-we-textfield>
-      </div>
-      <div class="input-center">
-        <app-we-password-field value="Create Password"></app-we-password-field>
-      </div>
-      <div class="input-center">
-        <app-we-password-field value="Confirm Password"></app-we-password-field>
-      </div>
-      <div class="input-center">
-        <app-we-textfield name="Email ID"></app-we-textfield>
-      </div>
-      <app-we-resume></app-we-resume>
-      <div class="sg-button-con">
-        <a class="sg-button" href="" style="text-decoration: none;">Sign up</a>
+      <div class="details-con">
+        <div class="input-center">
+          <div class="text-field-con">
+            <app-we-textfield name="First Name" [control]="signupForm.get('first_name')"></app-we-textfield>
+          </div>
+          <div class="text-field-con">
+            <app-we-textfield name="Last Name" [control]="signupForm.get('last_name')"></app-we-textfield>
+          </div>
+        </div>
+        <div class="input-center">
+          <div class="text-field-con">
+            <app-we-textfield name="Job title" [control]="signupForm.get('job_title')"></app-we-textfield>
+          </div>
+          <div class="text-field-con">
+            <app-we-textfield name="Mobile No" [control]="signupForm.get('mobile_no')"></app-we-textfield>
+          </div>
+        </div>
+        <div class="input-center">
+          <div class="text-field-con">
+            <app-we-password-field value="Create Password" [control]="signupForm.get('create_password')"></app-we-password-field>
+          </div>
+          <div class="text-field-con">
+            <app-we-password-field value="Confirm Password" [control]="signupForm.get('confirm_password')"></app-we-password-field>
+          </div>
+        </div>
+        <div class="input-center">
+          <div class="text-field-con">
+            <app-we-textfield name="Email ID" [control]="signupForm.get('email_id')"></app-we-textfield>
+          </div>
+        </div>
+        <div class="file-upload-con">
+          <p class="upload-text">Upload Resume</p>
+          <label class="upload-btn" for="file">
+            Upload
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 23 23" fill="none">
+              <g clip-path="url(#clip0_207_143)">
+                <path d="M11.0833 18.7224C7.01015 18.7224 3.69439 15.4066 3.69439 11.3335C3.69439 7.2604 7.01015 3.94463 11.0833 3.94463C15.1564 3.94463 18.4722 7.2604 18.4722 11.3335C18.4722 15.4066 15.1564 18.7224 11.0833 18.7224ZM11.0833 20.5696C16.1816 20.5696 20.3194 16.4319 20.3194 11.3335C20.3194 6.23519 16.1816 2.09741 11.0833 2.09741C5.98495 2.09741 1.84717 6.23519 1.84717 11.3335C1.84717 16.4319 5.98495 20.5696 11.0833 20.5696ZM10.1597 11.3335V15.028H12.0069V11.3335H14.7777L11.0833 7.63908L7.38883 11.3335H10.1597Z" fill="#201413"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_207_143">
+                  <rect width="22.1667" height="22.1667" fill="white" transform="translate(0 0.25)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </label>
+          <input type="file" id="file" (change)="onFileUpload($event)" [formControl]="signupForm.get('resume')">
+        </div>
+        <div class="file-img-con" *ngIf="selectFile">
+          <img class="file-img" [src]="selectFile">
+        </div>
+        <div class="sg-button-con">
+          <app-we-button value="Signup" (click)="doSignup()"></app-we-button>
+<!--          <input class="sg-button" type="button" value="Signup" (click)="doSignup()">-->
+        </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 <app-we-footer></app-we-footer>

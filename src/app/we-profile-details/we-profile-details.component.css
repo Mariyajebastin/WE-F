@@ -20,6 +20,21 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.profile-details-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 15px;
+}
+.text-field-con{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn-con{
+  margin-top: 40px;
+  text-align: center;
+}
 @media screen and (min-width: 600px) {
   .profile-pic-con{
     width: 90px;
@@ -27,9 +42,11 @@
     margin-right: auto;
     margin-left: auto;
   }
+  .text-field-con{
+    flex-direction: row;
+  }
   .text-field-align{
-    width:50%;
-    display: inline-block;
+    width: 49%;
   }
 }
 @media screen and (min-width: 900px){

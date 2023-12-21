@@ -1,33 +1,42 @@
-<app-we-top></app-we-top>
-<div class="emp-sign-con">
-  <div class="emp-sign-center">
-    <div class="emp-sign-txt">Sign up</div>
-    <div class="emp-txt-center">
-      <div class="text-field-align">
-        <app-we-textfield name="Company Name"></app-we-textfield>
+<app-we-header></app-we-header>
+<form [formGroup]="signupForm">
+  <div class="emp-sign-con">
+    <div class="emp-sign-center">
+      <div class="emp-sign-txt">Sign up</div>
+      <div class="emp-txt-center">
+        <div class="text-field-con">
+          <div class="text-field-align">
+            <app-we-textfield name="Company Name" [control]="signupForm.get('company_name')"></app-we-textfield>
+          </div>
+          <div class="text-field-align">
+            <app-we-textfield name="GST or Pan Number" [control]="signupForm.get('gst_or_pan_number')"></app-we-textfield>
+          </div>
+        </div>
+        <div class="text-field-con">
+          <div class="text-field-align">
+            <app-we-textfield name="Industry type" [control]="signupForm.get('industry_type')"></app-we-textfield>
+          </div>
+          <div class="text-field-align">
+            <app-we-dropdown value="ISO Register"></app-we-dropdown>
+          </div>
+        </div>
+        <div class="text-field-con">
+          <div class="text-field-align">
+            <app-we-textfield name="Email ID" [control]="signupForm.get('email_id')"></app-we-textfield>
+          </div>
+          <div class="text-field-align">
+            <app-we-textfield name="Telephone No" [control]="signupForm.get('telephone_no')"></app-we-textfield>
+          </div>
+        </div>
+        <app-we-textarea value="Registered Address" [control]="signupForm.get('registered_address')"></app-we-textarea>
+        <app-we-textarea value="Unit Address" [control]="signupForm.get('unit_address')"></app-we-textarea>
+        <app-we-textarea value="Company Breif" [control]="signupForm.get('company_breif')"></app-we-textarea>
+        <div class="btn-con">
+          <app-we-button value="Submit" (click)="doSubmit()"></app-we-button>
+        </div>
       </div>
-      <div class="text-field-align">
-        <app-we-textfield name="GST or Pan Number"></app-we-textfield>
-      </div>
-      <div class="text-field-align">
-        <app-we-textfield name="Industry type"></app-we-textfield>
-      </div>
-      <div class="text-field-align">
-        <app-we-dropdown value="ISO Register"></app-we-dropdown>
-      </div>
-      <div class="text-field-align">
-        <app-we-textfield name="Email ID"></app-we-textfield>
-      </div>
-      <div class="text-field-align">
-        <app-we-textfield name="Telephone No"></app-we-textfield>
-      </div>
-      <app-we-textarea value="Registered Address"></app-we-textarea>
-      <app-we-textarea value="Unit Address"></app-we-textarea>
-      <app-we-textarea value="Company Breif"></app-we-textarea>
-      <a class="emp-sign-sum-btn" href="" style="text-decoration: none;">
-        Sumbit
-      </a>
     </div>
   </div>
-</div>
+
+</form>
 <app-we-footer></app-we-footer>

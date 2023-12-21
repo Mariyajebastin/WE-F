@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-we-password-field',
@@ -7,4 +8,5 @@ import {Component, Input} from '@angular/core';
 })
 export class WePasswordFieldComponent {
     @Input () value : any;
+    @Input () control : FormControl | any;
 }

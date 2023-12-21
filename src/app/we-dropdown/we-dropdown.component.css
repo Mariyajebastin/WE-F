@@ -1,31 +1,26 @@
 .drop-down-con{
   width:100%;
-  padding-top: 10px;
 }
 .top-name{
   color: #424242;
-  font-family: Lexend;
   font-size: 13px;
-  font-style: normal;
   font-weight: 300;
 }
 .drop-down{
   width:100%;
-  height:30px;
+  height: 40px;
   margin-top:5px;
   padding-left:10px;
   font-size:12px;
 }
+.drop-down:focus{
+  outline: 0.3px solid #000;
+}
 @media screen and (min-width: 600px){
-  .drop-down-con{
-    display:inline-block;
-    padding-right:1%;
-  }
+
 }
 @media screen and (min-width: 900px){
-  .drop-down-con{
-    display:inline-block;
-    padding-right:3%;
-    padding-top:3%;
+  .drop-down{
+    height: 35px;
   }
 }

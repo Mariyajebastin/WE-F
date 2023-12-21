@@ -1,26 +1,36 @@
-<app-we-top-profile></app-we-top-profile>
+<app-we-header></app-we-header>
 <div class="detail-con">
   <div class="detail-center">
     <div class="profile-pic-con">
       <div class="profile-pic"></div>
     </div>
-    <div class="text-field-align">
-      <app-we-textfield name="Name"></app-we-textfield>
-    </div>
-    <div class="text-field-align">
-      <app-we-edit-textfield name="Email ID"></app-we-edit-textfield>
-    </div>
-    <div class="text-field-align">
-      <app-we-edit-textfield name="Mobile No"></app-we-edit-textfield>
-    </div>
-    <div class="text-field-align">
-      <app-we-edit-textfield name="Job title"></app-we-edit-textfield>
-    </div>
-    <app-we-textarea value="Skills"></app-we-textarea>
-    <div class="text-field-align">
-      <app-we-textfield name="Education"></app-we-textfield>
-    </div>
-    <app-we-resume></app-we-resume>
+    <form [formGroup]="profileForm">
+      <div class="profile-details-container">
+        <div class="text-field-con">
+          <div class="text-field-align">
+            <app-we-edit-textfield name="Name" [control]="profileForm.get('name')"></app-we-edit-textfield>
+          </div>
+          <div class="text-field-align">
+            <app-we-edit-textfield name="Email ID" [control]="profileForm.get('email_id')"></app-we-edit-textfield>
+          </div>
+        </div>
+        <div class="text-field-con">
+          <div class="text-field-align">
+            <app-we-edit-textfield name="Mobile No" [control]="profileForm.get('mobile_no')"></app-we-edit-textfield>
+          </div>
+          <div class="text-field-align">
+            <app-we-edit-textfield name="Job title" [control]="profileForm.get('job_title')"></app-we-edit-textfield>
+          </div>
+        </div>
+        <app-we-textarea value="Skills" [control]="profileForm.get('skills')"></app-we-textarea>
+        <div class="text-field-align">
+          <app-we-edit-textfield name="Education" [control]="profileForm.get('education')"></app-we-edit-textfield>
+        </div>
+        <div class="btn-con">
+          <app-we-button value="Save" (click)="doSave()"></app-we-button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 <app-we-footer></app-we-footer>

@@ -14,20 +14,13 @@
 }
 .mail-con{
   margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .login-button-con{
   margin-top:40px;
   text-align: center;
-}
-.login-button{
-  padding-top: 5px;
-  width: 70px;
-  height: 30px;
-  font-size: 13px;
-  font-family: Lexend;
-  color: white;
-  background-color: black;
-  display: inline-block;
 }
 .lg-text-con{
   margin-top:40px;
