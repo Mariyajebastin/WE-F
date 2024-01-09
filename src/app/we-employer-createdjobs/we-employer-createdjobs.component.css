@@ -149,6 +149,9 @@
 .table-child-one{
   width: 80px;
 }
+.job-head{
+  color: #fff;
+}
 .job-role{
   font-size: 12px;
   font-weight: 300;
@@ -159,7 +162,6 @@
 }
 .job-posted-date{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   color:#505050;
 }
@@ -168,7 +170,6 @@
 }
 .job-location{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   color:#505050;
 }

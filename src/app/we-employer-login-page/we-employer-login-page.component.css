@@ -14,7 +14,6 @@
 }
 .emp-acct-txt{
   font-size: 28px;
-  font-family: Lexend;
   font-weight: 700;
   color: #1400FF;
   line-height: 31px;
@@ -24,8 +23,8 @@
 }
 .emp-log-txt{
   font-size: 22px;
-  font-family: Lexend;
   font-weight: 500;
+  color: #000;
 }
 .emp-mail-pass-con{
   margin-top:20px;
@@ -44,7 +43,6 @@
 }
 .emp-lg-text{
   font-size: 14px;
-  font-family: Lexend;
   font-weight: 300;
   width:180px;
   display: inline-block;
@@ -52,8 +50,6 @@
 .emp-sign-tag{
   font-size: 14px;
   font-weight: 500;
-  font-family: Lexend;
-  color: black;
   display: inline-block;
 }
 @media screen and (min-width: 600px) {

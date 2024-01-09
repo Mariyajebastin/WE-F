@@ -4,7 +4,6 @@
 }
 .top-name{
   color: #424242;
-  font-family: Lexend;
   font-size: 13px;
   font-style: normal;
   font-weight: 300;
@@ -16,7 +15,6 @@
   margin-top:5px;
   resize:none;
   font-size: 13px;
-  font-family: Lexend;
   font-weight: 300;
 }
 .edit-icon{

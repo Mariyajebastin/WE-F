@@ -36,7 +36,6 @@
 }
 .dropdown{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 400;
   color: black;
   text-decoration: none;
@@ -95,12 +94,11 @@
 }
 .create-txt{
   font-size: 24px;
-  font-family: Lexend;
   font-weight: 400;
+  color: #000;
 }
 .child-create-txt{
   font-size: 15px;
-  font-family: Lexend;
   font-weight: 400;
   margin-top: 5px;
 }
@@ -123,13 +121,11 @@
 }
 .select-content{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 500;
   color: #505050;
 }
 .child-select-content{
   color: #505050;
-  font-family: Lexend;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
@@ -147,8 +143,8 @@
 }
 .job-title{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 500;
+  color: #000;
 }
 .input-job-title{
   width: 100%;
@@ -157,7 +153,6 @@
   border-radius: 4px;
   border: 0.5px solid black;
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   padding-left: 10px;
 }
@@ -169,12 +164,11 @@
 }
 .job-location{
   font-size: 16px;
-  font-family: Lexend;
+  color: #000;
   font-weight: 500;
 }
 .child-job-location{
   font-size: 13px;
-  font-family: Lexend;
   font-weight: 400;
   color: #505050;
   width: 280px;
@@ -187,7 +181,6 @@
   border-radius: 4px;
   border: 0.5px solid black;
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   resize: none;
   padding-left: 10px;
@@ -198,7 +191,6 @@
 }
 ::placeholder{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   color: #505050;
 }
@@ -208,8 +200,8 @@
 }
 .salary-range{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 400;
+  color: #000;
 }
 .salary-range-con{
   margin-top: 10px;
@@ -218,7 +210,6 @@
 }
 .to{
   font-size: 13px;
-  font-family: Lexend;
   font-weight: 400;
   color: #505050;
   margin-right: 15px;
@@ -229,7 +220,6 @@
   width: 30%;
   height: 40px;
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 400;
   border-radius: 4px;
   border: 0.542px solid #000;
@@ -242,7 +232,6 @@
   width: 30%;
   height: 40px;
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 400;
   margin-right: 20px;
   padding-left: 10px;
@@ -261,7 +250,6 @@
   background-color: white;
   padding-left: 10px;
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
 }
 .period:focus{
@@ -269,9 +257,9 @@
 }
 .job-type{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 400;
   margin-top: 15px;
+  color: #000;
 }
 .time-period{
   width: 35%;
@@ -283,7 +271,6 @@
   margin-top: 5px;
   padding-left: 10px;
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
 }
 .time-period:focus{
@@ -291,9 +278,9 @@
 }
 .job-description{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 400;
   margin-top: 15px;
+  color: #000;
 }
 .job-des{
   width: 100%;
@@ -304,9 +291,9 @@
 }
 .company-profile{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 400;
   margin-top: 15px;
+  color: #000;
 }
 .compy-profile{
   width: 100%;
@@ -323,7 +310,6 @@
   margin-left: auto;
   background-color: black;
   font-size: 15px;
-  font-family: Lexend;
   font-weight: 400;
   color: white;
   border-style: none;

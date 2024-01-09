@@ -59,7 +59,6 @@ const routes : Routes =[
   {path:'register-success',component:WeEmployerWelcomePageComponent},
   {path:'dashboard',component:WeEmployerProfilePageComponent},
   {path:'employer-profile',component:WeEmployerProfileDetailsComponent},
-  {path:'job-post',component:WeJobpostComponent},
   {path:'newjob-post',component:WeEmployerNewjobpostComponent},
   {path:'employer-jobpost',component:WeEmployerJobpostComponent},
   {path:'job-created',component:WeEmployerJobcreatedComponent},

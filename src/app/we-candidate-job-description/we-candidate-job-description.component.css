@@ -34,12 +34,11 @@
 }
 .name-text{
   font-size: 15px;
-  font-family: Lexend;
   font-weight: 500;
+  color: #000;
 }
 .dev-content{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   margin-left:40px;
   margin-top:5px;
@@ -47,7 +46,6 @@
 .apply-button{
   text-align: center;
   font-size: 13px;
-  font-family: Lexend;
   height: 30px;
   width: 88px;
   background-color: black;
@@ -68,20 +66,18 @@
 }
 .topic{
   font-size: 13px;
-  font-family: Lexend;
   font-weight: 500;
   padding-bottom: 15px;
+  color: #000;
 }
 .para{
   font-size: 11px;
-  font-family: Lexend;
   font-weight: 300;
   line-height: 16px;
 }
 .point-para{
   display: list-item;
   font-size: 11px;
-  font-family: Lexend;
   font-weight: 300;
   margin-top: 8px;
   margin-left:15px;
@@ -100,18 +96,16 @@
 }
 .com-name{
   font-size: 13px;
-  font-family: Lexend;
   font-weight: 500;
+  color: #000;
 }
 .com-details{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   margin-top:20px;
 }
 .web-tag{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   color: black;
   display: block;
@@ -130,7 +124,6 @@
 }
 .similar-txt{
   font-size: 14px;
-  font-family: Lexend;
   font-weight: 300;
   width:65%;
   display: inline-block;
@@ -168,14 +161,12 @@
 }
 .dev-detail{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   margin-left:10px;
   margin-top:5px;
 }
 .salary-detail{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 300;
   margin-left:10px;
 }
