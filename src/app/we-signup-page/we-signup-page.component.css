@@ -1,14 +1,14 @@
 .sign-con{
   width:100%;
+  min-height: 100svh;
 }
 .sign-center{
-  width:70%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
-  margin-top:60px;
+  padding-top: 120px;
 }
 .sign-text{
-  font-family: Lexend;
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -77,6 +77,35 @@ input[type=file]::file-selector-button{
   width: 100%;
   object-fit: contain;
 }
+.text-field{
+  width:100%;
+}
+.top-name{
+  font-size: 14px;
+  font-weight: 300;
+}
+.input-text{
+  font-weight: 400;
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  border: 0.5px solid #000;
+  font-size: 14px;
+  padding-left: 10px;
+  border-radius: 0;
+}
+.input-text:focus{
+  outline: 0.3px solid #000;
+}
+.signup-btn{
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
 @media screen and (min-width: 600px) {
   .input-center{
     display: flex;
@@ -88,9 +117,19 @@ input[type=file]::file-selector-button{
     width: 49%;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .sign-center{
-    width:60%;
-    margin-top: 120px;
+    width: 50%;
   }
+}
+@media screen and (min-width: 1300px) {
+  .sign-center{
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+ .sign-center{
+   width: 40%;
+ }
 }

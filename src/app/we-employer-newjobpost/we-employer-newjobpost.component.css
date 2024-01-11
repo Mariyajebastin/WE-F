@@ -175,20 +175,6 @@
   line-height: normal;
   margin-top: 3px;
 }
-.input-job-location{
-  width: 100%;
-  margin-top: 5px;
-  border-radius: 4px;
-  border: 0.5px solid black;
-  font-size: 12px;
-  font-weight: 300;
-  resize: none;
-  padding-left: 10px;
-  padding-top: 13px;
-}
-.input-job-location:focus{
-  outline: none;
-}
 ::placeholder{
   font-size: 12px;
   font-weight: 300;
@@ -282,12 +268,18 @@
   margin-top: 15px;
   color: #000;
 }
-.job-des{
+.input-textarea{
   width: 100%;
   resize: none;
   padding-top: 13px;
   padding-left: 10px;
   margin-top: 5px;
+  border: 0.5px solid #000;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.input-textarea:focus{
+  outline: 0.3px solid #000;
 }
 .company-profile{
   font-size: 16px;
@@ -302,18 +294,18 @@
   padding-left: 10px;
   margin-top: 5px;
 }
+.btn-con{
+  text-align: center;
+  margin-top: 3rem;
+}
 .submit-button{
-  width: 100px;
-  height: 35px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: black;
-  font-size: 15px;
-  font-weight: 400;
-  color: white;
-  border-style: none;
-  margin-top: 50px;
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
 }
 @media only screen and (min-width:600px) {
   .head-top {

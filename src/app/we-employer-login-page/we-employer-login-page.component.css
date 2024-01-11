@@ -52,6 +52,35 @@
   font-weight: 500;
   display: inline-block;
 }
+.text-field{
+  width:100%;
+}
+.top-name{
+  font-size: 14px;
+  font-weight: 300;
+}
+.input-text{
+  font-weight: 400;
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  border: 0.5px solid #000;
+  font-size: 14px;
+  padding-left: 10px;
+  border-radius: 0;
+}
+.input-text:focus{
+  outline: 0.3px solid #000;
+}
+.login-btn{
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
 @media screen and (min-width: 600px) {
   .emp-log-center{
     width:50%;
