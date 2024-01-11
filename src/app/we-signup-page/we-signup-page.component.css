@@ -91,6 +91,6 @@ input[type=file]::file-selector-button{
 @media screen and (min-width: 900px) {
   .sign-center{
     width:60%;
-    margin-top:45px;
+    margin-top: 120px;
   }
 }
