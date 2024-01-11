@@ -10,22 +10,19 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bg-con{
-  height: 300px;
-  width: 85%;
+  width: 90%;
   background-color: rgba(255, 255, 255, 0.85);
-  position: absolute;
-  bottom: 8%;
-  left: 7%;
-  right: 7%;
+  padding: 25px 0;
 }
 .bg-txt-con{
   width:88%;
   margin-left:auto;
   margin-right: auto;
-  padding-top: 25px;
 }
 .bg-txt{
   font-size: 35px;
@@ -36,8 +33,8 @@
 }
 .search{
   width: 100%;
-  height: 35px;
-  font-size: 13px;
+  height: 40px;
+  font-size: 14px;
   padding-left: 25px;
   font-weight: 300;
   color: #000;
@@ -48,8 +45,8 @@
 }
 .location{
   width: 100%;
-  height: 35px;
-  font-size: 13px;
+  height: 40px;
+  font-size: 14px;
   padding-left: 25px;
   font-weight: 300;
   color: #000;
@@ -60,10 +57,24 @@
 }
 .fa-search{
   position: absolute;
-  padding-top: 21px;
+  padding-top: 22px;
   padding-left: 8px;
   font-size: 14px;
   color:#8e8b8b;
+}
+.btn-con{
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.search-btn{
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
 }
 .material-icons{
   padding-top: 18px;
@@ -73,7 +84,7 @@
   color: gray;
 }
 .middle-con{
-  width:75%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10%;
@@ -87,25 +98,10 @@
 }
 .para-text{
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   padding-top: 15px;
   display: inline-block;
   width: 75%;
-}
-.arrow-con{
-  height: 55px;
-  width:30px;
-  display: inline-block;
-  margin-top: 15px;
-  float: right;
-}
-.arrow{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/Arrow .png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 .middle-txt p{
   font-size: 23px;
@@ -120,25 +116,28 @@
 .pt-con{
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
   margin-top: 30px;
 }
 .card{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 45%;
+  gap: 8px;
 }
 .card p{
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
   text-align: center;
+  width: 125px;
 }
 .middle-container{
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   padding-top: 10%;
 }
@@ -151,10 +150,8 @@
     background-image:url("/assets/img/bg tab.png") ;
   }
   .bg-con{
-    height: 290px;
+    padding: 50px 0;
     width:90%;
-    left:5%;
-    right: 5%;
   }
   .bg-txt-con{
     width:65%;
@@ -164,8 +161,8 @@
   }
   .fa-search{
     position: absolute;
-    padding-top: 21px;
     padding-left: 8px;
+    padding-top: 20px;
     font-size: 14px;
     color:#8e8b8b;
   }
@@ -196,15 +193,11 @@
     background-image: url("/assets/img/bg desktop.png");
   }
   .bg-con{
-    height: 260px;
     width:80%;
-    bottom: 18%;
-    left: 10%;
-    right: 10%;
+    padding: 70px 0;
   }
   .bg-txt-con{
     width:65%;
-    padding-top: 75px;
   }
   .bg-txt{
   text-align: center;
@@ -217,6 +210,12 @@
   .search-con{
     width:60%;
     display: inline-block;
+  }
+  .search{
+    height: 35px;
+  }
+  .location{
+    height: 35px;
   }
   .location-con{
     position:relative;
@@ -239,6 +238,10 @@
     padding-top: 4%;
     width:52%;
     position: relative;
+  }
+  .middle-container{
+    width: 52%;
+    padding-top: 6%;
   }
   .textx{
     font-size: 29px;

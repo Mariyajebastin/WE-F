@@ -3,9 +3,9 @@
 }
 .top-name{
   color: #424242;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   display: inline-block;
   margin-right: 5px;
 }
@@ -13,7 +13,7 @@
   width: 100%;
   margin-top:5px;
   resize:none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   padding-left: 10px;
   padding-top: 10px

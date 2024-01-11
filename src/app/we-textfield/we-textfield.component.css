@@ -2,8 +2,8 @@
   width:100%;
 }
 .top-name{
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
 }
 .input-text{
   font-weight: 400;
@@ -11,7 +11,7 @@
   width: 100%;
   margin-top: 5px;
   border: 0.5px solid #000;
-  font-size: 13px;
+  font-size: 14px;
   padding-left: 10px;
   border-radius: 0;
 }

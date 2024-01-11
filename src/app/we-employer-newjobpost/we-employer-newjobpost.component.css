@@ -104,12 +104,12 @@
 }
 .option-container{
   width: 100%;
-  border: 0.5px solid black;
+  border: 0.8px solid black;
   float: left;
   padding-top: 15px;
   padding-left: 15px;
   padding-bottom: 15px;
-  border-radius: 6px;
+  border-radius: 0;
   margin-top: 10px;
 }
 .option-content{
@@ -150,10 +150,10 @@
   width: 100%;
   height: 37px;
   margin-top: 5px;
-  border-radius: 4px;
-  border: 0.5px solid black;
-  font-size: 12px;
-  font-weight: 300;
+  border-radius: 0;
+  border: 0.8px solid black;
+  font-size: 14px;
+  font-weight: 400;
   padding-left: 10px;
 }
 .input-job-title:focus{
@@ -176,9 +176,8 @@
   margin-top: 3px;
 }
 ::placeholder{
-  font-size: 12px;
-  font-weight: 300;
-  color: #505050;
+  font-size: 14px;
+  font-weight: 400;
 }
 .salary-con{
   margin-top: 15px;
@@ -195,7 +194,7 @@
   align-items: center;
 }
 .to{
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: #505050;
   margin-right: 15px;
@@ -205,10 +204,10 @@
 .input-min-salary{
   width: 30%;
   height: 40px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  border-radius: 4px;
-  border: 0.542px solid #000;
+  border-radius: 0;
+  border: 0.8px solid #000;
   padding-left: 10px;
 }
 .input-min-salary:focus{
@@ -217,12 +216,12 @@
 .input-max-salary{
   width: 30%;
   height: 40px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin-right: 20px;
   padding-left: 10px;
-  border: 0.542px solid #000;
-  border-radius: 4px;
+  border: 0.8px solid #000;
+  border-radius: 0;
 }
 .input-max-salary:focus{
   outline: none;
@@ -230,13 +229,13 @@
 .period{
   width: 25%;
   height: 40px;
-  border: 0.542px solid #000;
-  border-radius: 4px;
+  border: 0.8px solid #000;
+  border-radius: 0;
   color: black;
   background-color: white;
   padding-left: 10px;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
 }
 .period:focus{
   outline: none;
@@ -250,14 +249,14 @@
 .time-period{
   width: 35%;
   height: 40px;
-  border: 0.542px solid #000;
-  border-radius: 4px;
+  border: 0.8px solid #000;
+  border-radius: 0;
   color: black;
   background-color: white;
   margin-top: 5px;
   padding-left: 10px;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
 }
 .time-period:focus{
   outline:none;
@@ -274,8 +273,8 @@
   padding-top: 13px;
   padding-left: 10px;
   margin-top: 5px;
-  border: 0.5px solid #000;
-  border-radius: 6px;
+  border: 0.8px solid #000;
+  border-radius: 0;
   font-size: 14px;
 }
 .input-textarea:focus{
