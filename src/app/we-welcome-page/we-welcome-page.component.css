@@ -1,26 +1,30 @@
 .we-container{
   width:100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .we-center{
-  width:70%;
+  width: 70%;
   margin-left:auto;
   margin-right:auto;
-  margin-top: 115px;
+}
+.designs-con{
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem
 }
 .square-con{
   height: 50px;
   width:50px;
   background-color: blue;
-  display: inline-block;
-  margin-right: 3px;
 }
 .circle-con{
   height: 50px;
   width:50px;
   background-color: blue;
   border-radius: 30px;
-  display: inline-block;
-  margin-right: 3px;
 }
 .triangle-con{
   width: 0;
@@ -29,34 +33,34 @@
   border-right: 25px solid transparent;
   border-bottom: 50px solid blue;
   rotate: 90deg;
-  display: inline-block;
 }
 .we-text-con{
   margin-top:50px;
 }
 .we-textx{
   font-size: 25px;
-  font-family: Lexend;
   font-weight: 500;
+  text-align: center;
 }
 .we-texty{
   font-size: 25px;
-  font-family: Lexend;
   font-weight: 300;
+  text-align: center;
 }
 .go-button-con{
   margin-top:50px;
   text-align: center;
 }
 .go-button{
-  padding-top: 4px;
-  width: 70px;
-  height: 30px;
-  font-size: 16px;
-  font-family: Lexend;
-  color: white;
-  background-color: black;
-  display: inline-block;
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  min-width: 75px;
 }
 @media screen and (min-width: 600px){
   .we-texty{

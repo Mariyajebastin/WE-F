@@ -21,8 +21,9 @@
   margin-top:5px;
   padding-left:10px;
   font-size:12px;
-  border: 0.5px solid #000;
+  border: 0.8px solid #000;
   border-radius: 0;
+  background-color: #fff;
 }
 @media screen and (min-width: 600px){
 }

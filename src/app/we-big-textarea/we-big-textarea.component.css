@@ -14,8 +14,9 @@
   width:100%;
   margin-top:5px;
   resize:none;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 0;
 }
 .edit-icon{
   display: inline-block;

@@ -3,7 +3,7 @@
   padding-top: 55px;
 }
 .emp-pe-ds-center{
-  width:70%;
+  width: 90%;
   margin-right: auto;
   margin-left:auto;
   margin-top:40px;
@@ -16,16 +16,17 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 .dropdown-total-con{
-
+  display: flex;
+  align-items: center;
 }
 .emp-pe-ds-dropdown-con{
   width:90px;
   height: 25px;
   background-color: #D9D9D9;
   display: block;
-  float: left;
 }
 .emp-pe-ds-dropdown{
   position: relative;
@@ -35,14 +36,13 @@
   width: 20px;
   display: inline-block;
   margin-left: 8px;
-  padding-top: 4px;
+  padding-top: 2px;
 }
 .fa-building-o{
   font-size: 14px;
 }
 .emp-atag{
   font-size: 12px;
-  font-family: Lexend;
   font-weight: 400;
   color:black;
   display: inline-block;
@@ -52,7 +52,6 @@
   height: 25px;
   background-color: #1400FF;
   display: block;
-  float: left;
 }
 .fa-angle-down{
   font-size: 25px;
@@ -88,11 +87,10 @@
   margin-left: 8px;
   margin-top: 4px;
   display: block;
-  float: left;
 }
 .emp-dp-pic-con{
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   margin-top: 55px;
   border-radius: 40px;
   margin-left: auto;

@@ -64,9 +64,11 @@
   }
   .header-txt{
     font-size: 40px;
-    font-family: Lexend;
     color: #1400FF;
     font-weight: 900;
+  }
+  .header-center{
+    width: 80%;
   }
   .emp-tag{
     font-size:15px;

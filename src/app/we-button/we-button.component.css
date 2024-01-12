@@ -4,6 +4,8 @@
   border: none;
   border-radius: 0;
   font-size: 14px;
+  font-weight: 600;
   color: #fff;
   cursor: pointer;
+  min-width: 75px;
 }

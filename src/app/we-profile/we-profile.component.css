@@ -1,17 +1,18 @@
 .full-con{
   width:100%;
-  height: 310px;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .center-con{
-  width:70%;
-  margin-right: auto;
-  margin-left:auto;
-  margin-top:100px;
+  width: 70%;
+  margin: 0 auto;
 }
 .profile-img-con{
-  width:115px;
-  height:115px;
-  border-radius: 60px;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -22,26 +23,36 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 50%;
 }
 .profile-tag-con{
   margin-top:30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
-.profile-tag{
-  font-size: 15px;
-  font-family: Lexend;
-  font-weight: 400;
-  border-style: solid;
-  background-color: black;
-  color: white;
-  width: 250px;
-  height: 35px;
-  text-align: center;
-  padding-top: 7px;
-  margin-top: 10px;
-  border-width: 0px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.profile-btn{
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  width: 190px;
+}
+.status-btn{
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  width: 190px;
 }
 .profile-tag:hover{
   background-color:#1400FF;

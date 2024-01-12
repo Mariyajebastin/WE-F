@@ -13,7 +13,9 @@
   padding-left:10px;
   font-size: 14px;
   font-weight: 400;
-  border: 0.5px solid #000;
+  border: 0.8px solid #000;
+  border-radius: 0;
+  background-color: #fff;
 }
 .drop-down:focus{
   outline: 0.3px solid #000;
