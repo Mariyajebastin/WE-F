@@ -2,18 +2,17 @@
   width:100%;
 }
 .top-name{
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--subtext);
 }
 .input-text{
-  font-weight: 400;
   height: 40px;
   width: 100%;
   margin-top: 5px;
-  border: 0.8px solid #000;
-  font-size: 14px;
+  border: 0.8px solid #505050;
+  font-size: var(--inputtext);
   padding-left: 10px;
-  border-radius: 0;
+  border-radius: 40px;
+  color: var(--headingcolor)
 }
 .input-text:focus{
   outline: 0.3px solid #000;

@@ -3,7 +3,7 @@
 }
 .top-name{
   color: #424242;
-  font-size: 14px;
+  font-size: var(--subtext);
   font-weight: 400;
 }
 .drop-down{
@@ -11,10 +11,10 @@
   height: 40px;
   margin-top:5px;
   padding-left:10px;
-  font-size: 14px;
-  font-weight: 400;
-  border: 0.8px solid #000;
-  border-radius: 0;
+  font-size: var(--inputtext);
+  color: var(--headingcolor);
+  border: 0.8px solid #505050;
+  border-radius: 40px;
   background-color: #fff;
 }
 .drop-down:focus{

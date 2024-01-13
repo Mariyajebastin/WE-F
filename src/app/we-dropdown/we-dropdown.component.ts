@@ -6,6 +6,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./we-dropdown.component.css']
 })
 export class WeDropdownComponent {
-
-    @Input () value : any;
+    @Input () name : any;
 }

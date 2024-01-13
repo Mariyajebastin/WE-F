@@ -1,24 +1,18 @@
 .text-area-con{
   width:100%;
-  padding-top: 10px;
 }
 .top-name{
   color: #424242;
-  font-size: 13px;
+  font-size: var(--subtext);
   font-style: normal;
-  font-weight: 300;
   display: inline-block;
-  margin-right: 5px;
 }
 .text-area{
   width:100%;
   margin-top:5px;
-  resize:none;
-  font-size: 14px;
-  font-weight: 400;
-  border-radius: 0;
-}
-.edit-icon{
-  display: inline-block;
+  resize: none;
+  font-size: var(--inputtext);
+  border-radius: 9px;
+  color: var(--headingcolor);
 }
 

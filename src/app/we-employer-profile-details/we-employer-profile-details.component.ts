@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {animate} from "@angular/animations";
 
 @Component({
@@ -12,17 +12,11 @@ export class WeEmployerProfileDetailsComponent {
 
   constructor() {
     this.profileForm = new FormGroup({
-      company_locations : new FormControl(),
+      company_locations : new FormControl('',Validators.required),
       telephone_no : new FormControl(),
       unit_address : new FormControl(),
       company_breif : new FormControl(),
       awards_achievements : new FormControl(),
     })
-  }
-
-  doSubmit(){
-    const formData = this.profileForm.value;
-
-    console.log('Form Data',formData);
   }
 }

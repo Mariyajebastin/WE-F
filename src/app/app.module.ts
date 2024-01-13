@@ -39,6 +39,8 @@ import { WeEmployerCreatedjobsComponent } from './we-employer-createdjobs/we-emp
 import { WeEmployerCandidateAppliedComponent } from './we-employer-candidate-applied/we-employer-candidate-applied.component';
 import { WeEmployerAnalyticsComponent } from './we-employer-analytics/we-employer-analytics.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {NgOptimizedImage} from "@angular/common";
+import { WeEmployerJobpostDetailsComponent } from './we-employer-jobpost-details/we-employer-jobpost-details.component';
 
 
 const routes : Routes =[
@@ -62,6 +64,7 @@ const routes : Routes =[
   {path:'employer-profile',component:WeEmployerProfileDetailsComponent},
   {path:'newjob-post',component:WeEmployerNewjobpostComponent},
   {path:'employer-jobpost',component:WeEmployerJobpostComponent},
+  {path:'jobPost-details',component:WeEmployerJobpostDetailsComponent},
   {path:'job-created',component:WeEmployerJobcreatedComponent},
   {path:'created-jobs',component:WeEmployerCreatedjobsComponent},
   {path:'employer-candidate-applied',component:WeEmployerCandidateAppliedComponent},
@@ -104,13 +107,15 @@ const routes : Routes =[
     WeEmployerJobcreatedComponent,
     WeEmployerCreatedjobsComponent,
     WeEmployerCandidateAppliedComponent,
-    WeEmployerAnalyticsComponent
+    WeEmployerAnalyticsComponent,
+    WeEmployerJobpostDetailsComponent
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
