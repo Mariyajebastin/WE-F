@@ -25,4 +25,8 @@ export class WebService {
   postEmployee(data: any) {
     return this.http.post(this.serverIp + "/employee/", data)
   }
+
+  // postSignUp(data: any) {
+  //   return this.http.post(this.serverIp + "/employee/", data)
+  // }
 }

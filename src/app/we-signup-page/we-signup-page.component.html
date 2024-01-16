@@ -8,17 +8,11 @@
         <div class="input-center">
           <div class="text-field-con">
             <div class="text-field">
-              <div class="top-name">First name</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('first_name')" autocomplete="off">
+              <div class="top-name">Nick name</div>
+              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off">
             </div>
           </div>
-          <div class="text-field-con">
-            <div class="text-field">
-              <div class="top-name">Last name</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('last_name')" autocomplete="off">
-            </div>
-          </div>
-        </div>
+
         <div class="input-center">
           <div class="text-field-con">
             <div class="text-field">
@@ -52,6 +46,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </form>
 <app-we-footer></app-we-footer>

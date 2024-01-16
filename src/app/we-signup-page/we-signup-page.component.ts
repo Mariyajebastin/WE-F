@@ -13,14 +13,11 @@ export class WeSignupPageComponent {
 
   constructor() {
     this.signupForm = new FormGroup({
-      first_name : new FormControl('',Validators.required),
-      last_name : new FormControl('',),
-      job_title : new FormControl(''),
+      nick_name : new FormControl('',Validators.required),
       mobile_no : new FormControl('',Validators.required),
-      create_password : new FormControl('',Validators.required),
-      confirm_password : new FormControl('',Validators.required),
-      email_id : new FormControl('',Validators.required),
-      resume : new FormControl('',)
+      profile_image : new FormControl('',Validators.required)
+
+
     })
 
   }
