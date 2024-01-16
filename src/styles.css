@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Oxygen,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: #505050;
+  letter-spacing: 0.48px;
+}
+body{
+  overflow-x:hidden;
+}
+:root{
+  --subtext : 15px;
+  --headingone : 35px;
+  --headingtwo : 22px;
+  --headingthree : 15px;
+  --headingcolor : #000;
+  --inputtext : 16px;
+  --tabletext : 12px;
+}

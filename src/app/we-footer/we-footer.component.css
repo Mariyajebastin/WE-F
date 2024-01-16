@@ -19,11 +19,17 @@
 .footer-header-text{
   font-size: 40px;
   font-weight: 900;
-  color:#1400FF;
+  color: #fff;
+}
+a{
+  text-decoration: none;
 }
 .table{
   width:31%;
   padding-top: 15px;
+}
+.tablez{
+  margin-top: 15px;
 }
 .hd-txt{
   font-size: 14px;
@@ -31,36 +37,35 @@
   color: #fff;
   padding-top: 10px;
 }
-.hd-txtx{
+.heading-b-text{
   font-size: 18px;
   font-weight: 400;
   color: #fff;
   padding-top: 10px;
 }
+.l-tag-con{
+  margin-top: 15px;
+}
 .tag-con{
   padding-top: 5px;
 }
-.tag-type{
+.tag-b-con{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.down-tag-b{
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 500;
   color: #fff;
   display: block;
   line-height: 22px;
 }
-.tag-typex{
+.down-tag{
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
   display: block;
-}
-.tag-typey{
-  font-size: 14px;
-  font-weight: 400;
-  color: #fff;
-  padding-top:15px;
-}
-.tag-typey-con{
-  padding-top: 15px;
+  line-height: 23px;
 }
 .app-con{
   padding-top: 20px;
@@ -88,19 +93,19 @@
   display: inline-block;
   color: #fff;
 }
- a i:hover {
+a i:hover {
    transition: all 0.3s linear;
 }
- .fa-android:hover{
+.fa-android:hover{
    color:#a8e86f;
    cursor: pointer;
    transition: all 0.3s linear;
- }
- .fa-apple:hover{
+}
+.fa-apple:hover{
    color: gray;
    cursor: pointer;
    transition: all 0.3s linear;
- }
+}
 @media screen and (min-width: 600px) {
   .footer-container{
     display: inline-block;
@@ -144,9 +149,19 @@
     width:21%;
     display: block;
     float: left;
+    margin-top: 0;
+  }
+  .tag-b-con {
+    margin-top: 0;
+  }
+  .l-tag-con{
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 900px) {
+  .footer-container{
+    margin-top: 6rem;
+  }
   .footer-con{
     height: 160px;
   }

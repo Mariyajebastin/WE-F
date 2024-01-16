@@ -1,4 +1,5 @@
 
+import {Router} from "@angular/router";
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {WebService} from "../web.service";
@@ -8,19 +9,19 @@ import {WebService} from "../web.service";
   styleUrls: ['./we-employer-jobpost.component.css']
 })
 
-
 export class WeEmployerJobpostComponent {
-  public jobPostForm : FormGroup | any;
+  public jobPostForm: FormGroup | any;
 
-  constructor(private http:WebService) {
+  constructor(private http: WebService, public router : Router) {
     this.jobPostForm = new FormGroup({
-      jobname : new FormControl(),
-      location : new FormControl(),
-      date : new FormControl(),
-      created_by : new FormControl(),
-      purpose : new FormControl()
+      jobname: new FormControl(),
+      location: new FormControl(),
+      date: new FormControl(),
+      created_by: new FormControl(),
+      purpose: new FormControl()
     })
   }
+
   doSubmit() {
     const formData = this.jobPostForm.value;
     console.log("form Data", formData);
@@ -36,8 +37,6 @@ export class WeEmployerJobpostComponent {
     )
   }
 }
-
-
 
 
 

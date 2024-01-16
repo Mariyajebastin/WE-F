@@ -1,16 +1,18 @@
 .detail-con{
   width:100%;
+  padding-top: 55px;
 }
 .detail-center{
-  width:70%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
-  margin-top:75px;
+  margin-top: 28px;
 }
 .profile-pic-con{
-  width:70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 .profile-pic{
   height: 100%;
@@ -19,6 +21,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 50%;
 }
 .profile-details-container{
   display: flex;

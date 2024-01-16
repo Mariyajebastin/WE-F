@@ -40,8 +40,13 @@ import { WeEmployerJobcreatedComponent } from './we-employer-jobcreated/we-emplo
 import { WeEmployerCreatedjobsComponent } from './we-employer-createdjobs/we-employer-createdjobs.component';
 import { WeEmployerCandidateAppliedComponent } from './we-employer-candidate-applied/we-employer-candidate-applied.component';
 import { WeEmployerAnalyticsComponent } from './we-employer-analytics/we-employer-analytics.component';
+
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {NgOptimizedImage} from "@angular/common";
+import { WeEmployerJobpostDetailsComponent } from './we-employer-jobpost-details/we-employer-jobpost-details.component';
+
+
 
 const routes : Routes =[
   {path:'',component:WeIndexPageComponent},
@@ -54,6 +59,7 @@ const routes : Routes =[
   {path:'job-search',component:WeCandidateJobSearchComponent},
   {path:'profile',component:WeProfileComponent},
   {path:'profile-details',component:WeProfileDetailsComponent},
+  {path:'job-status',component:WeCandidateJobStatusComponent},
 
   // Employer portal
   {path: 'employer',component:WeEmployerLoginPageComponent},
@@ -63,6 +69,7 @@ const routes : Routes =[
   {path:'employer-profile',component:WeEmployerProfileDetailsComponent},
   {path:'newjob-post',component:WeEmployerNewjobpostComponent},
   {path:'employer-jobpost',component:WeEmployerJobpostComponent},
+  {path:'jobPost-details',component:WeEmployerJobpostDetailsComponent},
   {path:'job-created',component:WeEmployerJobcreatedComponent},
   {path:'created-jobs',component:WeEmployerCreatedjobsComponent},
   {path:'employer-candidate-applied',component:WeEmployerCandidateAppliedComponent},
@@ -105,17 +112,18 @@ const routes : Routes =[
     WeEmployerJobcreatedComponent,
     WeEmployerCreatedjobsComponent,
     WeEmployerCandidateAppliedComponent,
-    WeEmployerAnalyticsComponent
+    WeEmployerAnalyticsComponent,
+    WeEmployerJobpostDetailsComponent
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+
     HttpClientModule,
     FormsModule,
-
-
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

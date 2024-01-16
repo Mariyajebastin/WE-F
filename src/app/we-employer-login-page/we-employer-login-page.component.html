@@ -9,11 +9,17 @@
         <div class="emp-log-txt">Login</div>
       </div>
       <div class="emp-mail-pass-con">
-        <app-we-textfield name="Email ID" [control]="loginForm.get('email_id')"></app-we-textfield>
-        <app-we-password-field value="Password" [control]="loginForm.get('password')"></app-we-password-field>
+        <div class="text-field">
+          <div class="top-name">Email id</div>
+          <input class="input-text" type="text" autocomplete="off" [formControl]="loginForm.get('email_id')">
+        </div>
+        <div class="text-field">
+          <div class="top-name">Password</div>
+          <input class="input-text" type="password" autocomplete="off" [formControl]="loginForm.get('password')">
+        </div>
       </div>
       <div class="emp-log-button-con">
-        <app-we-button value="Login" (click)="doLogin()"></app-we-button>
+        <input class="login-btn" type="button" value="Login" (click)="doLogin()">
       </div>
       <div class="emp-lg-txt-con">
         <div class="emp-lg-text">Create Employer account?</div>

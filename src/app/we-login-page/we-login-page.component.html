@@ -6,11 +6,17 @@
         Login
       </div>
       <div class="mail-con">
-        <app-we-textfield name="Email ID" [control]="loginForm.get('email_id')"></app-we-textfield>
-        <app-we-password-field value="Password" [control]="loginForm.get('password')"></app-we-password-field>
+        <div class="text-field">
+          <div class="top-name">Email id</div>
+          <input class="input-text" type="text" autocomplete="off" [formControl]="loginForm.get('email_id')">
+        </div>
+        <div class="password-field">
+          <div class="top-name">Password</div>
+          <input class="input-text" type="password" autocomplete="off" [formControl]="loginForm.get('password')">
+        </div>
       </div>
       <div class="login-button-con">
-        <app-we-button value="Login" (click)="doLogin()"></app-we-button>
+        <input class="login-btn" value="Login" type="button" (click)="doLogin()">
       </div>
       <div class="lg-text-con">
         <div class="lg-text">No candidate account?</div>

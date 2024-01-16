@@ -2,7 +2,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 28px;
   padding-top: 55px;
 }
 .dropdown-total-con{
@@ -105,10 +105,9 @@
   padding: 15px;
   background-color: white;
 }
-.total-update{
-  font-size: 21px;
-  font-family: Lexend;
-  font-weight: 600;
+.heading{
+  font-size: 15px;
+  font-weight: 500;
 }
 .total-percentage-con{
   margin-top: 5px;
@@ -116,13 +115,11 @@
   align-items: center;
 }
 .total-percentage{
-  font-size: 48px;
-  font-family: Lexend;
+  font-size: 35px;
   font-weight: 400;
 }
 .child-percentage{
-  font-size: 25px;
-  font-family: Lexend;
+  font-size: 22px;
   font-weight: 400;
   color: #5FC83B;
   margin-left: 20px
@@ -133,7 +130,6 @@
 }
 .time-period{
   font-size: 16px;
-  font-family: Lexend;
   font-weight: 400;
 }
 .analytics-table-two{

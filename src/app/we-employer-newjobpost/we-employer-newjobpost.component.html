@@ -1,136 +1,140 @@
 <app-we-header></app-we-header>
-<div class="emp-jobpost-con">
-  <div class="emp-jobpost-center">
-    <div class="dropdown-total-con">
-      <div class="dropdown-icon-con">
-        <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="10" height="6" viewBox="0 0 10 6" fill="none">
-          <path d="M1.1417 0L4.8583 3.7085L8.5749 0L9.7166 1.1417L4.8583 6L0 1.1417L1.1417 0Z" fill="white"/>
-        </svg>
-      </div>
-      <div class="emp-jp-dropdown-con">
-        <div class="dropdown-con">
-          <a class="dropdown" href="">
-            <svg xmlns="http://www.w3.org/2000/svg" class="jobpost-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <g clip-path="url(#clip0_226_1367)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3V2H5V3H7ZM2 4V9.5H10V4H2ZM10 3C10.555 3 11 3.445 11 4V9.5C11 10.055 10.555 10.5 10 10.5H2C1.445 10.5 1 10.055 1 9.5L1.005 4C1.005 3.445 1.445 3 2 3H4V2C4 1.445 4.445 1 5 1H7C7.555 1 8 1.445 8 2V3H10Z" fill="black"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_226_1367">
-                  <rect width="12" height="12" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-            Job post
-          </a>
-          <div class="f-dropdown-content">
+<form [formGroup]="jobForm">
+  <div class="emp-jobpost-con">
+    <div class="emp-jobpost-center">
+      <div class="dropdown-total-con">
+        <div class="dropdown-icon-con">
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="10" height="6" viewBox="0 0 10 6" fill="none">
+            <path d="M1.1417 0L4.8583 3.7085L8.5749 0L9.7166 1.1417L4.8583 6L0 1.1417L1.1417 0Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="emp-jp-dropdown-con">
+          <div class="dropdown-con">
+            <a class="dropdown" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" class="jobpost-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <g clip-path="url(#clip0_226_1367)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3V2H5V3H7ZM2 4V9.5H10V4H2ZM10 3C10.555 3 11 3.445 11 4V9.5C11 10.055 10.555 10.5 10 10.5H2C1.445 10.5 1 10.055 1 9.5L1.005 4C1.005 3.445 1.445 3 2 3H4V2C4 1.445 4.445 1 5 1H7C7.555 1 8 1.445 8 2V3H10Z" fill="black"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_226_1367">
+                    <rect width="12" height="12" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              Job post
+            </a>
+            <div class="f-dropdown-content">
+              <div class="dropdown-content">
+                <div class="option-con">
+                  <a class="dropdown" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="emp-icon" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                      <path d="M5.5 2.22222V0H0V10H11V2.22222H5.5ZM4.4 8.88889H1.1V7.77778H4.4V8.88889ZM4.4 6.66667H1.1V5.55556H4.4V6.66667ZM4.4 4.44444H1.1V3.33333H4.4V4.44444ZM4.4 2.22222H1.1V1.11111H4.4V2.22222ZM9.9 8.88889H5.5V3.33333H9.9V8.88889ZM8.8 4.44444H6.6V5.55556H8.8V4.44444ZM8.8 6.66667H6.6V7.77778H8.8V6.66667Z" fill="black"/>
+                    </svg>
+                    Employer
+                  </a>
+                </div>
+              </div>
+            </div>
             <div class="dropdown-content">
               <div class="option-con">
                 <a class="dropdown" href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="emp-icon" width="11" height="10" viewBox="0 0 11 10" fill="none">
-                    <path d="M5.5 2.22222V0H0V10H11V2.22222H5.5ZM4.4 8.88889H1.1V7.77778H4.4V8.88889ZM4.4 6.66667H1.1V5.55556H4.4V6.66667ZM4.4 4.44444H1.1V3.33333H4.4V4.44444ZM4.4 2.22222H1.1V1.11111H4.4V2.22222ZM9.9 8.88889H5.5V3.33333H9.9V8.88889ZM8.8 4.44444H6.6V5.55556H8.8V4.44444ZM8.8 6.66667H6.6V7.77778H8.8V6.66667Z" fill="black"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="analytics-icon"width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M16 0H2C0.89 0 0 0.9 0 2V16C0 17.1 0.89 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.11 0 16 0ZM16 16H2V4H16V16ZM14 9H4V7H14V9ZM10 13H4V11H10V13Z" fill="black"/>
                   </svg>
-                  Employer
+                  Analytics
+                </a>
+              </div>
+            </div>
+            <div class="dropdown-content">
+              <div class="option-con">
+                <a class="dropdown" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="candidate-icon" width="26" height="17" viewBox="0 0 26 17" fill="none">
+                    <path d="M18.3182 9.71428C16.9 9.71428 14.69 10.1271 13 10.9286C11.31 10.115 9.1 9.71428 7.68182 9.71428C5.11727 9.71428 0 11.0257 0 13.6607V17H26V13.6607C26 11.0257 20.8827 9.71428 18.3182 9.71428ZM13.5909 15.1786H1.77273V13.6607C1.77273 13.005 4.79818 11.5357 7.68182 11.5357C10.5655 11.5357 13.5909 13.005 13.5909 13.6607V15.1786ZM24.2273 15.1786H15.3636V13.6607C15.3636 13.1021 15.1273 12.6164 14.7491 12.1793C15.7891 11.815 17.0655 11.5357 18.3182 11.5357C21.2018 11.5357 24.2273 13.005 24.2273 13.6607V15.1786ZM7.68182 8.5C9.96273 8.5 11.8182 6.59357 11.8182 4.25C11.8182 1.90643 9.96273 0 7.68182 0C5.40091 0 3.54545 1.90643 3.54545 4.25C3.54545 6.59357 5.40091 8.5 7.68182 8.5ZM7.68182 1.82143C8.98182 1.82143 10.0455 2.91429 10.0455 4.25C10.0455 5.58571 8.98182 6.67857 7.68182 6.67857C6.38182 6.67857 5.31818 5.58571 5.31818 4.25C5.31818 2.91429 6.38182 1.82143 7.68182 1.82143ZM18.3182 8.5C20.5991 8.5 22.4545 6.59357 22.4545 4.25C22.4545 1.90643 20.5991 0 18.3182 0C16.0373 0 14.1818 1.90643 14.1818 4.25C14.1818 6.59357 16.0373 8.5 18.3182 8.5ZM18.3182 1.82143C19.6182 1.82143 20.6818 2.91429 20.6818 4.25C20.6818 5.58571 19.6182 6.67857 18.3182 6.67857C17.0182 6.67857 15.9545 5.58571 15.9545 4.25C15.9545 2.91429 17.0182 1.82143 18.3182 1.82143Z" fill="black"/>
+                  </svg>
+                  Candidate
                 </a>
               </div>
             </div>
           </div>
-          <div class="dropdown-content">
-            <div class="option-con">
-              <a class="dropdown" href="">
-                <svg xmlns="http://www.w3.org/2000/svg" class="analytics-icon"width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M16 0H2C0.89 0 0 0.9 0 2V16C0 17.1 0.89 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.11 0 16 0ZM16 16H2V4H16V16ZM14 9H4V7H14V9ZM10 13H4V11H10V13Z" fill="black"/>
-                </svg>
-                Analytics
-              </a>
-            </div>
-          </div>
-          <div class="dropdown-content">
-            <div class="option-con">
-              <a class="dropdown" href="">
-                <svg xmlns="http://www.w3.org/2000/svg" class="candidate-icon" width="26" height="17" viewBox="0 0 26 17" fill="none">
-                  <path d="M18.3182 9.71428C16.9 9.71428 14.69 10.1271 13 10.9286C11.31 10.115 9.1 9.71428 7.68182 9.71428C5.11727 9.71428 0 11.0257 0 13.6607V17H26V13.6607C26 11.0257 20.8827 9.71428 18.3182 9.71428ZM13.5909 15.1786H1.77273V13.6607C1.77273 13.005 4.79818 11.5357 7.68182 11.5357C10.5655 11.5357 13.5909 13.005 13.5909 13.6607V15.1786ZM24.2273 15.1786H15.3636V13.6607C15.3636 13.1021 15.1273 12.6164 14.7491 12.1793C15.7891 11.815 17.0655 11.5357 18.3182 11.5357C21.2018 11.5357 24.2273 13.005 24.2273 13.6607V15.1786ZM7.68182 8.5C9.96273 8.5 11.8182 6.59357 11.8182 4.25C11.8182 1.90643 9.96273 0 7.68182 0C5.40091 0 3.54545 1.90643 3.54545 4.25C3.54545 6.59357 5.40091 8.5 7.68182 8.5ZM7.68182 1.82143C8.98182 1.82143 10.0455 2.91429 10.0455 4.25C10.0455 5.58571 8.98182 6.67857 7.68182 6.67857C6.38182 6.67857 5.31818 5.58571 5.31818 4.25C5.31818 2.91429 6.38182 1.82143 7.68182 1.82143ZM18.3182 8.5C20.5991 8.5 22.4545 6.59357 22.4545 4.25C22.4545 1.90643 20.5991 0 18.3182 0C16.0373 0 14.1818 1.90643 14.1818 4.25C14.1818 6.59357 16.0373 8.5 18.3182 8.5ZM18.3182 1.82143C19.6182 1.82143 20.6818 2.91429 20.6818 4.25C20.6818 5.58571 19.6182 6.67857 18.3182 6.67857C17.0182 6.67857 15.9545 5.58571 15.9545 4.25C15.9545 2.91429 17.0182 1.82143 18.3182 1.82143Z" fill="black"/>
-                </svg>
-                Candidate
-              </a>
-            </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="create-txt">
+          Create a job post
+        </div>
+        <div class="child-create-txt">
+          How would you like to post your job?
+        </div>
+      </div>
+      <div class="option-container">
+        <div class="option-content">
+          <input class="select-btn" type="radio" name="select-btn">
+          <div class="select-content">
+            Use a previous job as a template
           </div>
         </div>
-      </div>
-    </div>
-    <div class="text-container">
-      <div class="create-txt">
-        Create a job post
-      </div>
-      <div class="child-create-txt">
-        How would you like to post your job?
-      </div>
-    </div>
-    <div class="option-container">
-      <div class="option-content">
-        <input class="select-btn" type="radio">
-        <div class="select-content">
-          Use a previous job as a template
+        <div class="child-select-content">
+          Copy a past job post and edit as needed.
         </div>
       </div>
-      <div class="child-select-content">
-        Copy a past job post and edit as needed.
-      </div>
-    </div>
-    <div class="option-container">
-      <div class="option-content">
-        <input class="select-btn" type="radio">
-        <div class="select-content">
-          Start with a new post
+      <div class="option-container">
+        <div class="option-content">
+          <input class="select-btn" type="radio" name="select-btn">
+          <div class="select-content">
+            Start with a new post
+          </div>
+        </div>
+        <div class="child-select-content">
+          Use our posting tool to create your job.
         </div>
       </div>
-      <div class="child-select-content">
-        Use our posting tool to create your job.
-      </div>
-    </div>
-    <div class="emp-njb-child-container">
-      <div class="job-title-con">
-        <div class="job-title">
-          Job Title
+      <div class="emp-njb-child-container">
+        <div class="job-title-con">
+          <div class="job-title">
+            Job Title
+          </div>
+          <input class="input-job-title" type="text" placeholder="Add short, descriptive job title" [formControl]="jobForm.get('job_title')">
         </div>
-        <input class="input-job-title" type="text" placeholder="Add short, descriptive job title">
-      </div>
-      <div class="job-location-con">
-        <div class="job-location">
-          Job Location
+        <div class="job-location-con">
+          <div class="job-location">
+            Job Location
+          </div>
+          <div class="child-job-location">
+            Adding a specific address helps you reach near by candidates
+          </div>
+          <textarea rows="5" cols="5" class="input-textarea" placeholder="Add an address" [formControl]="jobForm.get('job_location')"></textarea>
         </div>
-        <div class="child-job-location">
-          Adding a specific address helps you reach near by candidates
-        </div>
-        <textarea rows="5" cols="5" class="input-job-location" placeholder="Add an address"></textarea>
-      </div>
-      <div class="salary-con">
-        <div class="salary-range">Salary Range (Optional)</div>
-        <div class="salary-range-con">
-          <input type="text" class="input-min-salary" placeholder="₹Minimum">
-          <div class="to">TO</div>
-          <input type="text" class="input-max-salary" placeholder="₹Maximum">
-          <select  class="period">
-            <option value="Per Year">Per Year</option>
-            <option value="Per Month">Per Month</option>
-            <option value="Per Hour">Per Hour</option>
+        <div class="salary-con">
+          <div class="salary-range">Salary Range (Optional)</div>
+          <div class="salary-range-con">
+            <input type="text" class="input-min-salary" placeholder="₹Minimum" [formControl]="jobForm.get('min_salary')">
+            <div class="to">TO</div>
+            <input type="text" class="input-max-salary" placeholder="₹Maximum" [formControl]="jobForm.get('max_salary')">
+            <select  class="period">
+              <option value="Per Year">Per Year</option>
+              <option value="Per Month">Per Month</option>
+              <option value="Per Hour">Per Hour</option>
+            </select>
+          </div>
+          <div class="job-type">
+            Job Type
+          </div>
+          <select class="time-period">
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
           </select>
+          <div class="job-description">
+            Job Description
+          </div>
+          <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('job_description')" placeholder="Describe the responsibilities and preferred skills for this job"></textarea>
+          <div class="company-profile">Company Profile</div>
+          <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('company_profile')" placeholder="Write about your company founding idea, established year, achievements, employees..."></textarea>
         </div>
-        <div class="job-type">
-          Job Type
+        <div class="btn-con">
+          <input class="submit-button" type="button" value="Post" (click)="doPost()">
         </div>
-        <select class="time-period">
-          <option value="Full Time">Full Time</option>
-          <option value="Part Time">Part Time</option>
-        </select>
-        <div class="job-description">
-          Job Description
-        </div>
-        <textarea class="job-des" rows="5" cols="5" placeholder="Describe the responsibilities and preferred skills for this job"></textarea>
-        <div class="company-profile">Company Profile</div>
-        <textarea class="compy-profile" rows="5" cols="5" placeholder="Write about your company founding idea, established year, achievements, employees..."></textarea>
       </div>
-      <input class="submit-button" type="button" value="Submit">
     </div>
   </div>
-</div>
+</form>
 <app-we-footer></app-we-footer>

@@ -6,31 +6,62 @@
       <div class="emp-txt-center">
         <div class="text-field-con">
           <div class="text-field-align">
-            <app-we-textfield name="Company Name" [control]="signupForm.get('company_name')"></app-we-textfield>
+            <div class="text-field">
+              <div class="top-name">Company Name</div>
+              <input class="input-text" type="text" autocomplete="off" [formControl]="signupForm.get('company_name')">
+            </div>
           </div>
           <div class="text-field-align">
-            <app-we-textfield name="GST or Pan Number" [control]="signupForm.get('gst_or_pan_number')"></app-we-textfield>
+            <div class="text-field">
+              <div class="top-name">GST or Pan Number</div>
+              <input class="input-text" type="text" autocomplete="off" [formControl]="signupForm.get('gst_or_pan_number')">
+            </div>
           </div>
         </div>
         <div class="text-field-con">
           <div class="text-field-align">
-            <app-we-textfield name="Industry type" [control]="signupForm.get('industry_type')"></app-we-textfield>
+            <div class="text-field">
+              <div class="top-name">Industry type</div>
+              <input class="input-text" type="text" autocomplete="off" [formControl]="signupForm.get('industry_type')">
+            </div>
           </div>
           <div class="text-field-align">
-            <app-we-dropdown value="ISO Register"></app-we-dropdown>
+            <div class="drop-down-con">
+              <div class="top-name">ISO Resister</div>
+              <select name="we" class="drop-down">
+                <option>None</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="text-field-con">
           <div class="text-field-align">
-            <app-we-textfield name="Email ID" [control]="signupForm.get('email_id')"></app-we-textfield>
+            <div class="text-field">
+              <div class="top-name">Email id</div>
+              <input class="input-text" type="text" autocomplete="off" [formControl]="signupForm.get('email_id')">
+            </div>
           </div>
           <div class="text-field-align">
-            <app-we-textfield name="Telephone No" [control]="signupForm.get('telephone_no')"></app-we-textfield>
+            <div class="text-field">
+              <div class="top-name">Telephone No</div>
+              <input class="input-text" type="text" autocomplete="off" [formControl]="signupForm.get('telephone_no')">
+            </div>
           </div>
         </div>
-        <app-we-textarea value="Registered Address" [control]="signupForm.get('registered_address')"></app-we-textarea>
-        <app-we-textarea value="Unit Address" [control]="signupForm.get('unit_address')"></app-we-textarea>
-        <app-we-textarea value="Company Breif" [control]="signupForm.get('company_breif')"></app-we-textarea>
+        <div class="text-area-con">
+          <div class="top-name">Registered Address</div>
+          <textarea cols="5" rows="5" class="text-area" [formControl]="signupForm.get('registered_address')"></textarea>
+        </div>
+        <div class="text-area-con">
+          <div class="top-name">Unit Address</div>
+          <textarea cols="5" rows="5" class="text-area" [formControl]="signupForm.get('unit_address')"></textarea>
+        </div>
+        <div class="text-area-con">
+          <div class="top-name">Company Breif</div>
+          <textarea cols="5" rows="5" class="text-area" [formControl]="signupForm.get('company_breif')"></textarea>
+        </div>
         <div class="btn-con">
           <app-we-button value="Submit" (click)="doSubmit()"></app-we-button>
         </div>

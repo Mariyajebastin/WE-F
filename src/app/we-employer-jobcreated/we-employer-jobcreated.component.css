@@ -15,14 +15,12 @@
 }
 .success-msg{
   font-size: 24px;
-  font-family: Lexend;
   font-weight: 500;
   color: #4CB528;
   width: 290px;
 }
 .job-role{
-  font-size: 15px;
-  font-family: Lexend;
+  font-size: 14px;
   font-weight: 400;
   margin-top: 10px;
 }
@@ -30,14 +28,13 @@
   margin-top: 40px;
 }
 .submit-btn{
-  font-size: 13px;
-  font-family: Lexend;
-  font-weight: 400;
-  color: white;
-  width: 120px;
-  height: 35px;
-  background-color: black;
-  border-style: none;
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
   cursor: pointer;
 }
 @media only screen and (min-width:600px) {
