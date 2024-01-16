@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+
 import { AppComponent } from './app.component';
 import { WeTextfieldComponent } from './we-textfield/we-textfield.component';
 import { WeDropdownComponent } from './we-dropdown/we-dropdown.component';
@@ -38,8 +40,8 @@ import { WeEmployerJobcreatedComponent } from './we-employer-jobcreated/we-emplo
 import { WeEmployerCreatedjobsComponent } from './we-employer-createdjobs/we-employer-createdjobs.component';
 import { WeEmployerCandidateAppliedComponent } from './we-employer-candidate-applied/we-employer-candidate-applied.component';
 import { WeEmployerAnalyticsComponent } from './we-employer-analytics/we-employer-analytics.component';
-import {ReactiveFormsModule} from "@angular/forms";
-
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const routes : Routes =[
   {path:'',component:WeIndexPageComponent},
@@ -109,7 +111,11 @@ const routes : Routes =[
     BrowserModule,
     RouterOutlet,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
