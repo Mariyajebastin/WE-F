@@ -1,0 +1,57 @@
+.body-container{
+  width: 100%;
+  padding-top: 55px;
+}
+.body-center{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 28px;
+}
+.heading-con h1{
+  font-size: var(--headingtwo);
+  font-weight: 400;
+  color: var(--headingcolor);
+}
+.picture-container{
+  margin-top: 2rem;
+}
+input[type=file]{
+  display: none;
+}
+.take-btn{
+  font-size: var(--subtext);
+  color: #fff;
+  background-color: var(--headingcolor);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 40px;
+  margin-top: 7px;
+}
+.file-img-con{
+  height: 150px;
+  width: 250px;
+  margin-top: 20px;
+}
+.file-img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.btn-con{
+  margin-top: 3rem;
+  text-align: center;
+}
+.next-btn{
+  padding: 6px 17px;
+  background-color: #000;
+  border: none;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}

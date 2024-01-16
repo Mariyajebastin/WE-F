@@ -1,0 +1,125 @@
+.body-container{
+  width: 100%;
+  padding-top: 55px;
+}
+.body-center{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 28px;
+}
+.heading-con h1{
+  font-size: var(--headingtwo);
+  color: var(--headingcolor);
+  font-weight: 400;
+  width: 250px;
+  line-height: 35px;
+}
+.progress-container{
+  margin-top: 1.5rem;
+  height: 40px;
+  width: 100%;
+  background-color: #F2F2F2;
+  border-radius: 40px;
+  margin-bottom: 3rem;
+}
+.progress-bar{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  animation: progressAnimation;
+  animation-duration: 120s;
+  animation-delay: 2s;
+}
+@keyframes progressAnimation {
+  0%{
+    width: 0%;
+    height: 40px;
+    background-color: #5FE16C;
+    border-radius: 40px;
+  }
+  10%{
+    width: 10%;
+    background-color: #5FE16C;
+  }
+  20%{
+    width: 20%;
+    background-color: #5FE16C;
+  }
+  30%{
+    width: 30%;
+    background-color: #5FE16C;
+  }
+  40%{
+    width: 40%;
+    background-color: #5FE16C;
+  }
+  50%{
+    width: 50%;
+    background-color: #5FE16C;
+  }
+  60%{
+    width: 10%;
+    background-color: #5FE16C;
+  }
+  70%{
+    width: 70%;
+    background-color: #5FE16C;
+  }
+  70%{
+    width: 70%;
+    background-color: #5FE16C;
+  }
+  80%{
+    width: 80%;
+    background-color: #5FE16C;
+  }
+  90%{
+    width: 90%;
+    background-color: #5FE16C;
+  }
+  100%{
+    width: 100%;
+    background-color: #5FE16C;
+  }
+}
+.progress-bar p{
+  font-size: 12px;
+  color: #fff;
+  text-wrap: nowrap;
+  margin-left: 20px;
+}
+.btn-con{
+  margin-top: 3rem;
+  text-align: center;
+}
+.next-btn{
+  padding: 6px 17px;
+  background-color: #C9C9C9;
+  border: none;
+  border-radius: 40px;
+  font-size: var(--subtext);
+  cursor: pointer;
+}
+.register-container{
+  margin-top: 2rem;
+}
+.register-container p{
+  font-size: var(--subtext);
+}
+.register-container span{
+  font-size: var(--headingtwo);
+  color: var(--headingcolor);
+  margin-top: 10px;
+  display: block;
+}
+.login-btn{
+  padding: 8px 17px;
+  background-color: var(--headingcolor);
+  border: none;
+  border-radius: 40px;
+  font-size: var(--subtext);
+  color: #fff;
+  cursor: pointer;
+}

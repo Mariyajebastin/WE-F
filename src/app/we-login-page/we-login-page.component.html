@@ -7,20 +7,38 @@
       </div>
       <div class="mail-con">
         <div class="text-field">
-          <div class="top-name">Email id</div>
-          <input class="input-text" type="text" autocomplete="off" [formControl]="loginForm.get('email_id')">
-        </div>
-        <div class="password-field">
-          <div class="top-name">Password</div>
-          <input class="input-text" type="password" autocomplete="off" [formControl]="loginForm.get('password')">
+          <div class="top-name">Enter your Registered Mobile Number</div>
+          <div class="text-field-country">
+            <div class="country-code-con">
+              <select class="country-codes">
+                <option class="country-code" value="India">+91</option>
+                <option class="country-code" value="us">+1</option>
+                <option class="country-code" value="Uk">+44</option>
+              </select>
+            </div>
+            <input class="input-text" type="text" style="padding-left: 70px;" [formControl]="loginForm.get('mobile_no')" autocomplete="off">
+            <a href="/verify" class="lg-text">Forgot your registered mobile number or missing?</a>
+          </div>
         </div>
       </div>
       <div class="login-button-con">
-        <input class="login-btn" value="Login" type="button" (click)="doLogin()">
+        <input class="login-btn" value="Next" type="button" (click)="startTimerFunction()">
       </div>
+      <div class="otp-container">
+        <p class="enter-otp">Please Enter the OTP</p>
+        <div class="otp-con">
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp1, otp2)" #otp1>
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp2, otp3)" #otp2>
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp3, otp4)" #otp3>
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp4, undefined)" #otp4>
+        </div>
+        <p class="seconds">{{seconds}} sec</p>
+        <a href="#" class="resend-otp">Resend OTP</a>
+      </div>
+
       <div class="lg-text-con">
-        <div class="lg-text">No candidate account?</div>
-        <a class="sign-tag" href="/signup" style="text-decoration: none;">Sign up</a>
+        <p class="lg-text">No candidate account?</p>
+        <a class="sign-tag" href="/signup">Sign up</a>
       </div>
     </div>
   </div>
