@@ -1,4 +1,3 @@
-<app-we-header></app-we-header>
 <form [formGroup]="signupForm">
   <div class="sign-con">
     <div class="sign-center">
@@ -23,41 +22,13 @@
         <div class="input-center">
           <div class="text-field-con">
             <div class="text-field">
-              <div class="top-name">Job title</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('job_title')" autocomplete="off">
-            </div>
-          </div>
-          <div class="text-field-con">
-            <div class="text-field">
               <div class="top-name">Mobile No</div>
               <input class="input-text" type="text" [formControl]="signupForm.get('mobile_no')" autocomplete="off">
             </div>
           </div>
         </div>
-        <div class="input-center">
-          <div class="text-field-con">
-            <div class="password-field">
-              <div class="top-name">Create Password</div>
-              <input class="input-text" type="password" [formControl]="signupForm.get('create_password')" autocomplete="off">
-            </div>
-          </div>
-          <div class="text-field-con">
-            <div class="password-field">
-              <div class="top-name">Confirm Password</div>
-              <input class="input-text" type="password" [formControl]="signupForm.get('confirm_password')" autocomplete="off">
-            </div>
-          </div>
-        </div>
-        <div class="input-center">
-          <div class="text-field-con">
-            <div class="text-field">
-              <div class="top-name">Email id</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('email_id')" autocomplete="off">
-            </div>
-          </div>
-        </div>
         <div class="file-upload-con">
-          <p class="upload-text">Upload Resume</p>
+          <p class="upload-text">Upload Profile Image</p>
           <label class="upload-btn" for="file">
             Upload
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 23 23" fill="none">
