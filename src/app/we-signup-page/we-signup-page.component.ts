@@ -8,15 +8,14 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class WeSignupPageComponent {
   public signupForm : FormGroup | any;
-
   selectFile : any;
 
   constructor() {
     this.signupForm = new FormGroup({
       nick_name : new FormControl('',Validators.required),
       mobile_no : new FormControl('',Validators.required),
-      profile_image : new FormControl('',Validators.required)
-
+      profile_image : new FormControl('',Validators.required),
+      resume : new FormControl('',)
 
     })
 

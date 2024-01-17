@@ -77,7 +77,6 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 85%;
   height: 85dvh;
   margin: 0 auto;
   padding-top: 3rem;
@@ -94,7 +93,7 @@ a{
   font-size: var(--headingtwo);
   color: #fff;
   transition: all 0.2s ease-in;
-  padding: 5px 15px;
+  padding: 13px 25px;
 }
 .menu-option:hover{
   color: var(--headingcolor);

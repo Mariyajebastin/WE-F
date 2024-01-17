@@ -7,17 +7,33 @@
       <div class="details-con">
         <div class="input-center">
           <div class="text-field-con">
-            <div class="text-field">
-              <div class="top-name">Nick name</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off">
+<!--            <div class="text-field">-->
+
+<!--              <div class="top-name">Nick name</div>-->
+<!--              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off">-->
+<!--            </div>-->
+<!--          </div>-->
+
+        <div class="input-center">
+
+              <div class="top-name">How we can call you?</div>
+              <input class="input-text" type="text" [formControl]="signupForm.get('first_name')" autocomplete="off">
             </div>
           </div>
 
-        <div class="input-center">
           <div class="text-field-con">
             <div class="text-field">
               <div class="top-name">Mobile No</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('mobile_no')" autocomplete="off">
+              <div class="text-field-country">
+                <div class="country-code-con">
+                  <select class="country-codes">
+                    <option class="country-code" value="India">+91</option>
+                    <option class="country-code" value="us">+1</option>
+                    <option class="country-code" value="Uk">+44</option>
+                  </select>
+                </div>
+                <input class="input-text" type="text" style="padding-left: 70px;" [formControl]="signupForm.get('mobile_no')" autocomplete="off">
+              </div>
             </div>
           </div>
         </div>
@@ -46,7 +62,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </form>
 <app-we-footer></app-we-footer>

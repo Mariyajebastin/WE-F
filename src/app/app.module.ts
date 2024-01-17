@@ -45,6 +45,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {NgOptimizedImage} from "@angular/common";
 import { WeEmployerJobpostDetailsComponent } from './we-employer-jobpost-details/we-employer-jobpost-details.component';
+import { WeVerificationPageComponent } from './we-verification-page/we-verification-page.component';
+import { WeVerifyingPageComponent } from './we-verifying-page/we-verifying-page.component';
 
 
 
@@ -52,6 +54,8 @@ const routes : Routes =[
   {path:'',component:WeIndexPageComponent},
   // Candidate portal
   {path:'login',component:WeLoginPageComponent},
+  {path:'verify',component:WeVerificationPageComponent},
+  {path:'verifying',component:WeVerifyingPageComponent},
   {path:'signup',component:WeSignupPageComponent},
   {path:'welcome',component:WeWelcomePageComponent},
   {path:'applied-jobs',component:WeCandidateJobAppliedComponent},
@@ -113,7 +117,9 @@ const routes : Routes =[
     WeEmployerCreatedjobsComponent,
     WeEmployerCandidateAppliedComponent,
     WeEmployerAnalyticsComponent,
-    WeEmployerJobpostDetailsComponent
+    WeEmployerJobpostDetailsComponent,
+    WeVerificationPageComponent,
+    WeVerifyingPageComponent,
   ],
   imports: [
     BrowserModule,
