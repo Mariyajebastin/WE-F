@@ -7,20 +7,11 @@
       <div class="details-con">
         <div class="input-center">
           <div class="text-field-con">
-<!--            <div class="text-field">-->
-
-<!--              <div class="top-name">Nick name</div>-->
-<!--              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off">-->
-<!--            </div>-->
-<!--          </div>-->
-
-        <div class="input-center">
-
+            <div class="text-field">
               <div class="top-name">How we can call you?</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('first_name')" autocomplete="off">
+              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off">
             </div>
           </div>
-
           <div class="text-field-con">
             <div class="text-field">
               <div class="top-name">Mobile No</div>
@@ -52,7 +43,7 @@
               </defs>
             </svg>
           </label>
-          <input type="file" id="file" (change)="onFileUpload($event)" [formControl]="signupForm.get('resume')">
+          <input type="file" id="file" (change)="onFileUpload($event)" [formControl]="signupForm.get('profile_image')">
         </div>
         <div class="file-img-con" *ngIf="selectFile">
           <img class="file-img" [src]="selectFile">

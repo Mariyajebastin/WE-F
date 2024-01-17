@@ -126,7 +126,6 @@ const routes : Routes =[
     RouterOutlet,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-
     HttpClientModule,
     FormsModule,
     NgOptimizedImage

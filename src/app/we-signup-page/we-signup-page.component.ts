@@ -15,8 +15,6 @@ export class WeSignupPageComponent {
       nick_name : new FormControl('',Validators.required),
       mobile_no : new FormControl('',Validators.required),
       profile_image : new FormControl('',Validators.required),
-      resume : new FormControl('',)
-
     })
 
   }
