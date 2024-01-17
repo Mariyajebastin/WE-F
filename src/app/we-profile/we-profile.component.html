@@ -1,13 +1,100 @@
-<app-we-header></app-we-header>
-<div class="full-con">
-  <div class="center-con">
-    <div class="profile-img-con">
-      <div class="profile-img"></div>
-    </div>
-    <div class="profile-tag-con">
-      <input class="profile-btn" type="button" value="Profile">
-      <input class="status-btn" type="button" value="Job Applied / Status">
+<div class="body-container">
+  <div class="profile-img-con">
+    <img class="profile-img" src="/assets/img/employee%20profile%20img.jpg">
+  </div>
+  <div class="profile">
+    <div class="profile-container">
+      <div class="profile-inner-con">
+        <div class="profile-name-container">
+          <p class="profile-name">Ramesh RS</p>
+          <p class="profile-role">Software Developer</p>
+        </div>
+        <div class="swipe-up-container">
+          <div class="swipe-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <mask id="mask0_527_91" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                <rect x="40" y="40" width="40" height="40" transform="rotate(-180 40 40)" fill="#D9D9D9"/>
+              </mask>
+              <g mask="url(#mask0_527_91)">
+                <path d="M20.3201 14.936L29.7432 24.359L27.9868 26.1153L20.3201 18.4487L12.6535 26.1153L10.8971 24.359L20.3201 14.936Z" fill="#464646"/>
+              </g>
+            </svg>
+            <p>Swipe Up</p>
+          </div>
+        </div>
+        <div class="close-btn-con">
+          <button class="close-btn">&times;</button>
+        </div>
+        <div class="edit-btn-con">
+          <button class="edit-btn">Edit</button>
+        </div>
+        <div class="profile-details-container">
+          <div class="text-field-con">
+            <div class="text-field">
+              <p class="top-name">Name</p>
+              <input type="text" class="input-text">
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <p class="top-name">Designation</p>
+              <input type="text" class="input-text">
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <p class="top-name">Programme</p>
+              <select class="input-text">
+                <option>Under Graduate</option>
+                <option>Post Graduate</option>
+                <option>Diploma</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <p class="top-name">Course</p>
+              <select class="input-text">
+                <option>Information Technology</option>
+                <option>Computer Science</option>
+                <option>B.com</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <p class="top-name">Experience</p>
+              <select class="input-text">
+                <option>0-1 years</option>
+                <option>1-3 years</option>
+                <option>3-5 years</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <p class="top-name">Skills</p>
+              <select class="input-text">
+                <option>python</option>
+                <option>java</option>
+                <option>javaScript</option>
+              </select>
+            </div>
+          </div>
+          <div class="file-upload-con">
+            <label for="file" class="update-btn">
+              Update Resume
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 9" fill="none">
+                <path d="M1.58387 8.84375C1.28968 8.84375 1.0407 8.74186 0.836914 8.53809C0.633138 8.3343 0.53125 8.08532 0.53125 7.79113V6.57655H1.79441V0.84375H7.68914V7.79113C7.68914 8.08532 7.58725 8.3343 7.38348 8.53809C7.1797 8.74186 6.93071 8.84375 6.63652 8.84375H1.58387ZM6.63652 8.21218C6.75582 8.21218 6.85582 8.17183 6.93652 8.09113C7.01722 8.01042 7.05757 7.91042 7.05757 7.79113V1.47532H2.42598V6.57655H6.21547V7.79113C6.21547 7.91042 6.25582 8.01042 6.33652 8.09113C6.41722 8.17183 6.51722 8.21218 6.63652 8.21218ZM2.92801 3.45102V2.81946H6.55554V3.45102H2.92801ZM2.92801 4.6656V4.03403H6.55554V4.6656H2.92801ZM1.58387 8.21218H5.58389V7.20811H1.16282V7.79113C1.16282 7.91042 1.20317 8.01042 1.28387 8.09113C1.36457 8.17183 1.46458 8.21218 1.58387 8.21218ZM1.58387 8.21218H1.16282H5.58389H1.58387Z" fill="white"/>
+              </svg>
+            </label>
+            <input type="file" id="file">
+          </div>
+          <div class="btn-con">
+            <input type="button" class="save-btn" value="Save">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<app-we-footer></app-we-footer>

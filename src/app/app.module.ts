@@ -47,7 +47,8 @@ import {NgOptimizedImage} from "@angular/common";
 import { WeEmployerJobpostDetailsComponent } from './we-employer-jobpost-details/we-employer-jobpost-details.component';
 import { WeVerificationPageComponent } from './we-verification-page/we-verification-page.component';
 import { WeVerifyingPageComponent } from './we-verifying-page/we-verifying-page.component';
-
+import { WeTakePictureComponent } from './we-take-picture/we-take-picture.component';
+import { NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
 
 
 const routes : Routes =[
@@ -57,6 +58,7 @@ const routes : Routes =[
   {path:'verify',component:WeVerificationPageComponent},
   {path:'verifying',component:WeVerifyingPageComponent},
   {path:'signup',component:WeSignupPageComponent},
+  {path:'take-picture',component:WeTakePictureComponent},
   {path:'welcome',component:WeWelcomePageComponent},
   {path:'applied-jobs',component:WeCandidateJobAppliedComponent},
   {path:'job-description',component:WeCandidateJobDescriptionComponent},
@@ -120,6 +122,7 @@ const routes : Routes =[
     WeEmployerJobpostDetailsComponent,
     WeVerificationPageComponent,
     WeVerifyingPageComponent,
+    WeTakePictureComponent,
   ],
   imports: [
     BrowserModule,
@@ -128,7 +131,8 @@ const routes : Routes =[
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

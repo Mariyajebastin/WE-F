@@ -28,29 +28,23 @@
             </div>
           </div>
         </div>
-        <div class="file-upload-con">
-          <p class="upload-text">Upload Profile Image</p>
-          <label class="upload-btn" for="file">
-            Upload
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 23 23" fill="none">
-              <g clip-path="url(#clip0_207_143)">
-                <path d="M11.0833 18.7224C7.01015 18.7224 3.69439 15.4066 3.69439 11.3335C3.69439 7.2604 7.01015 3.94463 11.0833 3.94463C15.1564 3.94463 18.4722 7.2604 18.4722 11.3335C18.4722 15.4066 15.1564 18.7224 11.0833 18.7224ZM11.0833 20.5696C16.1816 20.5696 20.3194 16.4319 20.3194 11.3335C20.3194 6.23519 16.1816 2.09741 11.0833 2.09741C5.98495 2.09741 1.84717 6.23519 1.84717 11.3335C1.84717 16.4319 5.98495 20.5696 11.0833 20.5696ZM10.1597 11.3335V15.028H12.0069V11.3335H14.7777L11.0833 7.63908L7.38883 11.3335H10.1597Z" fill="#201413"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_207_143">
-                  <rect width="22.1667" height="22.1667" fill="white" transform="translate(0 0.25)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </label>
-          <input type="file" id="file" (change)="onFileUpload($event)" [formControl]="signupForm.get('profile_image')">
+        <div class="generate-btn-con">
+          <input class="generate-btn" type="button" value="Generate OTP" (click)="startTimerFunction()">
         </div>
-        <div class="file-img-con" *ngIf="selectFile">
-          <img class="file-img" [src]="selectFile">
+      </div>
+      <div class="otp-container">
+        <p class="enter-otp">Please Enter the OTP</p>
+        <div class="otp-con">
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp1, otp2)" #otp1>
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp2, otp3)" #otp2>
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp3, otp4)" #otp3>
+          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp4, undefined)" #otp4>
         </div>
-        <div class="sg-button-con">
-          <input class="signup-btn" type="button" (click)="doSignup()" value="Signup">
-        </div>
+        <p class="seconds">{{seconds}} sec</p>
+        <a href="#" class="resend-otp">Resend OTP</a>
+      </div>
+      <div class="sg-button-con">
+        <input class="signup-btn" type="button" (click)="doSignup()" value="Signup">
       </div>
     </div>
   </div>
