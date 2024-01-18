@@ -9,24 +9,23 @@
   margin-top: 28px;
 }
 .title{
-  font-size: 24px;
-  font-weight: 500;
+  font-size: var(--headingthree);
   color: #000;
+  font-weight: 700;
 }
 .heading-text{
-  font-size: 15px;
-  font-weight: 500;
+  font-size: var(--headingthree);
   margin-top: 20px;
-  color: #000;
 }
 .sub-text{
-  font-size: 14px;
+  font-size: var(--subtext);
   font-weight: 400;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .date{
-  font-size: 12px;
+  font-size: var(--subtext);
   font-weight: 400;
+  margin-top: 5px;
 }
 .status-container{
   margin-top: 2rem;
@@ -134,5 +133,8 @@ input[type=radio]{
   }
   .status-container{
     padding-left: 0;
+  }
+  .heading-text{
+    font-size: var(--subtext);
   }
 }

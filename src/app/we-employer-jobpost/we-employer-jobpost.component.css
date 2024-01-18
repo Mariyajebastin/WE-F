@@ -19,7 +19,7 @@
   height: 40px;
   width: 100%;
   border-radius: 40px;
-  border: 0.8px solid #505050;
+  border: 1.055px solid #505050;
   padding-left: 35px;
 }
 .input-search:focus{
@@ -51,14 +51,16 @@ thead{
   background-color: #1400FF;
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
 }
 th{
   font-size: var(--subtext);
   color: #fff;
   font-weight: 400;
-  padding: 5px 12px;
+  padding: 8px 12px;
   text-align: left;
-  text-wrap: nowrap;
+  white-space: pre;
 }
 td{
   font-size: var(--tabletext);
@@ -78,4 +80,17 @@ tbody tr:last-child{
   padding: 6px 12px;
   border: none;
   border-radius: 20px;
+}
+.btn-con{
+  margin-top: 1rem;
+  text-align: center;
+}
+.load-more-btn{
+  font-size: var(--subtext);
+  color: #fff;
+  background-color: var(--headingcolor);
+  padding: 8px 17px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
 }

@@ -15,8 +15,24 @@ body{
   --subtext : 15px;
   --headingone : 35px;
   --headingtwo : 22px;
+  /*this is heading four its changed for work purpose*/
   --headingthree : 15px;
+  /*this is heading three its changed for work purpose*/
+  --headingfour : 18px;
   --headingcolor : #000;
   --inputtext : 16px;
   --tabletext : 12px;
+  --smalltext : 13px;
+  --ntext: 14px;
+}
+@media screen and (min-width: 1024px)  {
+ :root{
+   --subtext : 14px;
+   --h1: 32px;
+   --h2 : 24px;
+   --h3 : 18px;
+   --subheading : 15px;
+   --line1 : 20px;
+   --line2 : 18px;
+ }
 }

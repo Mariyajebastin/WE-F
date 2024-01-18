@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-we-employer-jobpost-details',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./we-employer-jobpost-details.component.css']
 })
 export class WeEmployerJobpostDetailsComponent {
-
+  constructor(public router : Router) {
+  }
 }

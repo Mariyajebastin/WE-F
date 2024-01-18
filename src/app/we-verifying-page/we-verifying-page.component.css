@@ -12,7 +12,7 @@
   color: var(--headingcolor);
   font-weight: 400;
   width: 250px;
-  line-height: 35px;
+  line-height: 28px;
 }
 .progress-container{
   margin-top: 1.5rem;
@@ -82,8 +82,7 @@
 }
 .progress-bar p{
   font-size: 12px;
-  color: #fff;
-  text-wrap: nowrap;
+  white-space: pre;
   margin-left: 20px;
 }
 .btn-con{

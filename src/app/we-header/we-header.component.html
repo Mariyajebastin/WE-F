@@ -1,14 +1,26 @@
-<div class="head-con">
+<div class="head-con" xmlns="http://www.w3.org/1999/html">
   <div class="header-center">
     <div class="header-left">
       <a class="header-txt" href="">we.</a>
     </div>
     <div class="header-right">
       <div class="right-center">
-        <a class="emp-tag" href="/employer"style="text-decoration: none;">Employer</a>
-        <a class="bn-tag" href="/login"style="text-decoration: none;">Login</a>
-        <a class="bn-tag" href="/signup"style="text-decoration: none;">Sign up</a>
+        <div class="header-tag">
+          <a class="emp-tag" href="/employer"style="text-decoration: none;">Employer</a>
+          <a class="bn-tag" href="/login"style="text-decoration: none;">Login</a>
+          <a class="bn-tag" href="/signup"style="text-decoration: none;">Signup</a>
+        </div>
       </div>
+      <button class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 14" fill="none">
+          <path d="M0.555603 13.2606V11.594H19.4444V13.2606H0.555603ZM0.555603 7.83323V6.16662H19.4444V7.83323H0.555603ZM0.555603 2.4059V0.739258H19.4444V2.4059H0.555603Z" fill="#505050"/>
+        </svg>
+      </button>
+      <button class="profile-menu">
+        <div class="profile-img-con">
+          <img src="/assets/img/profile%20img.png" class="profile-img">
+        </div>
+      </button>
     </div>
   </div>
 </div>
@@ -58,5 +70,23 @@
       </svg>
       Logout
     </a>
+  </div>
+</div>
+<div class="candidate-menu-container">
+  <div class="menu-header">
+    <div class="menu-header-center">
+      <div class="menu-header-left"><a href="" class="header-txt" style="color: #fff;">we.</a></div>
+      <div class="menu-header-right">
+        <button class="close-btn">&times;</button>
+      </div>
+    </div>
+  </div>
+  <div class="menus-container">
+    <div class="menu-option-container">
+      <a href="/job-search" class="menu">Job Search</a>
+      <a href="/applied-jobs" class="menu">Job Applied</a>
+      <a href="/profile" class="menu">Profile</a>
+    </div>
+    <a href="/profile" class="menu">Logout</a>
   </div>
 </div>

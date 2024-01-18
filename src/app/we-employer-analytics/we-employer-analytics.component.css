@@ -1,9 +1,11 @@
-.emp-analytics-center{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
+.body-container{
+  width: 100%;
   padding-top: 55px;
+}
+.body-center{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 28px;
 }
 .dropdown-total-con{
   display: flex;
@@ -88,9 +90,8 @@
   width: 300px
 }
 .content-text{
-  font-size: 22px;
-  color: #000;
-  font-weight: 400;
+  font-size: var(--headingtwo);
+  color: var(--headingcolor)
 }
 .flex-analytics{
   width: 100%;
@@ -107,7 +108,6 @@
 }
 .heading{
   font-size: 15px;
-  font-weight: 500;
 }
 .total-percentage-con{
   margin-top: 5px;
@@ -129,7 +129,7 @@
   height: 14px;
 }
 .time-period{
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 .analytics-table-two{

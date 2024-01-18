@@ -68,10 +68,10 @@
   text-align: center;
 }
 .search-btn{
-  padding: 6px 17px;
+  padding: 8px 17px;
   background-color: #000;
   border: none;
-  border-radius: 0;
+  border-radius: 40px;
   font-size: 14px;
   font-weight: 600;
   color: #fff;

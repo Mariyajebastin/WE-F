@@ -1,12 +1,11 @@
-.job-dn-con{
+.body-container{
   width:100%;
   padding-top: 55px;
 }
-.job-dn-center{
+.body-center{
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
+  margin: 0 auto;
+  padding-top: 28px;
 }
 .company-c-feed-con{
   width:100%;
@@ -40,7 +39,7 @@
 .dev-content{
   font-size: 14px;
   font-weight: 400;
-  margin-left:40px;
+  margin-left: 40px;
   margin-top:5px;
 }
 .apply-button{
@@ -60,7 +59,6 @@
 }
 .para-con{
   width:82%;
-  margin-left: 40px;
   margin-top: 30px;
 }
 .topic{
@@ -111,6 +109,7 @@
 .similar-con{
   width:100%;
   margin-top:20px;
+  margin-bottom: 2rem;
 }
 .similar-center{
   display: flex;
@@ -133,14 +132,14 @@
 .box-con-center{
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.5rem;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   margin-top: 20px;
   scrollbar-width: none;
   padding: 0 10px;
-  height: 150px;
+  height: 130px;
 }
 .box-con-center::-webkit-scrollbar{
   display: none;
@@ -150,37 +149,32 @@
   height: 105px;
   box-shadow: rgba(149, 157, 165, 0.4) 0px 6px 24px;
   flex-shrink: 0;
+  padding: 10px;
 }
-.c-name{
-  font-size: 13px;
-  font-weight: 400;
-  margin-left:10px;
-  margin-top:10px;
+.sub-text{
+  font-size: var(--smalltext);
+  margin-top: 5px;
 }
-.dev-detail{
-  font-size: 12px;
-  font-weight: 300;
-  margin-left:10px;
-  margin-top:5px;
-}
-.salary-detail{
-  font-size: 12px;
-  font-weight: 300;
-  margin-left:10px;
+.sub-text:nth-child(1){
+  margin-top: 0;
 }
 @media screen and (min-width: 640px) {
-  .down-center{
-    width: 59%;
-  }
-  .similar-center{
-    width: 59%;
-  }
+
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 70%;
+  }
   .down-center{
-    width: 63%;
+    width: 70%;
   }
   .similar-center{
     width: 70%;
+  }
+  .com-name{
+    font-size: var(--ntext);
+  }
+  .para{
+    line-height: var(--line2);
   }
 }

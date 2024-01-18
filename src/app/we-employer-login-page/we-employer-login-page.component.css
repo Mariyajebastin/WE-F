@@ -22,9 +22,9 @@
   margin-top: 40px;
 }
 .emp-log-txt{
-  font-size: 25px;
+  font-size: var(--headingtwo);
   font-weight: 400;
-  color: #000;
+  color: var(--headingcolor);
 }
 .emp-mail-pass-con{
   margin-top:20px;
@@ -41,10 +41,11 @@
   margin-top:40px;
   text-align: center;
 }
+a{
+  text-decoration: none;
+}
 .emp-lg-text{
-  font-size: 14px;
-  font-weight: 300;
-  width:180px;
+  font-size: 13px;
   display: inline-block;
 }
 .emp-sign-tag{
@@ -56,29 +57,28 @@
   width:100%;
 }
 .top-name{
-  font-size: 14px;
-  font-weight: 300;
+  font-size: var(--subtext);
 }
 .input-text{
   font-weight: 400;
   height: 40px;
   width: 100%;
   margin-top: 5px;
-  border: 0.8px solid #000;
-  font-size: 14px;
+  border: 1.055px solid #000;
+  font-size: var(--inputtext);
+  color: var(--headingcolor);
   padding-left: 10px;
-  border-radius: 0;
+  border-radius: 40px;
 }
 .input-text:focus{
   outline: 0.3px solid #000;
 }
 .login-btn{
-  padding: 6px 17px;
-  background-color: #000;
+  padding: 8px 17px;
+  background-color: var(--headingcolor);
   border: none;
-  border-radius: 0;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 40px;
+  font-size: var(--subtext);
   color: #fff;
   cursor: pointer;
 }

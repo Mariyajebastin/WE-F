@@ -1,12 +1,11 @@
-.emp-jobpost-con{
+.body-container{
   width: 100%;
   padding-top: 55px;
-  margin-top: 28px;
 }
-.emp-jobpost-center{
+.body-center{
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding-top: 28px;
 }
 .dropdown-total-con{
   display: flex;
@@ -87,7 +86,6 @@
 }
 .text-container{
   width: 100%;
-  margin-top: 50px;
 }
 .create-txt{
   font-size: 24px;
@@ -101,11 +99,9 @@
 }
 .option-container{
   width: 100%;
-  border: 0.8px solid black;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  border-radius: 0;
+  border: 1.055px solid black;
+  padding: 15px;
+  border-radius: 40px;
   margin-top: 1rem;
 }
 .option-content{
@@ -130,7 +126,11 @@
   width: 180px;
   margin-top: 7px;
 }
-.emp-njb-child-container{
+.child-container{
+  width: 100%;
+  display: none;
+}
+.container{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -139,19 +139,18 @@
 .job-title-con{
   margin-top: 1rem;
 }
-.job-title{
+.title{
   font-size: 16px;
-  font-weight: 500;
   color: #000;
 }
 .input-job-title{
   width: 100%;
-  height: 37px;
+  height: 40px;
   margin-top: 5px;
-  border-radius: 0;
-  border: 0.8px solid black;
-  font-size: 14px;
-  font-weight: 400;
+  border-radius: 40px;
+  border: 1.055px solid black;
+  font-size: var(--smalltext);
+  color: var(--headingcolor);
   padding-left: 10px;
 }
 .input-job-title:focus{
@@ -159,11 +158,6 @@
 }
 .job-location-con{
 
-}
-.job-location{
-  font-size: 16px;
-  color: #000;
-  font-weight: 500;
 }
 .child-job-location{
   font-size: 13px;
@@ -179,11 +173,9 @@
 }
 .salary-con{
   width: 100%;
-}
-.salary-range{
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .salary-range-con{
   margin-top: 10px;
@@ -200,10 +192,10 @@
 .input-min-salary{
   width: 30%;
   height: 40px;
-  font-size: 14px;
-  font-weight: 400;
-  border-radius: 0;
-  border: 0.8px solid #000;
+  font-size: var(--smalltext);
+  color: var(--headingcolor);
+  border-radius: 40px;
+  border: 1.055px solid #505050;
   padding-left: 10px;
 }
 .input-min-salary:focus{
@@ -212,11 +204,11 @@
 .input-max-salary{
   width: 30%;
   height: 40px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--smalltext);
+  color: var(--headingcolor);
   padding-left: 10px;
-  border: 0.8px solid #000;
-  border-radius: 0;
+  border: 1.055px solid #505050;
+  border-radius: 40px;
 }
 .input-max-salary:focus{
   outline: none;
@@ -224,43 +216,29 @@
 .period{
   width: 25%;
   height: 40px;
-  border: 0.8px solid #000;
-  border-radius: 0;
-  color: black;
+  border: 1.055px solid #505050;
+  border-radius: 40px;
   background-color: white;
   padding-left: 10px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--smalltext);
+  color: var(--headingcolor);
 }
 .period:focus{
   outline: none;
 }
-.job-type{
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 15px;
-  color: #000;
-}
 .time-period{
-  width: 37%;
+  width: 30%;
   height: 40px;
-  border: 0.8px solid #000;
-  border-radius: 0;
-  color: black;
+  border: 1.055px solid #505050;
+  border-radius: 40px;
+  color: var(--headingcolor);
   background-color: white;
   margin-top: 5px;
   padding-left: 10px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--smalltext);
 }
 .time-period:focus{
   outline:none;
-}
-.job-description{
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
-  margin-top: 1rem;
 }
 .input-textarea{
   width: 100%;
@@ -268,39 +246,105 @@
   padding-top: 13px;
   padding-left: 10px;
   margin-top: 5px;
-  border: 0.8px solid #000;
-  border-radius: 0;
-  font-size: 14px;
+  border: 1.055px solid #505050;
+  border-radius: 10px;
+  font-size: var(--smalltext);
+  color: var(--headingcolor);
 }
 .input-textarea:focus{
   outline: 0.3px solid #000;
 }
-.company-profile{
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
-  margin-top: 1rem;
-}
-.compy-profile{
-  width: 100%;
-  resize: none;
-  padding-top: 13px;
-  padding-left: 10px;
-  margin-top: 5px;
-}
 .btn-con{
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .submit-button{
-  padding: 6px 17px;
-  background-color: #000;
+  padding: 8px 17px;
+  background-color: var(--headingcolor);
   border: none;
-  border-radius: 0;
-  font-size: 14px;
+  border-radius: 40px;
+  font-size: var(--subtext);
   color: #fff;
   cursor: pointer;
-  min-width: 75px;
+}
+.search-con{
+  position: relative;
+  margin-top: 1.5rem;
+}
+.input-search{
+  font-size: var(--inputtext);
+  color: var(--headingcolor);
+  height: 40px;
+  width: 100%;
+  border-radius: 40px;
+  border: 1.055px solid #505050;
+  padding-left: 35px;
+}
+.input-search:focus{
+  outline: 0.3px solid #000;
+}
+.search-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 14px;
+  margin-left: 14px;
+}
+.job-table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1px;
+}
+thead{
+  background-color: #1400FF;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+th{
+  font-size: var(--subtext);
+  color: #fff;
+  font-weight: 400;
+  padding: 8px 12px;
+  text-align: left;
+  white-space: pre;
+}
+td{
+  font-size: var(--tabletext);
+  padding: 8px 12px;
+}
+tbody tr{
+  background-color: #ECECEC;
+  border-bottom: 2px solid transparent;
+}
+tbody tr:last-child{
+  border-bottom: 2px solid transparent;
+}
+.open-btn{
+  font-size: var(--tabletext);
+  color: #fff;
+  background-color: var(--headingcolor);
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+}
+.load-btn-con{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.load-more-btn{
+  font-size: var(--subtext);
+  color: #fff;
+  background-color: var(--headingcolor);
+  padding: 8px 17px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
 }
 @media only screen and (min-width:600px) {
   .head-top {

@@ -64,7 +64,6 @@ const routes : Routes =[
   {path:'job-description',component:WeCandidateJobDescriptionComponent},
   {path:'job-search',component:WeCandidateJobSearchComponent},
   {path:'profile',component:WeProfileComponent},
-  {path:'profile-details',component:WeProfileDetailsComponent},
   {path:'job-status',component:WeCandidateJobStatusComponent},
 
   // Employer portal

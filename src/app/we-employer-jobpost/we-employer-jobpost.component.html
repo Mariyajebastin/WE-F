@@ -2,7 +2,7 @@
 <div class="body-container">
   <div class="body-center">
     <div class="create-btn">
-      <app-we-button value="+ Create New Job"></app-we-button>
+      <app-we-button value="+ Create New Job" (click)="this.router.navigate(['/newjob-post'])"></app-we-button>
     </div>
     <div class="search-con">
       <input class="input-search" type="text" placeholder="Search">
@@ -102,6 +102,9 @@
         </tr>
         </tbody>
       </table>
+    </div>
+    <div class="btn-con">
+      <input type="button" class="load-more-btn" value="Load more">
     </div>
   </div>
 </div>

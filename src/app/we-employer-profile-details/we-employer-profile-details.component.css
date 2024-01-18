@@ -46,3 +46,17 @@
   gap: 1rem;
   margin-top: 3rem;
 }
+.save-btn-con{
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.save-btn{
+  font-size: var(--subtext);
+  color: #fff;
+  background-color: var(--headingcolor);
+  padding: 8px 17px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}

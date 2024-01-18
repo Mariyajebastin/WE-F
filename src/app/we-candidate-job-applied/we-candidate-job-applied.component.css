@@ -14,25 +14,23 @@
   align-items: center;
   justify-content: space-between;
 }
-.job-ad-txt{
-  font-size: 15px;
-  font-weight: 400;
-  color: #000;
-}
-.notification-txt{
-  font-size: 15px;
-  font-weight: 400;
-  display: inline-block;
-  margin-right: 5px;
+.heading-con h1{
+  font-size: var(--headingfour);
+  font-weight: 700;
+  color: var(--headingcolor);
 }
 .fa-bell-o{
   font-size: 15px;
+}
+a{
+  text-decoration: none;
 }
 .notifi-con{
   width:100%;
   background-color: #F2F2F2;
   margin-top: 3px;
-  padding: 10px 15px;
+  padding: 15px;
+  display: block;
 }
 .notifi-con:nth-child(2){
   margin-top: 20px;
@@ -46,20 +44,18 @@
   width:100%;
 }
 .notifi-head-text{
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--subtext);
+  font-weight: 700;
 }
 .notifi-dev-text{
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--subtext);
   padding-top: 5px;
 }
 .date-con{
   margin-top: 5px;
 }
 .date{
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 13px;
 }
 @media screen and (min-width: 600px) {
   .job-ad-center {
@@ -68,13 +64,9 @@
   .job-ad-txt-con{
     margin-left:0px;
   }
-  .notifi-center{
-    width:95%;
-    padding-left:30px;
-  }
 }
-@media screen and (min-width: 900px) {
-  .job-ad-txt-con{
-    margin-left:30px;
+@media screen and (min-width: 1024px) {
+  .title{
+    font-size: var(--h2);
   }
 }

@@ -1,6 +1,6 @@
 .button{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--headingcolor);
   border: none;
   font-size: var(--subtext);
   color: #fff;

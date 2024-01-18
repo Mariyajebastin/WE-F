@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {WebService} from "../web.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-we-employer-newjobpost',
@@ -10,7 +11,7 @@ import {WebService} from "../web.service";
 export class WeEmployerNewjobpostComponent {
   public jobForm : FormGroup | any;
 
-  constructor(private http:WebService) {
+  constructor(private http:WebService, public router : Router) {
     this.jobForm = new FormGroup({
       job_title : new FormControl(),
       job_location : new FormControl(),
