@@ -84,6 +84,7 @@ a{
   }
   .profile-menu p{
     font-size: var(--headingthree);
+    letter-spacing: var(--lspace2);
     color: #fff;
     position: relative;
     z-index: 2;

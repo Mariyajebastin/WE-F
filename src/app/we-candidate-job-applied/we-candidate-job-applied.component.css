@@ -14,7 +14,7 @@
   justify-content: space-between;
 }
 .heading-con{
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .heading-con h1{
   font-size: var(--headingfour);
@@ -34,9 +34,6 @@ a{
   padding: 15px;
   display: block;
 }
-.notifi-con:nth-child(2){
-  margin-top: 20px;
-}
 .notifi-bar-con{
   width:100%;
   background-color: #F2F2F2;
@@ -47,7 +44,6 @@ a{
 }
 .notifi-head-text{
   font-size: var(--subtext);
-  font-weight: 700;
 }
 .notifi-dev-text{
   font-size: var(--subtext);

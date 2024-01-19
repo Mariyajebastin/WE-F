@@ -24,6 +24,8 @@ body{
   --tabletext : 12px;
   --smalltext : 13px;
   --ntext: 14px;
+  --lspace1 : 0.10px;
+  --lspace2 : 0.5px;
 }
 @media screen and (min-width: 1024px)  {
  :root{

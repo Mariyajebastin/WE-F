@@ -170,6 +170,7 @@ input[type=file]::file-selector-button{
   background-color: transparent;
   font-size: var(--subtext);
   text-decoration: underline;
+  cursor: pointer;
 }
 @media screen and (min-width: 600px) {
   .input-center{
@@ -185,6 +186,9 @@ input[type=file]::file-selector-button{
 @media screen and (min-width: 1024px) {
   .sign-center{
     width: 50%;
+  }
+  .sign-text{
+    text-align: center;
   }
 }
 @media screen and (min-width: 1300px) {
