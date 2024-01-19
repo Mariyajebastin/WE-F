@@ -1,29 +1,32 @@
 <form [formGroup]="jobForm">
   <div class="body-container">
     <div class="body-center">
+      <app-we-back-button></app-we-back-button>
       <div class="text-container">
-        <div class="create-txt">
-          Create a job post
+        <div class="heading-con">
+          <h1>Create a job post</h1>
         </div>
-        <div class="child-create-txt">
+        <div class="sub-heading">
           How would you like to post your job?
         </div>
       </div>
-      <div class="option-container">
-        <div class="option-content">
-          <input class="select-btn" type="radio" name="select-btn">
-          <div class="select-content">
-            Use a previous job as a template
+      <div class="option-center">
+        <label class="option-container" for="radio1">
+          <div class="option-content">
+            <input class="select-btn" id="radio1" type="radio" name="select-btn">
+            <p class="sub-text">
+              Use a previous job as a template
+            </p>
           </div>
-        </div>
-      </div>
-      <div class="option-container">
-        <div class="option-content">
-          <input class="select-btn" type="radio" name="select-btn">
-          <div class="select-content">
-            Start with a new post
+        </label>
+        <label class="option-container" for="radio2">
+          <div class="option-content">
+            <input class="select-btn" id="radio2" type="radio" name="select-btn">
+            <p class="sub-text">
+              Start with a new post
+            </p>
           </div>
-        </div>
+        </label>
       </div>
       <div class="child-container">
         <div class="container">

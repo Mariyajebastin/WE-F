@@ -1,0 +1,16 @@
+button{
+  border: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  button{
+    display: none;
+  }
+}

@@ -1,5 +1,6 @@
 <div class="body-container">
   <div class="body-center">
+    <app-we-back-button></app-we-back-button>
     <div class="profile-details">
       <div class="profile-img-con">
         <img class="profile-img" src="/assets/img/emp%20dp%20pic.png" alt="">
@@ -13,29 +14,37 @@
     </div>
     <form [formGroup]="profileForm">
       <div class="profile-details-container">
-        <div class="text-field">
-          <app-we-textfield name="Company Name"></app-we-textfield>
+        <div class="input-center">
+          <div class="text-field">
+            <app-we-textfield name="Company Name"></app-we-textfield>
+          </div>
+          <div class="text-field">
+            <app-we-textfield name="GST or Pan Number"></app-we-textfield>
+          </div>
         </div>
-        <div class="text-field">
-          <app-we-textfield name="GST or Pan Number"></app-we-textfield>
-        </div>
-        <div class="text-field">
-          <app-we-dropdown name="Industry Type"></app-we-dropdown>
-        </div>
-        <div class="text-field">
-          <app-we-textfield name="ISO Register"></app-we-textfield>
-        </div>
-        <div class="text-field">
-          <app-we-dropdown name="No of Employees"></app-we-dropdown>
+       <div class="input-center">
+         <div class="text-field">
+           <app-we-dropdown name="Industry Type"></app-we-dropdown>
+         </div>
+         <div class="text-field">
+           <app-we-textfield name="ISO Register"></app-we-textfield>
+         </div>
+       </div>
+        <div class="input-center">
+          <div class="text-field-con">
+            <app-we-dropdown name="No of Employees"></app-we-dropdown>
+          </div>
         </div>
         <div class="text-field">
           <app-we-textarea value="Company Location"></app-we-textarea>
         </div>
-        <div class="text-field">
-          <app-we-textfield name="Email id"></app-we-textfield>
-        </div>
-        <div class="text-field">
-          <app-we-textfield name="Telephone No"></app-we-textfield>
+        <div class="input-center">
+          <div class="text-field">
+            <app-we-textfield name="Email id"></app-we-textfield>
+          </div>
+          <div class="text-field">
+            <app-we-textfield name="Telephone No"></app-we-textfield>
+          </div>
         </div>
         <div class="text-field">
           <app-we-textarea value="Registered Address"></app-we-textarea>

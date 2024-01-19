@@ -146,12 +146,12 @@ a{
   color: #fff;
   cursor: pointer;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .body-center{
     width:60%;
   }
   .heading-con h1{
-    font-size: var(--h2);
+    font-size: var(--headingtwo);
   }
   .name-text{
     font-weight: 400;

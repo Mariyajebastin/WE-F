@@ -118,3 +118,16 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 25%;
+  }
+  .register-container{
+    margin-top: 1rem;
+  }
+  .heading-con h1{
+    font-size: var(--h3);
+    width: auto;
+  }
+}

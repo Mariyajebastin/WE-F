@@ -67,9 +67,10 @@
     width:85%;
   }
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1024px){
   .we-texty{
     width:100%;
+    font-size: var(--headingtwo);
   }
   .we-center{
     text-align: center;

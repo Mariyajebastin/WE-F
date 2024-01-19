@@ -1,18 +1,20 @@
-.job-ad-con{
+.body-container{
   width:100%;
   padding-top: 55px;
   min-height: 100svh;
 }
-.job-ad-center{
+.body-center{
   width: 90%;
-  margin-right: auto;
-  margin-left:auto;
-  margin-top: 28px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 .job-ad-txt-con{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.heading-con{
+  margin-top: 20px;
 }
 .heading-con h1{
   font-size: var(--headingfour);
@@ -58,7 +60,7 @@ a{
   font-size: 13px;
 }
 @media screen and (min-width: 600px) {
-  .job-ad-center {
+  .body-center {
     width: 70%;
   }
   .job-ad-txt-con{
@@ -67,6 +69,6 @@ a{
 }
 @media screen and (min-width: 1024px) {
   .title{
-    font-size: var(--h2);
+    font-size: var(--headingtwo);
   }
 }

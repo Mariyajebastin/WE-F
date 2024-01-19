@@ -8,6 +8,9 @@
   margin: 0 auto;
   padding-top: 28px;
 }
+.heading-con{
+  margin-top: 20px;
+}
 .heading-con h1{
   font-size: var(--headingtwo);
   font-weight: 400;
@@ -44,4 +47,12 @@ td{
 .icon{
   vertical-align: bottom;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 60%;
+  }
+  .heading-con{
+    margin-top: 0;
+  }
 }

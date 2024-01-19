@@ -49,6 +49,7 @@ import { WeVerificationPageComponent } from './we-verification-page/we-verificat
 import { WeVerifyingPageComponent } from './we-verifying-page/we-verifying-page.component';
 import { WeTakePictureComponent } from './we-take-picture/we-take-picture.component';
 import { NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
+import { WeBackButtonComponent } from './we-back-button/we-back-button.component';
 
 
 const routes : Routes =[
@@ -122,6 +123,7 @@ const routes : Routes =[
     WeVerificationPageComponent,
     WeVerifyingPageComponent,
     WeTakePictureComponent,
+    WeBackButtonComponent,
   ],
   imports: [
     BrowserModule,

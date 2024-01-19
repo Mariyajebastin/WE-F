@@ -1,17 +1,17 @@
-.job-ap-con{
+.body-container{
   width:100%;
   padding-top: 55px;
 }
-.job-ap-center{
+.body-center{
   width: 90%;
-  margin-left:auto;
-  margin-right: auto;
-  margin-top: 28px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 .title{
   font-size: var(--headingthree);
   color: #000;
   font-weight: 700;
+  margin-top: 20px;
 }
 .heading-text{
   font-size: var(--headingthree);
@@ -128,7 +128,7 @@ input[type=radio]{
   }
 }
 @media screen and (min-width: 1024px) {
-  .job-ap-center{
+  .body-center{
     width: 50%;
   }
   .status-container{

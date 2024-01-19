@@ -6,7 +6,7 @@
   font-family: Oxygen,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #505050;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.10px;
 }
 body{
   overflow-x:hidden;
@@ -28,9 +28,9 @@ body{
 @media screen and (min-width: 1024px)  {
  :root{
    --subtext : 14px;
-   --h1: 32px;
-   --h2 : 24px;
-   --h3 : 18px;
+   --headingone: 32px;
+   --headingtwo : 24px;
+   --headingthree: 18px;
    --subheading : 15px;
    --line1 : 20px;
    --line2 : 18px;

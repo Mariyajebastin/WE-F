@@ -5,7 +5,7 @@
 .body-center{
   width: 90%;
   margin: 0 auto;
-  padding-top: 28px;
+  padding-top: 20px;
 }
 .profile-img-con{
   height: 110px;
@@ -36,7 +36,7 @@
   font-weight: 700;
   color: #fff;
   background-color: var(--headingcolor);
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 20px;
   border: none;
 }
@@ -45,6 +45,17 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: 3rem;
+}
+.input-center{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.text-field-con{
+  width: 100%;
+}
+.text-field{
+  width: 100%;
 }
 .save-btn-con{
   margin-top: 2rem;
@@ -59,4 +70,16 @@
   border: none;
   border-radius: 40px;
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 50%;
+    margin-top: 28px;
+  }
+  .text-field-con{
+    width: 49%;
+  }
+  .input-center{
+    flex-direction: row;
+  }
 }

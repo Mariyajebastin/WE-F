@@ -1,12 +1,15 @@
-<div class="job-dn-con">
-  <div class="job-dn-center">
-    <div class="company-c-feed-con">
-      <div class="logo-con">
-        <div class="logo"></div>
-      </div>
-      <div>
-        <p class="name-text">Front End Web Developer</p>
-        <p class="dev-content">Capgemnini Technology Services India Limited , OMR</p>
+<div class="body-container">
+  <div class="body-center">
+    <app-we-back-button></app-we-back-button>
+    <div class="company-feed-con">
+      <div class="company-top">
+        <div class="logo-con">
+          <div class="logo"></div>
+        </div>
+        <div>
+          <p class="name-text">Front End Web Developer</p>
+          <p class="dev-content">Capgemnini Technology Services India Limited , OMR</p>
+        </div>
       </div>
       <div class="menu-btn-con">
         <button class="menu-btn">
@@ -33,6 +36,17 @@
         </div>
         <div class="create-btn-con">
           <button class="edit-btn" (click)="this.router.navigate(['/newjob-post'])">+</button>
+        </div>
+      </div>
+      <div class="drop-down-menu-con">
+        <button class="drop-down-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="43" viewBox="0 0 16 10" fill="none">
+            <path d="M8 5.75L13.75 -7.64949e-08L15.5 1.75L8 9.25L0.499998 1.75L2.25 -5.79176e-07L8 5.75Z" fill="#505050"/>
+          </svg>
+        </button>
+        <div class="menu-option">
+          <a href="#" class="menu">Edit</a>
+          <a href="#" class="menu2">Create New Job</a>
         </div>
       </div>
     </div>

@@ -12,6 +12,9 @@
   font-weight: 400;
   color: var(--headingcolor);
 }
+.top-name{
+  font-size: var(--subtext);
+}
 .picture-container{
   margin-top: 2rem;
 }
@@ -54,4 +57,10 @@ input[type=file]{
   font-weight: 600;
   color: #fff;
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 25%;
+  }
+
 }
