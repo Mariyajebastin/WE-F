@@ -1,5 +1,6 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {WebService} from "../web.service";
 
 @Component({
   selector: 'app-we-signup-page',
@@ -13,7 +14,7 @@ export class WeSignupPageComponent {
   timerSubscription: any;
   seconds = 0;
 
-  constructor() {
+  constructor(private http : WebService) {
     this.signupForm = new FormGroup({
       nick_name : new FormControl('',Validators.required),
       mobile_no : new FormControl('',Validators.required),
@@ -24,7 +25,17 @@ export class WeSignupPageComponent {
   doSignup() {
     const formData = this.signupForm.value;
 
-    console.log('Form Data',formData);
+    console.log("form Data",formData);
+    this.http.postEmployee(formData).subscribe(
+      response => {
+        var res = JSON.parse(JSON.stringify(response));
+        console.log(res);
+
+
+      }, error => {
+        console.log("error details ", error);
+      }
+    )
   }
 
   startTimerFunction() {
