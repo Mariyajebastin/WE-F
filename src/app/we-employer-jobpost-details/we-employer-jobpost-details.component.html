@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="menu-btn-con">
-        <button class="menu-btn">
+        <button class="menu-btn" (click)="openMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
             <mask id="mask0_696_176" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
               <rect x="0.0688477" y="0.0688477" width="21.8623" height="21.8623" fill="#D9D9D9"/>
@@ -22,20 +22,22 @@
             </g>
           </svg>
         </button>
-        <div class="edit-btn-con">
-          <button class="edit-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <mask id="mask0_696_234" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
-                <rect x="0.715576" y="0.71582" width="20.569" height="20.569" fill="#D9D9D9"/>
-              </mask>
-              <g mask="url(#mask0_696_234)">
-                <path d="M5.00075 16.9995H6.08193L14.8551 8.22629L13.7739 7.14511L5.00075 15.9183V16.9995ZM3.71521 18.285V15.3843L15.0199 4.08452C15.1495 3.96681 15.2926 3.87585 15.4492 3.81164C15.6058 3.74744 15.77 3.71533 15.9419 3.71533C16.1137 3.71533 16.2802 3.74583 16.4413 3.80682C16.6023 3.8678 16.745 3.96476 16.8691 4.0977L17.9157 5.15746C18.0486 5.28161 18.1434 5.42448 18.2 5.58606C18.2566 5.74763 18.2849 5.9092 18.2849 6.07076C18.2849 6.2431 18.2554 6.40757 18.1966 6.56416C18.1377 6.72077 18.0441 6.86388 17.9157 6.99348L6.61593 18.285H3.71521ZM14.305 7.69518L13.7739 7.14511L14.8551 8.22629L14.305 7.69518Z" fill="white"/>
-              </g>
-            </svg>
-          </button>
-        </div>
-        <div class="create-btn-con">
-          <button class="edit-btn" (click)="this.router.navigate(['/newjob-post'])">+</button>
+        <div class="edit-create-btn" #btns>
+          <div class="edit-btn-con">
+            <button class="edit-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <mask id="mask0_696_234" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
+                  <rect x="0.715576" y="0.71582" width="20.569" height="20.569" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_696_234)">
+                  <path d="M5.00075 16.9995H6.08193L14.8551 8.22629L13.7739 7.14511L5.00075 15.9183V16.9995ZM3.71521 18.285V15.3843L15.0199 4.08452C15.1495 3.96681 15.2926 3.87585 15.4492 3.81164C15.6058 3.74744 15.77 3.71533 15.9419 3.71533C16.1137 3.71533 16.2802 3.74583 16.4413 3.80682C16.6023 3.8678 16.745 3.96476 16.8691 4.0977L17.9157 5.15746C18.0486 5.28161 18.1434 5.42448 18.2 5.58606C18.2566 5.74763 18.2849 5.9092 18.2849 6.07076C18.2849 6.2431 18.2554 6.40757 18.1966 6.56416C18.1377 6.72077 18.0441 6.86388 17.9157 6.99348L6.61593 18.285H3.71521ZM14.305 7.69518L13.7739 7.14511L14.8551 8.22629L14.305 7.69518Z" fill="white"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="create-btn-con">
+            <button class="edit-btn" (click)="this.router.navigate(['/newjob-post'])">+</button>
+          </div>
         </div>
       </div>
       <div class="drop-down-menu-con">

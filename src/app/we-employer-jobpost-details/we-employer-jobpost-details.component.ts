@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -8,5 +8,14 @@ import {Router} from "@angular/router";
 })
 export class WeEmployerJobpostDetailsComponent {
   constructor(public router : Router) {
+  }
+
+  @ViewChild('btns',{static : true}) btns! : ElementRef;
+
+  openMenu(){
+    if(this.btns && this.btns.nativeElement){
+      const x = this.btns.nativeElement as HTMLDivElement;
+      x.style.display = x.style.display === 'block' ? 'none' : 'block';
+    }
   }
 }
