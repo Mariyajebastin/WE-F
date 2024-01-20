@@ -12,7 +12,8 @@ body{
   overflow-x:hidden;
 }
 :root{
-  --subtext : 15px;
+  --subtext : 14px;
+  --subheading: 15px;
   --headingone : 35px;
   --headingtwo : 22px;
   /*this is heading four its changed for work purpose*/
@@ -30,6 +31,7 @@ body{
 @media screen and (min-width: 1024px)  {
  :root{
    --subtext : 14px;
+   --inputtext: 15px;
    --headingone: 32px;
    --headingtwo : 24px;
    --headingthree: 18px;

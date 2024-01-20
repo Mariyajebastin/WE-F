@@ -39,11 +39,11 @@ a{
 .menu-btn{
   border: none;
   background-color: transparent;
-  display: none;
 }
 .profile-menu{
   background-color: transparent;
   border: none;
+  display: none;
 }
 .profile-img-con{
   height: 35px;
@@ -170,9 +170,6 @@ a{
  text-decoration: underline;
 }
 @media screen and (min-width: 600px) {
-  .head-con{
-    height: 50px;
-  }
   .header-txt{
     font-size: 35px;
   }

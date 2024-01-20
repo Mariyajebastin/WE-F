@@ -133,7 +133,7 @@ const routes : Routes =[
     HttpClientModule,
     FormsModule,
     NgOptimizedImage,
-    NgMultiSelectDropDownModule.forRoot()
+    NgMultiSelectDropDownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

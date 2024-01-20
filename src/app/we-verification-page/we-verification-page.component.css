@@ -62,11 +62,9 @@ input[type=file]{
   .body-center{
     width: 50%;
   }
-
 }
 @media screen and (min-width: 1024px) {
   .body-center{
     width: 25%;
   }
-
 }

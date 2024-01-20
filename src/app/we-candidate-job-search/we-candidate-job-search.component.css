@@ -7,27 +7,27 @@
   margin: 0 auto;
   padding-top: 28px;
 }
-.heading-con{
-  margin-bottom: 25px;
-}
 .heading-con h1{
-  font-size: 35px;
+  font-size: var(--headingtwo);
+  letter-spacing: var(--lspace2);
+  color: #1400FF;
   font-weight: 400;
-  color: #000;
 }
-.search-con{
+.top-container{
+  margin-top: 15px;
+}
+.search-container{
   position: relative;
-  width: 100%;
-  margin-top: 10px;
+  margin-bottom: 1rem;
 }
 .input-search{
   font-size: var(--inputtext);
   color: var(--headingcolor);
   height: 40px;
   width: 100%;
-  padding-left: 35px;
+  border: 0.8px solid #454545;
   border-radius: 40px;
-  border: 1.055px solid #505050;
+  padding-left: 35px;
 }
 .input-search:focus{
   outline: 0.3px solid #000;
@@ -36,131 +36,97 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 12px;
+  margin-top: 9px;
   margin-left: 10px;
+}
+.location-container{
+  position: relative;
 }
 .location-icon{
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 12px;
-  margin-left: 14px;
+  margin-top: 10px;
+  margin-left: 15px;
 }
-.feed-con{
-  width:100%;
-  margin-top:40px;
+.btn-con{
+  margin-top: 1rem;
+  text-align: center;
+}
+.search-btn{
+  font-size: var(--subtext);
+  color: #fff;
+  background-color: var(--headingcolor);
+  padding: 8px 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.jobs-container{
+  margin-top: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.heading-con h2{
+  font-size: var(--headingthree);
+  font-weight: 400;
+}
+.job-container{
+  width: 95%;
+  position: relative;
+  margin-top: 1.3rem;
+}
+.job-period{
+  font-size: var(--subheading);
+  color: #1400FF91;
+}
+.box-container{
+  position: relative;
+  padding: 10px 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  transition: scroll-left 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+.box-container::-webkit-scrollbar{
+  display: none;
+}
+.job-box{
+  height: 85px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  gap: 4px;
 }
 a{
   text-decoration: none;
 }
-.company-feed-con{
-  width:100%;
-  display: block;
+.job-box p{
+  font-size: var(--smalltext);
+  white-space: pre;
+  width: 170px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.logo-con{
-  width:30px;
-  height: 30px;
-  border-radius: 20px;
-  display: block;
-  float: left;
-  margin-right: 15px;
+.scroll-btn-con{
+  position: absolute;
+  right: -25px;
+  top: 55px;
 }
-.logo{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/capgemini logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.name-text{
-  font-size: 14px;
-  font-weight: 700;
-  color: #000;
-}
-.dev-content{
-  font-size: 14px;
-  font-weight: 400;
-  margin-left:45px;
-  margin-top: 3px;
-}
-.salary-details{
-  font-size: 12px;
-  font-weight: 400;
-  margin-left: 45px;
-  margin-top: 3px;
-}
-.info-logo{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/infosys logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.vale-logo{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/vale logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.tcs-logo{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/tcs logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.acce-logo{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/acce logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.jepp-logo{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/jepp logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.btn-con{
-  margin-top: 2.5rem;
-  text-align: center;
-}
-.load-more{
-  font-size: var(--subtext);
-  padding: 8px 17px;
-  background-color: var(--headingcolor);
+.scroll-btn{
   border: none;
-  border-radius: 40px;
-  color: #fff;
-  cursor: pointer;
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4.5px 0px rgba(0, 0, 0, 0.15);
 }
-@media screen and (min-width: 1024px) {
-  .body-center{
-    width:60%;
-  }
-  .heading-con h1{
-    font-size: var(--headingtwo);
-  }
-  .name-text{
-    font-weight: 400;
-  }
-  .input-search{
-    font-size: var(--ntext);
-  }
-  .load-more{
-    font-size: var(--smalltext);
-  }
-}
-

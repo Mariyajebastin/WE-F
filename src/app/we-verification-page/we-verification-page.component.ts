@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {WebcamImage} from "ngx-webcam";
 
 @Component({
   selector: 'app-we-verification-page',
