@@ -27,7 +27,6 @@ export class WeLoginPageComponent {
   }
   ngOnInit() {
   }
-
   startTimerFunction() {
     this.seconds = 59; // Set initial value
     this.timerSubscription = setInterval(() => {
@@ -41,6 +40,7 @@ export class WeLoginPageComponent {
 
     const formData = this.loginForm.value;
     console.log('Form Data',formData);
+
   }
 
   @ViewChild('otp1') otp1!: ElementRef;

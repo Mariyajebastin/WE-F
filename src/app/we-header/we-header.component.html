@@ -11,12 +11,12 @@
           <a class="bn-tag" href="/signup"style="text-decoration: none;">Signup</a>
         </div>
       </div>
-      <button class="menu-btn">
+      <button class="menu-btn" (click)="openMenuBar()">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 14" fill="none">
           <path d="M0.555603 13.2606V11.594H19.4444V13.2606H0.555603ZM0.555603 7.83323V6.16662H19.4444V7.83323H0.555603ZM0.555603 2.4059V0.739258H19.4444V2.4059H0.555603Z" fill="#505050"/>
         </svg>
       </button>
-      <button class="profile-menu">
+      <button class="profile-menu" (click)="openMenu()">
         <div class="profile-img-con">
           <img src="/assets/img/profile%20img.png" class="profile-img">
         </div>
@@ -24,16 +24,12 @@
     </div>
   </div>
 </div>
-<div class="menu-container">
+<div class="menu-container" #menuBar>
   <div class="menu-header">
     <div class="menu-header-center">
       <div class="menu-header-left"><a href="" class="header-txt" style="color: #fff;">we.</a></div>
       <div class="menu-header-right">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 20 14" fill="none">
-            <path d="M0.555542 13.2606V11.594H19.4444V13.2606H0.555542ZM0.555542 7.83323V6.16662H19.4444V7.83323H0.555542ZM0.555542 2.4059V0.739258H19.4444V2.4059H0.555542Z" fill="white"/>
-          </svg>
-        </a>
+        <button class="e-close-btn" (click)="openMenuBar()">&times;</button>
       </div>
     </div>
   </div>
@@ -72,12 +68,12 @@
     </a>
   </div>
 </div>
-<div class="candidate-menu-container">
+<div class="candidate-menu-container" #profileMenu>
   <div class="menu-header">
     <div class="menu-header-center">
       <div class="menu-header-left"><a href="" class="header-txt" style="color: #fff;">we.</a></div>
       <div class="menu-header-right">
-        <button class="close-btn">&times;</button>
+        <button class="close-btn" (click)="openMenu()">&times;</button>
       </div>
     </div>
   </div>

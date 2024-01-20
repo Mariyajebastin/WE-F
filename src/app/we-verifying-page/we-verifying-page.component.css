@@ -118,7 +118,11 @@
   color: #fff;
   cursor: pointer;
 }
-
+@media screen and (min-width: 640px) {
+  .body-center{
+    width: 50%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .body-center{
     width: 25%;
