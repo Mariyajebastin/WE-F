@@ -23,8 +23,9 @@ input[type=file]{
 }
 .take-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   height: 40px;
   width: 100%;
   display: flex;
@@ -33,6 +34,7 @@ input[type=file]{
   gap: 1rem;
   border-radius: 40px;
   margin-top: 7px;
+  cursor: pointer;
 }
 .file-img-con{
   height: 150px;
@@ -50,12 +52,12 @@ input[type=file]{
 }
 .next-btn{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
 }
 @media screen and (min-width: 640px) {

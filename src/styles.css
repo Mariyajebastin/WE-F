@@ -8,6 +8,9 @@
   color: #505050;
   letter-spacing: 0.10px;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   overflow-x:hidden;
 }
@@ -27,6 +30,11 @@ body{
   --ntext: 14px;
   --lspace1 : 0.10px;
   --lspace2 : 0.5px;
+  --we: #FF1F00;
+  --white : #fff;
+  --bgbutton : #FFE8E5;
+  --darkgray: #505050;
+  --lightgray: #ebebeb;
 }
 @media screen and (min-width: 1024px)  {
  :root{

@@ -50,6 +50,7 @@ import { WeVerifyingPageComponent } from './we-verifying-page/we-verifying-page.
 import { WeTakePictureComponent } from './we-take-picture/we-take-picture.component';
 import { NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
 import { WeBackButtonComponent } from './we-back-button/we-back-button.component';
+import { WeNavbarComponent } from './we-navbar/we-navbar.component';
 
 
 const routes : Routes =[
@@ -78,8 +79,8 @@ const routes : Routes =[
   {path:'jobPost-details',component:WeEmployerJobpostDetailsComponent},
   {path:'job-created',component:WeEmployerJobcreatedComponent},
   {path:'created-jobs',component:WeEmployerCreatedjobsComponent},
-  {path:'employer-candidate-applied',component:WeEmployerCandidateAppliedComponent},
-  {path:'employer-analytics',component:WeEmployerAnalyticsComponent}
+  {path:'candidates',component:WeEmployerCandidateAppliedComponent},
+  {path:'analytics',component:WeEmployerAnalyticsComponent}
 ]
 @NgModule({
   declarations: [
@@ -124,6 +125,7 @@ const routes : Routes =[
     WeVerifyingPageComponent,
     WeTakePictureComponent,
     WeBackButtonComponent,
+    WeNavbarComponent,
   ],
   imports: [
     BrowserModule,

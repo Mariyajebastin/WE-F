@@ -51,7 +51,7 @@ table{
   border-spacing: 0 1px;
 }
 thead{
-  background-color: #1400FF;
+  background-color: var(--we);
   position: sticky;
   top: 0;
   left: 0;
@@ -78,11 +78,13 @@ tbody tr:last-child{
 }
 .open-btn{
   font-size: var(--tabletext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 6px 12px;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
 .btn-con{
   margin-top: 1rem;
@@ -90,8 +92,9 @@ tbody tr:last-child{
 }
 .load-more-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 17px;
   border: none;
   border-radius: 40px;
@@ -100,5 +103,8 @@ tbody tr:last-child{
 @media screen and (min-width: 1024px) {
   .body-center{
     width: 60%;
+  }
+  .job-table{
+    height: 56dvh;
   }
 }

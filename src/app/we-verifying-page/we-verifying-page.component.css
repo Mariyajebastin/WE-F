@@ -111,11 +111,12 @@
 }
 .login-btn{
   padding: 8px 17px;
-  background-color: var(--headingcolor);
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: var(--subtext);
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
 }
 @media screen and (min-width: 640px) {

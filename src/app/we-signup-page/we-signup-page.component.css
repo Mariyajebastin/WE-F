@@ -11,7 +11,8 @@
 }
 .sign-text{
   font-size: var(--headingtwo);
-  color: var(--headingcolor);
+  color: var(--we);
+  font-weight: 700;
 }
 .details-con{
   margin-top: 15px;
@@ -111,12 +112,12 @@ input[type=file]::file-selector-button{
 }
 .signup-btn{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
 }
 .otp-container{

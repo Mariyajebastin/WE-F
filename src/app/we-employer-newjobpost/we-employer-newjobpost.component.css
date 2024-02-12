@@ -6,6 +6,7 @@
   width: 90%;
   margin: 0 auto;
   padding-top: 20px;
+  padding-bottom: 2rem;
 }
 .text-container{
   width: 100%;
@@ -62,9 +63,11 @@
   width: 180px;
   margin-top: 7px;
 }
+.previous-post-container{
+  display: none;
+}
 .child-container{
   width: 100%;
-  display: none;
 }
 .container{
   width: 100%;
@@ -196,11 +199,12 @@
 }
 .submit-button{
   padding: 8px 17px;
-  background-color: var(--headingcolor);
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: var(--subtext);
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
 }
 .search-con{

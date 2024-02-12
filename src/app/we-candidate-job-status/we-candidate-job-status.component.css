@@ -84,16 +84,16 @@ input[type=radio]{
   border-radius: 50%;
 }
 #radio-btn1:checked ~ .radio-btn1{
-  background-color: #1400FF;
+  background-color: var(--we);
 }
 #radio-btn2:checked ~ .radio-btn2{
-  background-color: #1400FF;
+  background-color: var(--we);
 }
 #radio-btn3:checked ~ .radio-btn3{
-  background-color: #1400FF;
+  background-color: var(--we);
 }
 #radio-btn4:checked ~ .radio-btn4{
-  background-color: #1400FF;
+  background-color: var(--we);
 }
 .radio-btn-container{
   display: flex;
@@ -115,7 +115,7 @@ input[type=radio]{
 .status-line{
   width: 2px;
   height: 200px;
-  background-color: #1400FF;
+  background-color: var(--we);
   position: absolute;
   z-index: -1;
   left: 50%;

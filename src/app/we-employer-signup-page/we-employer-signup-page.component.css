@@ -5,12 +5,12 @@
 .emp-sign-center{
   width: 90%;
   margin: 0 auto;
-  margin-top:45px;
+  padding-top: 28px;
 }
 .emp-sign-txt{
   font-size: var(--headingtwo);
-  font-weight: 400;
-  color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
 }
 .emp-txt-center{
   margin-top:15px;

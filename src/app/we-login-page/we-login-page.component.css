@@ -81,12 +81,12 @@
 }
 .login-btn{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
 }
 a{

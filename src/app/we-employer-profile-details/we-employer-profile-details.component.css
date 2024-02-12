@@ -34,11 +34,12 @@
 .edit-btn{
   font-size: var(--subtext);
   font-weight: 700;
-  color: #fff;
-  background-color: var(--headingcolor);
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 20px;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 .profile-details-container{
   display: flex;
@@ -64,8 +65,9 @@
 }
 .save-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 17px;
   border: none;
   border-radius: 40px;

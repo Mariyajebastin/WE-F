@@ -55,8 +55,9 @@
 }
 .search-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 17px;
   border: none;
   cursor: pointer;
@@ -129,4 +130,12 @@ a{
   width: 30px;
   border-radius: 50%;
   box-shadow: 0px 2px 4.5px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 640px) {
+
+}
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 70%;
+  }
 }

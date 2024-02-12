@@ -64,11 +64,11 @@
 }
 .search-btn{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: 14px;
-  color: #fff;
+  color: var(--we);
   cursor: pointer;
 }
 .material-icons{

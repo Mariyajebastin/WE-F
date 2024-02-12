@@ -73,8 +73,9 @@
 }
 .edit-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 17px;
   border: none;
   border-radius: 40px;
@@ -144,8 +145,9 @@ input[type=file]::file-selector-button{
 }
 .update-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 12px 17px;
   border-radius: 40px;
   display: flex;
@@ -162,8 +164,9 @@ input[type=file]::file-selector-button{
 }
 .save-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 17px;
   border: none;
   border-radius: 40px;

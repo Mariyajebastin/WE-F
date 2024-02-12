@@ -23,8 +23,8 @@
 }
 .emp-log-txt{
   font-size: var(--headingtwo);
-  font-weight: 400;
-  color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
 }
 .emp-mail-pass-con{
   margin-top:20px;
@@ -75,12 +75,13 @@ a{
 }
 .login-btn{
   padding: 8px 17px;
-  background-color: var(--headingcolor);
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: var(--subtext);
-  color: #fff;
+  color: var(--we);
   cursor: pointer;
+  user-select: none;
 }
 @media screen and (min-width: 600px) {
   .emp-log-center{

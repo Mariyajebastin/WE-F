@@ -18,12 +18,12 @@
 .square-con{
   height: 50px;
   width:50px;
-  background-color: blue;
+  background-color: var(--we);
 }
 .circle-con{
   height: 50px;
   width:50px;
-  background-color: blue;
+  background-color: var(--we);
   border-radius: 30px;
 }
 .triangle-con{
@@ -31,7 +31,7 @@
   height: 0;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-bottom: 50px solid blue;
+  border-bottom: 50px solid var(--we);
   rotate: 90deg;
 }
 .we-text-con{
@@ -53,12 +53,12 @@
 }
 .go-button{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
   min-width: 75px;
 }

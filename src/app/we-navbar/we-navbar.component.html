@@ -1,0 +1,9 @@
+<nav>
+  <div class="navbar-container">
+    <ul>
+      <li><button class="nav-button"[ngClass]="{'active-button' : activeButton === 'Dashboard'}" (click)="setActiveButton('Dashboard')">Dashboard</button></li>
+      <li><button class="nav-button" [ngClass]="{'active-button' : activeButton === 'CreateNewJob'}" (click)="setActiveButton('CreateNewJob')">Create New Job</button></li>
+      <li><button class="nav-button" [ngClass]="{'active-button' : activeButton === 'Candidates'}" (click)="setActiveButton('Candidates')">Candidates</button></li>
+    </ul>
+  </div>
+</nav>

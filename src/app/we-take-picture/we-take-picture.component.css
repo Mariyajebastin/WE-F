@@ -15,16 +15,17 @@ input[type=file]{
 }
 .take-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  background-color: var(--bgbutton);
   height: 40px;
   width: 100%;
+  color: var(--we);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   border-radius: 40px;
   margin-top: 7px;
+  font-weight: 700;
 }
 .file-img-con{
   height: 150px;
@@ -42,11 +43,16 @@ input[type=file]{
 }
 .next-btn{
   padding: 8px 17px;
-  background-color: #000;
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .body-center{
+    width: 20%;
+  }
 }

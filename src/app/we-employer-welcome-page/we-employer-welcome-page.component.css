@@ -10,22 +10,10 @@
 
 }
 .star-img-con{
-  width:60px;
-  height: 75px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.star-img{
-  height: 100%;
-  width:100%;
-  background-image: url("/assets/img/emp we img.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  text-align: center;
 }
 .emp-we-txt{
   font-size: 22px;
-  font-family: Lexend;
   font-weight: 500;
   text-align: center;
   width: 200px;
@@ -34,20 +22,16 @@
 }
 .emp-go-btn-con{
   margin-top:30px;
-}
-.emp-go-btn{
-  font-size: 13px;
-  font-family: Lexend;
-  font-weight: 400;
-  width:155px;
-  height: 30px;
-  background-color: black;
-  color:white;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5px;
-  display: block;
+}
+.go-btn{
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 17px;
+  background-color: var(--bgbutton);
+  color: var(--we);
+  text-align: center;
+  border-radius: 40px;
 }
 @media screen and (min-width: 600px) {
 

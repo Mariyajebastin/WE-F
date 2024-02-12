@@ -31,9 +31,11 @@
 }
 .view-job-btn{
   font-size: var(--subtext);
-  background-color: var(--headingcolor);
-  color: #fff;
+  background-color: var(--bgbutton);
+  font-weight: 700;
+  color: var(--we);
   padding: 8px 17px;
   border: none;
   border-radius: 40px;
+  cursor: pointer;
 }

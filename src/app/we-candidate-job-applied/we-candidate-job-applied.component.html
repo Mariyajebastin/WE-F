@@ -1,74 +1,187 @@
+<link rel="stylesheet" href="we-candidate-job-applied.component.css">
 <div class="body-container">
   <div class="body-center">
     <app-we-back-button></app-we-back-button>
-    <div class="heading-con">
-      <h1>Job Applied</h1>
+    <div class="job-profile-container">
+      <div class="profile-option-container">
+        <div class="profile-container">
+          <div class="profile">
+            <div class="profile-img">
+              <img src="/assets/img/candidate.png">
+            </div>
+            <div class="profile-details">
+              <p class="profile-name">Mariya Jebastin</p>
+              <p class="location">Kelambakkam, Chennai</p>
+            </div>
+            <div class="profile-qualifications">
+              <div class="container">
+                <p class="left-q">Designation</p>
+                <p class="right-q">Fullstack Developer</p>
+              </div>
+              <div class="profile-btn">
+                <button (click)="this.router.navigate(['/profile'])">Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="option-container">
+          <div class="option-button-container">
+            <button class="option-button" [ngClass]="{'active-button' : activeButton === 'Jobs Applied'}" (click)="setActiveButton('Jobs Applied')">Jobs Applied (10)</button>
+            <button class="option-button" [ngClass]="{'active-button' : activeButton === 'Saved Jobs'}" (click)="setActiveButton('Saved Jobs')">Saved Jobs (2)</button>
+          </div>
+        </div>
+      </div>
+      <div class="option-button-container-m">
+        <button class="option-button" [ngClass]="{'active-button' : activeButton === 'Jobs Applied'}" (click)="setActiveButton('Jobs Applied')">Jobs Applied (10)</button>
+        <button class="option-button" [ngClass]="{'active-button' : activeButton === 'Saved Jobs'}" (click)="setActiveButton('Saved Jobs')">Saved Jobs (2)</button>
+      </div>
+      <div class="job-applied-container" *ngIf="showJobsAppliedContainer">
+        <div class="heading-con">
+          <h1>Job Applied</h1>
+        </div>
+        <div class="no-job-container">
+          <div class="job-applied-empty-img">
+            <div class="empty-img-con">
+              <img src="/assets/img/vector.png">
+            </div>
+            <div class="text-con">
+              <h1>Ahh...We're sorry. You have not applied any job yet.</h1>
+            </div>
+            <div class="search-btn-con">
+              <app-we-button value="Search Jobs"></app-we-button>
+            </div>
+          </div>
+        </div>
+        <div class="jobs-con">
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Applied: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/job-status'])">View Status</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="saved-jobs-container" *ngIf="showSavedJobsContainer">
+        <div class="heading-con">
+          <h1>Saved Jobs</h1>
+        </div>
+        <div class="no-job-container">
+          <div class="job-applied-empty-img">
+            <div class="empty-img-con">
+              <img src="/assets/img/no%20data%20vector.png">
+            </div>
+            <div class="text-con">
+              <h1>No saved jobs</h1>
+            </div>
+          </div>
+        </div>
+        <div class="jobs-con">
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Posted: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/'])">Apply</button>
+            </div>
+          </div>
+          <div class="job-applied">
+            <div class="job-title-con">
+              <p class="job-title">Sales Manager</p>
+              <p class="company-name">HCL, Chennai</p>
+              <p class="date">Posted: 12days(s) ago</p>
+            </div>
+            <div class="job-company-con">
+              <button class="view-btn" (click)="this.router.navigate(['/'])">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <a href="/job-status" class="notifi-con">
-      <div class="notifi-center">
-        <div class="notifi-head-text">
-          Capgemnini Technology Services India Limited
-        </div>
-        <div class="notifi-dev-text">
-          Front End Web Developer
-        </div>
-        <div class="date-con">
-          <div class="date">1 Jne 2023</div>
-        </div>
-      </div>
-    </a>
-    <a href="/job-status" class="notifi-con">
-      <div class="notifi-center">
-        <div class="notifi-head-text">
-          Capgemnini Technology Services India Limited
-        </div>
-        <div class="notifi-dev-text">
-          Front End Web Developer
-        </div>
-        <div class="date-con">
-          <div class="date">1 June 2023</div>
-        </div>
-      </div>
-    </a>
-    <a href="/job-status" class="notifi-con">
-      <div class="notifi-center">
-        <div class="notifi-head-text">
-          Capgemnini Technology Services India Limited
-        </div>
-        <div class="notifi-dev-text">
-          Front End Web Developer
-        </div>
-        <div class="date-con">
-          <div class="date">1 June 2023</div>
-        </div>
-      </div>
-    </a>
-    <a href="/job-status" class="notifi-con">
-      <div class="notifi-center">
-        <div class="notifi-head-text">
-          Capgemnini Technology Services India Limited
-        </div>
-        <div class="notifi-dev-text">
-          Front End Web Developer
-        </div>
-        <div class="date-con">
-          <div class="date">1 June 2023</div>
-        </div>
-      </div>
-    </a>
-    <a href="/job-status" class="notifi-con">
-      <div class="notifi-center">
-        <div class="notifi-head-text">
-          Capgemnini Technology Services India Limited
-        </div>
-        <div class="notifi-dev-text">
-          Front End Web Developer
-        </div>
-        <div class="date-con">
-          <div class="date">1 June 2023</div>
-        </div>
-      </div>
-    </a>
   </div>
 </div>
-<app-we-footer></app-we-footer>

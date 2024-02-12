@@ -26,7 +26,7 @@ table{
   border-spacing: 0 2px;
 }
 thead{
-  background-color: #1400FF;
+  background-color: var(--we);
 }
 tbody tr{
   background-color: #F8F8F8;
@@ -54,5 +54,8 @@ td{
   }
   .heading-con{
     margin-top: 0;
+  }
+  .icon{
+    text-align: left;
   }
 }

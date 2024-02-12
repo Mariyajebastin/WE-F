@@ -43,15 +43,13 @@
 }
 .apply-button{
   padding: 8px 17px;
-  background-color: var(--headingcolor);
+  background-color: var(--bgbutton);
   border: none;
   border-radius: 40px;
   font-size: var(--subtext);
-  color: #fff;
+  font-weight: 700;
+  color: var(--we);
   cursor: pointer;
-}
-.apply-button:hover{
-  background-color: #1400FF;
 }
 .para-con{
   width:82%;
