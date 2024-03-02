@@ -15,7 +15,7 @@ export class WebService {
   }
 
   postEmployer(data: any) {
-    return this.http.post(this.serverIp + "/employer/", data)
+    return this.http.post(this.serverIp + "/employer/employer", data)
   }
 
   postJobPost(data: any) {

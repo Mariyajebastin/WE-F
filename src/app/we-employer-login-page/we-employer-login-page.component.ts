@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {WebService} from "../web.service";
 
 @Component({
   selector: 'app-we-employer-login-page',
@@ -9,7 +10,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class WeEmployerLoginPageComponent {
   public loginForm : FormGroup | any;
 
-  constructor() {
+  constructor(private http : WebService) {
     this.loginForm = new FormGroup({
       email_id : new FormControl('',Validators.required),
       password : new FormControl('',Validators.required)
@@ -18,7 +19,14 @@ export class WeEmployerLoginPageComponent {
 
   doLogin(){
     const formData = this.loginForm.value;
-
+    this.loginForm.reset()
     console.log('Form Data',formData);
+    this.http.postEmployer(this.loginForm.value).subscribe(
+      response =>{
+        var res = JSON.parse(JSON.stringify(response))
+        console.log(res);
+      }
+    )
+
   }
 }
