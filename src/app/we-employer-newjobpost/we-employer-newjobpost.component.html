@@ -2,9 +2,9 @@
   <div class="body-container">
     <div class="body-center">
       <app-we-back-button></app-we-back-button>
-      <div class="nav">
+      <!-- <div class="nav">
         <app-we-navbar></app-we-navbar>
-      </div>
+      </div> -->
       <div class="text-container">
         <div class="heading-con">
           <h1>Create a job post</h1>
@@ -14,15 +14,15 @@
         </div>
       </div>
       <div class="option-center">
-        <label class="option-container" for="radio1">
+        <label class="option-container" for="radio1" (click)="showOldPost()">
           <div class="option-content">
-            <input class="select-btn" id="radio1" type="radio" name="select-btn">
+            <input class="select-btn" id="radio1" type="radio" name="select-btn" checked>
             <p class="sub-text">
               Use a previous job as a template
             </p>
           </div>
         </label>
-        <label class="option-container" for="radio2">
+        <label class="option-container" for="radio2" (click)="showNewPost()">
           <div class="option-content">
             <input class="select-btn" id="radio2" type="radio" name="select-btn">
             <p class="sub-text">
@@ -31,43 +31,80 @@
           </div>
         </label>
       </div>
-      <div class="child-container">
+      <div class="child-container" *ngIf="newPost">
         <div class="container">
           <div class="job-title-con">
-            <div class="title">
-              Job Title
-            </div>
+            <label class="title">
+              Job Title <p>*</p>
+            </label>
             <input class="input-job-title" type="text" placeholder="Add short, descriptive job title" [formControl]="jobForm.get('job_title')">
+            <p class="info-text" *ngIf="jobForm.get('job_title')?.hasError('required') && jobForm.get('job_title')?.touched">This field is required</p>
           </div>
           <div class="job-location-con">
-            <p class="title">Job Location</p>
+            <label class="title">Job Location <p>*</p></label>
             <p class="child-job-location">Adding a specific address helps you reach near by candidates</p>
             <textarea rows="5" cols="5" class="input-textarea" placeholder="Add an address" [formControl]="jobForm.get('job_location')"></textarea>
+            <p class="info-text" *ngIf="jobForm.get('job_location')?.hasError('required') && jobForm.get('job_location')?.touched">This field is required</p>
           </div>
           <div class="salary-con">
             <div>
-              <p class="title">Salary Range (Optional)</p>
+              <label class="title">Salary Range <p>*</p></label>
               <div class="salary-range-con">
-                <input type="text" class="input-min-salary" placeholder="₹Minimum" [formControl]="jobForm.get('min_salary')">
+                <div class="text-field">
+                  <select class="input-text" [formControl]="jobForm.get('min_salary')">
+                    <option value="5000">5000</option>
+                    <option value="10000">10000</option>
+                    <option value="11000">12000</option>
+                    <option value="12000">13000</option>
+                    <option value="13000">14000</option>
+                  </select>
+                  <p class="info-text" *ngIf="jobForm.get('min_salary')?.hasError('required') && jobForm.get('min_salary')?.touched">This field is required</p>
+                </div>
                 <div class="to">TO</div>
-                <input type="text" class="input-max-salary" placeholder="₹Maximum" [formControl]="jobForm.get('max_salary')">
-                <select  class="period">
-                  <option value="Per Year">Per Year</option>
-                  <option value="Per Month">Per Month</option>
-                  <option value="Per Hour">Per Hour</option>
-                </select>
+                <div class="text-field">
+                  <select class="input-text" [formControl]="jobForm.get('max_salary')">
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="30000">30000</option>
+                    <option value="40000">40000</option>
+                  </select>
+                  <p class="info-text" *ngIf="jobForm.get('max_salary')?.hasError('required') && jobForm.get('max_salary')?.touched">This field is required</p>
+                </div>
+                <div class="text-field">
+                  <select  class="input-text" [formControl]="jobForm.get('salary_period')">
+                    <option value="Per Year">Per Year</option>
+                    <option value="Per Month" selected>Per Month</option>
+                    <option value="Per Hour">Per Hour</option>
+                  </select>
+                  <p class="info-text" *ngIf="jobForm.get('salary_period')?.hasError('required') && jobForm.get('salary_period')?.touched">This field is required</p>
+                </div>
+                
               </div>
             </div>
             <div>
-              <p class="title">Job Type</p>
-              <select class="time-period">
-                <option value="Full Time">Full Time</option>
+              <label class="title">Job Type <p>*</p></label>
+              <select class="time-period" [formControl]="jobForm.get('job_type')">
+                <option value="Full Time" selected>Full Time</option>
                 <option value="Part Time">Part Time</option>
+                <option value="Contract">Contract</option>
+                <option value="Internship">Internship</option>
               </select>
+              <p class="info-text" *ngIf="jobForm.get('job_type')?.hasError('required') && jobForm.get('job_type')?.touched">This field is required</p>
             </div>
             <div>
-              <p class="title">Job Description</p>
+              <label class="title">Job Description <p>*</p></label>
               <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('job_description')" placeholder="Describe the responsibilities and preferred skills for this job"></textarea>
+              <p class="info-text" *ngIf="jobForm.get('job_description')?.hasError('required') && jobForm.get('job_description')?.touched">This field is required</p>
+            </div>
+            <div>
+              <label class="title">Responsibilities <p>*</p></label>
+              <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('responsibilities')"></textarea>
+              <p class="info-text" *ngIf="jobForm.get('responsibilities')?.hasError('required') && jobForm.get('responsibilities')?.touched">This field is required</p>
+            </div>
+            <div>
+              <label class="title">Skills <p>*</p></label>
+              <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('skills')"></textarea>
+              <p class="info-text" *ngIf="jobForm.get('skills')?.hasError('required') && jobForm.get('skills')?.touched">This field is required</p>
             </div>
             <div>
               <p class="title">Company Profile</p>
@@ -79,70 +116,51 @@
           </div>
         </div>
       </div>
-      <div class="previous-post-container">
-        <div class="search-con">
-          <input class="input-search" type="text" placeholder="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M12.7368 13.5388L7.95944 8.7615C7.57913 9.0755 7.14176 9.32124 6.64736 9.49872C6.15295 9.6762 5.64147 9.76494 5.11294 9.76494C3.8129 9.76494 2.71263 9.31481 1.81215 8.41456C0.911667 7.5143 0.461426 6.41432 0.461426 5.11462C0.461426 3.81491 0.911553 2.71453 1.81181 1.81348C2.71206 0.912434 3.81205 0.461914 5.11176 0.461914C6.41146 0.461914 7.51184 0.912157 8.41289 1.81264C9.31394 2.71312 9.76447 3.81338 9.76447 5.11343C9.76447 5.65659 9.67329 6.17538 9.49093 6.66979C9.30857 7.1642 9.06526 7.59424 8.76101 7.95993L13.5383 12.7373L12.7368 13.5388ZM5.11294 8.62403C6.09298 8.62403 6.9231 8.28394 7.60328 7.60376C8.28346 6.92358 8.62355 6.09347 8.62355 5.11343C8.62355 4.13338 8.28346 3.30327 7.60328 2.62309C6.9231 1.94291 6.09298 1.60282 5.11294 1.60282C4.13289 1.60282 3.30278 1.94291 2.6226 2.62309C1.94243 3.30327 1.60235 4.13338 1.60235 5.11343C1.60235 6.09347 1.94243 6.92358 2.6226 7.60376C3.30278 8.28394 4.13289 8.62403 5.11294 8.62403Z" fill="#464646"/>
-          </svg>
-        </div>
-        <div class="job-table">
+      <div class="previous-post-container"*ngIf="oldPost">
+        <form [formGroup]="searchForm" *ngIf="showData">
+          <div class="search-con">
+            <input class="input-search" formControlName="searchText" (keyup.enter)="onSearchButtonClick()" (keydown)="onSearchKeydown($event)" (input)="onSearchInput()" type="text" placeholder="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M12.7368 13.5388L7.95944 8.7615C7.57913 9.0755 7.14176 9.32124 6.64736 9.49872C6.15295 9.6762 5.64147 9.76494 5.11294 9.76494C3.8129 9.76494 2.71263 9.31481 1.81215 8.41456C0.911667 7.5143 0.461426 6.41432 0.461426 5.11462C0.461426 3.81491 0.911553 2.71453 1.81181 1.81348C2.71206 0.912434 3.81205 0.461914 5.11176 0.461914C6.41146 0.461914 7.51184 0.912157 8.41289 1.81264C9.31394 2.71312 9.76447 3.81338 9.76447 5.11343C9.76447 5.65659 9.67329 6.17538 9.49093 6.66979C9.30857 7.1642 9.06526 7.59424 8.76101 7.95993L13.5383 12.7373L12.7368 13.5388ZM5.11294 8.62403C6.09298 8.62403 6.9231 8.28394 7.60328 7.60376C8.28346 6.92358 8.62355 6.09347 8.62355 5.11343C8.62355 4.13338 8.28346 3.30327 7.60328 2.62309C6.9231 1.94291 6.09298 1.60282 5.11294 1.60282C4.13289 1.60282 3.30278 1.94291 2.6226 2.62309C1.94243 3.30327 1.60235 4.13338 1.60235 5.11343C1.60235 6.09347 1.94243 6.92358 2.6226 7.60376C3.30278 8.28394 4.13289 8.62403 5.11294 8.62403Z" fill="#464646"/>
+            </svg>
+          </div>
+        </form>
+        <div class="job-table" *ngIf="showData">
           <table>
             <thead>
             <tr>
               <th>Date</th>
               <th>Jobs</th>
-              <th>Job Details</th>
+              <th style="text-align: center;">Job Details</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Software Developer</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open" (click)="this.router.navigate(['/jobPost-details'])"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Senior Software Developer Senior Software Developer</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Software Developer</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Product Manager</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Product Manager</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Product Manager</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Product Manager</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
-            <tr>
-              <td>10.01.2024</td>
-              <td>Product Manager</td>
-              <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-            </tr>
+              <ng-container *ngIf="searchResultFound; else notFound">
+                <tr *ngFor="let job of filtered_job_data">
+                  <td> {{ job.created_date }} </td>
+                  <td> {{ job.job_title }} </td>
+                  <td style="text-align: center"><input type="button" class="open-btn" value="Open" (click)="viewJobDetails(job)"></td>
+                </tr>
+              </ng-container>
+              <ng-template #notFound>
+                <tr>
+                  <td colspan="6">No matching records found.</td>
+                </tr>
+              </ng-template>
             </tbody>
           </table>
         </div>
-        <div class="load-btn-con">
-          <input type="button" class="load-more-btn" value="Load more">
+        <div class="not-found-container" *ngIf="noData">
+          <div class="not-found-img">
+            <img src="/assets/img/not found.jpg" alt="">
+          </div>
+          <h1 class="not-found-text">Job post unavailable</h1>
         </div>
+        <!-- <div class="load-btn-con">
+          <input type="button" class="load-more-btn" value="Load more">
+        </div> -->
       </div>
     </div>
   </div>
 </form>
+<app-success-dialog #dialog></app-success-dialog>

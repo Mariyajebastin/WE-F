@@ -1,0 +1,56 @@
+.toaster-container{
+
+}
+.toaster{
+  position: fixed;
+  z-index: 1060;
+  right: 1%;
+  bottom: 3%;
+  transform: translate(-10%, -50%);
+  animation: slideIn 0.2s ease-in-out;
+}
+.toaster-con{
+  padding: 10px 15px;
+  position: relative;
+  min-width: 260px;
+  border-radius: 5px;
+}
+.toaster-con button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5px;
+  margin-right: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  line-height: 14px;
+  color: #fff;
+  font-weight: 300;
+  cursor: pointer;
+}
+.toaster-icon{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.toaster-status{
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  line-height: normal;
+}
+.toaster-msg{
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  line-height: normal;
+}
+@keyframes slideIn {
+  from {
+    transform: translate(10%, -50%);
+  }
+  to {
+    transform: translate(-10%, -50%);
+  }
+}

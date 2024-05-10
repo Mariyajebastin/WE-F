@@ -29,7 +29,6 @@ import { WeEmployerLoginPageComponent } from './we-employer-login-page/we-employ
 import { WeEmployerSignupPageComponent } from './we-employer-signup-page/we-employer-signup-page.component';
 import { WeEmployerWelcomePageComponent } from './we-employer-welcome-page/we-employer-welcome-page.component';
 import { WeEmployerProfilePageComponent } from './we-employer-profile-page/we-employer-profile-page.component';
-import { WeEmployerProfileDetailsComponent } from './we-employer-profile-details/we-employer-profile-details.component';
 import { WeEditDropdownComponent } from './we-edit-dropdown/we-edit-dropdown.component';
 import { WeEditTextareaComponent } from './we-edit-textarea/we-edit-textarea.component';
 import { WeBigTextareaComponent } from './we-big-textarea/we-big-textarea.component';
@@ -51,6 +50,13 @@ import { WeTakePictureComponent } from './we-take-picture/we-take-picture.compon
 import { NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
 import { WeBackButtonComponent } from './we-back-button/we-back-button.component';
 import { WeNavbarComponent } from './we-navbar/we-navbar.component';
+import { ToasterComponent } from './toaster/toaster.component';
+import { AuthService } from './auth.service';
+import { AuthGuardService } from './auth.guard.service';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
+import { EditJobpostComponent } from './edit-jobpost/edit-jobpost.component';
+import { EmployerProfileDetailsComponent } from './employer-profile-details/employer-profile-details.component';
 
 
 const routes : Routes =[
@@ -61,26 +67,25 @@ const routes : Routes =[
   {path:'verifying',component:WeVerifyingPageComponent},
   {path:'signup',component:WeSignupPageComponent},
   {path:'take-picture',component:WeTakePictureComponent},
-  {path:'welcome',component:WeWelcomePageComponent},
-  {path:'applied-jobs',component:WeCandidateJobAppliedComponent},
-  {path:'job-description',component:WeCandidateJobDescriptionComponent},
-  {path:'job-search',component:WeCandidateJobSearchComponent},
-  {path:'profile',component:WeProfileComponent},
-  {path:'job-status',component:WeCandidateJobStatusComponent},
+  {path:'applied-jobs',component:WeCandidateJobAppliedComponent, canActivate : [AuthService]},
+  {path:'job-description/:id',component:WeCandidateJobDescriptionComponent, canActivate : [AuthService]},
+  {path:'job-search',component:WeCandidateJobSearchComponent, canActivate : [AuthService]},
+  {path:'profile',component:WeProfileComponent, canActivate : [AuthService]},
+  {path:'job-status',component:WeCandidateJobStatusComponent, canActivate : [AuthService]},
 
   // Employer portal
   {path: 'employer',component:WeEmployerLoginPageComponent},
   {path:'employer-signup',component:WeEmployerSignupPageComponent},
-  {path:'register-success',component:WeEmployerWelcomePageComponent},
-  {path:'dashboard',component:WeEmployerProfilePageComponent},
-  {path:'employer-profile',component:WeEmployerProfileDetailsComponent},
-  {path:'newjob-post',component:WeEmployerNewjobpostComponent},
-  {path:'employer-jobpost',component:WeEmployerJobpostComponent},
-  {path:'jobPost-details',component:WeEmployerJobpostDetailsComponent},
-  {path:'job-created',component:WeEmployerJobcreatedComponent},
-  {path:'created-jobs',component:WeEmployerCreatedjobsComponent},
-  {path:'candidates',component:WeEmployerCandidateAppliedComponent},
-  {path:'analytics',component:WeEmployerAnalyticsComponent}
+  {path:'dashboard',component:WeEmployerProfilePageComponent, canActivate:[AuthGuardService]},
+  {path:'employer-profile',component:EmployerProfileDetailsComponent, canActivate:[AuthGuardService]},
+  {path:'newjob-post',component:WeEmployerNewjobpostComponent, canActivate:[AuthGuardService]},
+  {path:'employer-jobpost',component:WeEmployerJobpostComponent, canActivate:[AuthGuardService]},
+  {path:'jobPost-details/:id',component:WeEmployerJobpostDetailsComponent,canActivate:[AuthGuardService]},
+  {path:'job-created',component:WeEmployerJobcreatedComponent,canActivate:[AuthGuardService]},
+  {path:'created-jobs',component:WeEmployerCreatedjobsComponent,canActivate:[AuthGuardService]},
+  {path:'candidates',component:WeEmployerCandidateAppliedComponent,canActivate:[AuthGuardService]},
+  {path:'analytics',component:WeEmployerAnalyticsComponent,canActivate:[AuthGuardService]},
+  {path: 'edit-job/:id',component: EditJobpostComponent}
 ]
 @NgModule({
   declarations: [
@@ -110,7 +115,6 @@ const routes : Routes =[
     WeEmployerSignupPageComponent,
     WeEmployerWelcomePageComponent,
     WeEmployerProfilePageComponent,
-    WeEmployerProfileDetailsComponent,
     WeEditDropdownComponent,
     WeEditTextareaComponent,
     WeBigTextareaComponent,
@@ -126,10 +130,15 @@ const routes : Routes =[
     WeTakePictureComponent,
     WeBackButtonComponent,
     WeNavbarComponent,
+    ToasterComponent,
+    SuccessDialogComponent,
+    EditJobpostComponent,
+    EmployerProfileDetailsComponent,
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
+    NgOtpInputModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     HttpClientModule,

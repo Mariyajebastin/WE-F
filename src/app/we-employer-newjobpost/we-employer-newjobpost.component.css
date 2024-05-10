@@ -64,10 +64,15 @@
   margin-top: 7px;
 }
 .previous-post-container{
-  display: none;
+
 }
 .child-container{
   width: 100%;
+}
+.title p{
+  font-size: 14px;
+  color: red;
+  display: inline;
 }
 .container{
   width: 100%;
@@ -81,6 +86,7 @@
 .title{
   font-size: 16px;
   color: #000;
+  display: block;
 }
 .input-job-title{
   width: 100%;
@@ -119,7 +125,7 @@
 .salary-range-con{
   margin-top: 10px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
 }
 .to{
@@ -128,8 +134,8 @@
   color: #505050;
   display: inline-block;
 }
-.input-min-salary{
-  width: 30%;
+.input-text{
+  width: 100%;
   height: 40px;
   font-size: var(--smalltext);
   color: var(--headingcolor);
@@ -137,36 +143,11 @@
   border: 1.055px solid #505050;
   padding-left: 10px;
 }
-.input-min-salary:focus{
-  outline: none;
-}
-.input-max-salary{
-  width: 30%;
-  height: 40px;
-  font-size: var(--smalltext);
-  color: var(--headingcolor);
-  padding-left: 10px;
-  border: 1.055px solid #505050;
-  border-radius: 40px;
-}
-.input-max-salary:focus{
-  outline: none;
-}
-.period{
-  width: 25%;
-  height: 40px;
-  border: 1.055px solid #505050;
-  border-radius: 40px;
-  background-color: white;
-  padding-left: 10px;
-  font-size: var(--smalltext);
-  color: var(--headingcolor);
-}
-.period:focus{
-  outline: none;
+.input-text:focus{
+  outline: 0.3px solid #000;
 }
 .time-period{
-  width: 30%;
+  width: 31%;
   height: 40px;
   border: 1.055px solid #505050;
   border-radius: 40px;
@@ -240,7 +221,7 @@ table{
   border-spacing: 0 1px;
 }
 thead{
-  background-color: #1400FF;
+  background-color: var(--we);
   position: sticky;
   top: 0;
   left: 0;
@@ -267,11 +248,13 @@ tbody tr:last-child{
 }
 .open-btn{
   font-size: var(--tabletext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  font-weight: 700;
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 6px 12px;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
 .load-btn-con{
   margin-bottom: 1rem;
@@ -279,12 +262,28 @@ tbody tr:last-child{
 }
 .load-more-btn{
   font-size: var(--subtext);
-  color: #fff;
-  background-color: var(--headingcolor);
+  color: var(--we);
+  background-color: var(--bgbutton);
   padding: 8px 17px;
   border: none;
   border-radius: 40px;
   cursor: pointer;
+}
+.not-found-container{
+  text-align: center;
+}
+.not-found-text{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.info-text{
+  font-size: 11px;
+  font-weight: 400;
+  color: red;
+  margin-top: 3px;
+}
+.text-field{
+  width: 100%;
 }
 @media only screen and (min-width:600px) {
   .head-top {

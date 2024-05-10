@@ -7,11 +7,12 @@
     <div class="company-feed-con">
       <div class="company-top">
         <div class="logo-con">
-          <div class="logo"></div>
+          <img src="/assets/img/company.png" alt="" class="dummy-logo">
+          <!-- <img class="logo" src="/assets/img/capgemini logo.png" alt=""> -->
         </div>
         <div>
-          <p class="name-text">Front End Web Developer</p>
-          <p class="dev-content">Capgemnini Technology Services India Limited , OMR</p>
+          <p class="name-text"> {{ jobDetails.job_title }} </p>
+          <p class="dev-content">Salary: {{ jobDetails.min_salary+ ' - ' + jobDetails.max_salary }}</p>
         </div>
       </div>
       <div class="menu-btn-con">
@@ -27,7 +28,7 @@
         </button>
         <div class="edit-create-btn" #btns>
           <div class="edit-btn-con">
-            <button class="edit-btn">
+            <button class="edit-btn" (click)="editJob(jobDetails.id)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                 <mask id="mask0_696_234" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
                   <rect x="0.715576" y="0.71582" width="20.569" height="20.569" fill="#D9D9D9"/>
@@ -50,7 +51,7 @@
           </svg>
         </button>
         <div class="menu-option" #menu>
-          <a href="#" class="menu">Edit</a>
+          <a class="menu" (click)="editJob(jobDetails.id)">Edit</a>
           <a href="/newjob-post" class="menu2">Create New Job</a>
         </div>
       </div>
@@ -58,42 +59,17 @@
     <div class="para-con">
       <div class="topic">Job brief</div>
       <div class="para">
-        We are looking for a Software Developer to build and implement functional programs.
-        You will work with other
-        Developers and Product Managers throughout the software development
-        life cycle.
-        <br>
-        <br>
-        In this role, you should be a team player with a keen eye for detail and problem-solving skills. If you also
-        have experience in Agile frameworks and popular coding languages (e.g. JavaScript), we’d like to meet you.
-        Your goal will be to build efficient programs and systems that serve user needs.
+        {{ jobDetails.job_description }}
       </div>
     </div>
     <div class="para-con">
       <div class="topic">Responsibilities</div>
       <div class="point-para">
-        Work with developers to design algorithms and flowcharts
-      </div>
-      <div class="point-para">
-        Produce clean, efficient code based on specifications
-      </div>
-      <div class="point-para">
-        Integrate software components and third-party programs
-      </div>
-      <div class="point-para">
-        Verify and deploy programs and systems
-      </div>
-      <div class="point-para">
-        Troubleshoot, debug and upgrade existing software
-      </div>
-      <div class="point-para">
-        Gather and evaluate user feedback
-      </div>
-      <div class="point-para">
-        Recommend and execute improvements
-      </div>
-      <div class="point-para">
-        Create technical documentation for reference and reporting
+        <ul>
+          <li *ngFor="let responsibility of jobDetails.responsibilities.split('\n')">
+            {{ responsibility }}
+          </li>
+        </ul>
       </div>
     </div>
     <div class="para-con">
@@ -101,44 +77,22 @@
         Requirements and skills
       </div>
       <div class="point-para">
-        Proven experience as a Software Developer,Software Engineer or similar role
-      </div>
-      <div class="point-para">
-        Familiarity with Agile development methodologies
-      </div>
-      <div class="point-para">
-        Experience with software design and development in a test-driven environment
-      </div>
-      <div class="point-para">
-        Knowledge of coding languages (e.g. C++, Jave, JavaScript) and frameworks/systems(e.g. AngularJS,Git)
-      </div>
-      <div class="point-para">
-        Experience with databases and Object-Relational Mapping (ORM)frameworks (e.g. Hibernate)
-      </div>
-      <div class="point-para">
-        Ability to learn new languages and technologies
-      </div>
-      <div class="point-para">
-        Excellent communication skills
-      </div>
-      <div class="point-para">
-        Resourcefulness and troubleshooting aptitude Attention to detail
-      </div>
-      <div class="point-para">
-        B.sc/BA in Computer Science, Engineering or a related field
+        <ul>
+          <li *ngFor="let skills of jobDetails.skills.split('\n')"> {{ skills }} </li>
+        </ul>
       </div>
     </div>
   </div>
   <div class="down-con">
     <div class="down-center">
-      <p class="com-name">Capgemini Technology Services India Limited,</p>
-      <p class="com-name">OMR</p>
-      <div class="com-details">
+      <p class="com-name"> {{ companyName }},</p>
+      <p class="com-name"> {{ companyAddress }} </p>
+      <!-- <div class="com-details">
         Capgemini was founded by Serge Kampf in 1967[4] as an enterprise management and data processing company.
         The company was founded as the Société pour la Gestion de l'Entreprise et le Traitement de l'Information
         (Sogeti).[5]
-      </div>
-      <a class="web-tag" href="" style="text-decoration: none;">www.cape.com</a>
+      </div> -->
+      <a class="web-tag" href="" style="text-decoration: none;"> {{ companyLink }} </a>
     </div>
   </div>
 </div>

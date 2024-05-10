@@ -7,8 +7,8 @@
       <div class="profile-container">
         <div class="profile-inner-con">
           <div class="profile-name-container">
-            <p class="profile-name">Ramesh RS</p>
-            <p class="profile-role">Software Developer</p>
+            <p class="profile-name"> {{ employee_data.nick_name }} </p>
+            <p class="profile-role"> {{ employee_data.designation }} </p>
           </div>
           <div class="swipe-up-container">
             <div class="swipe-up">
@@ -26,90 +26,84 @@
           <div class="close-btn-con">
             <button class="close-btn">&times;</button>
           </div>
-          <div class="edit-btn-con">
-            <button class="edit-btn">Edit</button>
-          </div>
-          <div class="profile-details-container">
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Name</p>
-                <input type="text" class="input-text">
-              </div>
-            </div>
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Mobile Number</p>
-                <div class="text-field-country">
-                  <div class="country-code-con">
-                    <select class="country-codes">
-                      <option class="country-code" value="India">+91</option>
-                      <option class="country-code" value="us">+1</option>
-                      <option class="country-code" value="Uk">+44</option>
-                    </select>
-                  </div>
-                  <input class="input-text" type="text" style="padding-left: 70px;" maxlength="10" autocomplete="off">
+          <form [formGroup]="profileForm">
+            <div class="profile-details-container">
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Nick name</p>
+                  <input type="text" class="input-text" [formControl]="profileForm.get('nick_name')">
                 </div>
               </div>
-            </div>
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Designation</p>
-                <input type="text" class="input-text">
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Mobile Number</p>
+                  <div class="text-field-country">
+                    <div class="country-code-con">
+                      <input class="country-codes" type="text" value="+91" disabled>
+                    </div>
+                    <input class="input-text" type="text" style="padding-left: 70px;" maxlength="10" [formControl]="profileForm.get('mobile_number')" autocomplete="off">
+                  </div>
+                </div>
+              </div>
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Designation</p>
+                  <input type="text" class="input-text" [formControl]="profileForm.get('designation')">
+                </div>
+              </div>
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Education</p>
+                  <select class="input-text">
+                    <option value="Bsc">Bsc</option>
+                    <option value="Msc">Msc</option>
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                  </select>
+                </div>
+              </div>
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Department</p>
+                  <select class="input-text" [formControl]="profileForm.get('department')">
+                    <option value="Maths">Maths</option>
+                    <option value="computer science">Computer science</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="physics">Physics</option>
+                  </select>
+                </div>
+              </div>
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Experience</p>
+                  <select class="input-text" [formControl]="profileForm.get('experience')">
+                    <option value="0-1 years">0-1 years</option>
+                    <option value="1-3 years">1-3 years</option>
+                    <option value="3-5 years">3-5 years</option>
+                  </select>
+                </div>
+              </div>
+              <div class="text-field-con">
+                <div class="text-field">
+                  <p class="top-name">Skills</p>
+                  <select class="input-text">
+                    <option>python</option>
+                    <option>java</option>
+                    <option>javaScript</option>
+                  </select>
+                </div>
+              </div>
+              <div class="file-upload-con">
+                <label for="file" class="update-btn">
+                  Update Resume
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path d="M4.25 15.75H11.75V14.25H4.25V15.75ZM4.25 11.75H11.75V10.25H4.25V11.75ZM2.3077 19.5C1.80257 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V2.3077C0.5 1.80257 0.675 1.375 1.025 1.025C1.375 0.675 1.80257 0.5 2.3077 0.5H10.25L15.5 5.74995V17.6923C15.5 18.1974 15.325 18.625 14.975 18.975C14.625 19.325 14.1974 19.5 13.6922 19.5H2.3077ZM9.5 6.49995V1.99998H2.3077C2.23077 1.99998 2.16024 2.03203 2.09612 2.09613C2.03202 2.16024 1.99997 2.23077 1.99997 2.3077V17.6923C1.99997 17.7692 2.03202 17.8397 2.09612 17.9038C2.16024 17.9679 2.23077 18 2.3077 18H13.6922C13.7692 18 13.8397 17.9679 13.9038 17.9038C13.9679 17.8397 14 17.7692 14 17.6923V6.49995H9.5Z" fill="#FF1F00"/>
+                  </svg>
+                </label>
+                <input type="file" id="file" (change)="getFile($event)">
               </div>
             </div>
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Programme</p>
-                <select class="input-text">
-                  <option>Under Graduate</option>
-                  <option>Post Graduate</option>
-                  <option>Diploma</option>
-                </select>
-              </div>
-            </div>
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Course</p>
-                <select class="input-text">
-                  <option>Information Technology</option>
-                  <option>Computer Science</option>
-                  <option>B.com</option>
-                </select>
-              </div>
-            </div>
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Experience</p>
-                <select class="input-text">
-                  <option>0-1 years</option>
-                  <option>1-3 years</option>
-                  <option>3-5 years</option>
-                </select>
-              </div>
-            </div>
-            <div class="text-field-con">
-              <div class="text-field">
-                <p class="top-name">Skills</p>
-                <select class="input-text">
-                  <option>python</option>
-                  <option>java</option>
-                  <option>javaScript</option>
-                </select>
-              </div>
-            </div>
-            <div class="file-upload-con">
-              <label for="file" class="update-btn">
-                Update Resume
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
-                  <path d="M4.25 15.75H11.75V14.25H4.25V15.75ZM4.25 11.75H11.75V10.25H4.25V11.75ZM2.3077 19.5C1.80257 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V2.3077C0.5 1.80257 0.675 1.375 1.025 1.025C1.375 0.675 1.80257 0.5 2.3077 0.5H10.25L15.5 5.74995V17.6923C15.5 18.1974 15.325 18.625 14.975 18.975C14.625 19.325 14.1974 19.5 13.6922 19.5H2.3077ZM9.5 6.49995V1.99998H2.3077C2.23077 1.99998 2.16024 2.03203 2.09612 2.09613C2.03202 2.16024 1.99997 2.23077 1.99997 2.3077V17.6923C1.99997 17.7692 2.03202 17.8397 2.09612 17.9038C2.16024 17.9679 2.23077 18 2.3077 18H13.6922C13.7692 18 13.8397 17.9679 13.9038 17.9038C13.9679 17.8397 14 17.7692 14 17.6923V6.49995H9.5Z" fill="#FF1F00"/>
-                </svg>
-              </label>
-              <input type="file" id="file">
-            </div>
-            <div class="btn-con">
-              <input type="button" class="save-btn" value="Save">
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -136,88 +130,87 @@
         </div>
         <div class="profile-name-con">
           <div>
-            <p class="profile-name">Ramesh RS</p>
-            <p class="profile-role">Software Developer</p>
-          </div>
-          <div class="edit-btn-con">
-            <input class="edit-btn" type="button" value="Edit">
+            <p class="profile-name"> {{ employee_data.nick_name }} </p>
+            <p class="profile-role"> {{ employee_data.designation }} </p>
           </div>
         </div>
       </div>
-      <div class="field-details">
-        <div class="input-center">
-          <div class="text-field">
-            <p class="top-name">Name</p>
-            <input class="input-text" type="text">
-          </div>
-          <div class="text-field">
-            <div class="top-name">Mobile Number</div>
-            <div class="text-field-country">
-              <div class="country-code-con">
-                <select class="country-codes">
-                  <option class="country-code" value="India">+91</option>
-                  <option class="country-code" value="us">+1</option>
-                  <option class="country-code" value="Uk">+44</option>
-                </select>
+      <form [formGroup]="profileForm">
+        <div class="field-details">
+          <div class="input-center">
+            <div class="text-field">
+              <p class="top-name">Nick name</p>
+              <input class="input-text" type="text" [formControl]="profileForm.get('nick_name')" (blur)="doSave()">
+            </div>
+            <div class="text-field">
+              <div class="top-name">Mobile Number</div>
+              <div class="text-field-country">
+                <div class="country-code-con">
+                  <input class="country-codes" type="text" value="+91" disabled>
+                </div>
+                <input class="input-text" type="text" style="padding-left: 70px;" (blur)="doSave()" [formControl]="profileForm.get('mobile_number')" autocomplete="off">
               </div>
-              <input class="input-text" type="text" style="padding-left: 70px;" autocomplete="off">
             </div>
           </div>
-        </div>
-        <div class="input-center">
-          <div class="text-field">
-            <p class="top-name">Designation</p>
-            <input class="input-text" type="text">
+          <div class="input-center">
+            <div class="text-field">
+              <p class="top-name">Designation</p>
+              <input class="input-text" type="text" (blur)="doSave()" [formControl]="profileForm.get('designation')">
+            </div>
+            <div class="text-field">
+              <p class="top-name">Experience</p>
+              <select class="input-text" [formControl]="profileForm.get('experience')" (blur)="doSave()">
+                <option value="0-1 years">0-1 years</option>
+                <option value="1-3 years">1-3 years</option>
+                <option value="3-5 years">3-5 years</option>
+              </select>
+            </div>
           </div>
-          <div class="text-field">
-            <p class="top-name">Experience</p>
-            <select class="input-text">
-              <option>0-1 years</option>
-              <option>1-3 years</option>
-              <option>3-5 years</option>
-            </select>
+          <div class="input-center">
+            <div class="text-field">
+              <p class="top-name">Education</p>
+              <select class="input-text" [formControl]="profileForm.get('education')" (blur)="doSave()">
+                <option value="Bsc">Bsc</option>
+                <option value="Msc">Msc</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+              </select>
+            </div>
+            <div class="text-field">
+              <p class="top-name">Department</p>
+              <select class="input-text" [formControl]="profileForm.get('department')" (blur)="doSave()">
+                <option>Information Technology</option>
+                <option>Computer Science</option>
+                <option>B.com</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-center">
+            <div class="text-field">
+              <p class="top-name">Skills</p>
+              <ng-multiselect-dropdown [settings]="dropdownSettings"
+              [data]="dropdownList"
+              [(ngModel)]="selectedItems"
+              (onSelect)="onItemSelect($event)"
+              (onSelectAll)="onSelectAll($event)">
+
+              </ng-multiselect-dropdown>
+            </div>
+          </div>
+          <div class="file-upload-con">
+            <label for="p-file" class="update-btn">
+              Update Resume
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 20" fill="none">
+                <path d="M4.25 15.75H11.75V14.25H4.25V15.75ZM4.25 11.75H11.75V10.25H4.25V11.75ZM2.3077 19.5C1.80257 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V2.3077C0.5 1.80257 0.675 1.375 1.025 1.025C1.375 0.675 1.80257 0.5 2.3077 0.5H10.25L15.5 5.74995V17.6923C15.5 18.1974 15.325 18.625 14.975 18.975C14.625 19.325 14.1974 19.5 13.6922 19.5H2.3077ZM9.5 6.49995V1.99998H2.3077C2.23077 1.99998 2.16024 2.03203 2.09612 2.09613C2.03202 2.16024 1.99997 2.23077 1.99997 2.3077V17.6923C1.99997 17.7692 2.03202 17.8397 2.09612 17.9038C2.16024 17.9679 2.23077 18 2.3077 18H13.6922C13.7692 18 13.8397 17.9679 13.9038 17.9038C13.9679 17.8397 14 17.7692 14 17.6923V6.49995H9.5Z" fill="#FF1F00"/>
+              </svg>
+            </label>
+            <input type="file" id="p-file" (change)="getFile($event)">
+          </div>
+          <div class="btn-con" *ngIf="saveBtn">
+            <input type="button" class="save-btn" value="Save">
           </div>
         </div>
-        <div class="input-center">
-          <div class="text-field">
-            <p class="top-name">Programme</p>
-            <select class="input-text">
-              <option>Under Graduate</option>
-              <option>Post Graduate</option>
-              <option>Diploma</option>
-            </select>
-          </div>
-          <div class="text-field">
-            <p class="top-name">Course</p>
-            <select class="input-text">
-              <option>Information Technology</option>
-              <option>Computer Science</option>
-              <option>B.com</option>
-            </select>
-          </div>
-        </div>
-        <div class="input-center">
-          <div class="text-field">
-            <p class="top-name">Skills</p>
-            <input type="text" placeholder="Search" class="input-search">
-            <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M16.6484 17.7181L10.2786 11.3483C9.77152 11.767 9.18837 12.0947 8.52916 12.3313C7.86994 12.5679 7.18798 12.6863 6.48327 12.6863C4.74988 12.6863 3.28286 12.0861 2.08222 10.8857C0.881572 9.68541 0.28125 8.21877 0.28125 6.48584C0.28125 4.75289 0.88142 3.28571 2.08176 2.08431C3.2821 0.88292 4.74874 0.282227 6.48169 0.282227C8.21463 0.282227 9.6818 0.88255 10.8832 2.08319C12.0846 3.28384 12.6853 4.75085 12.6853 6.48424C12.6853 7.20846 12.5637 7.90018 12.3206 8.55939C12.0774 9.2186 11.753 9.792 11.3474 10.2796L17.7171 16.6494L16.6484 17.7181ZM6.48327 11.1651C7.78999 11.1651 8.89681 10.7116 9.80372 9.80469C10.7106 8.89779 11.1641 7.79097 11.1641 6.48424C11.1641 5.17752 10.7106 4.0707 9.80372 3.16379C8.89681 2.25689 7.78999 1.80343 6.48327 1.80343C5.17654 1.80343 4.06972 2.25689 3.16282 3.16379C2.25593 4.0707 1.80248 5.17752 1.80248 6.48424C1.80248 7.79097 2.25593 8.89779 3.16282 9.80469C4.06972 10.7116 5.17654 11.1651 6.48327 11.1651Z" fill="#464646"/>
-            </svg>
-          </div>
-        </div>
-        <div class="file-upload-con">
-          <label for="p-file" class="update-btn">
-            Update Resume
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 20" fill="none">
-              <path d="M4.25 15.75H11.75V14.25H4.25V15.75ZM4.25 11.75H11.75V10.25H4.25V11.75ZM2.3077 19.5C1.80257 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V2.3077C0.5 1.80257 0.675 1.375 1.025 1.025C1.375 0.675 1.80257 0.5 2.3077 0.5H10.25L15.5 5.74995V17.6923C15.5 18.1974 15.325 18.625 14.975 18.975C14.625 19.325 14.1974 19.5 13.6922 19.5H2.3077ZM9.5 6.49995V1.99998H2.3077C2.23077 1.99998 2.16024 2.03203 2.09612 2.09613C2.03202 2.16024 1.99997 2.23077 1.99997 2.3077V17.6923C1.99997 17.7692 2.03202 17.8397 2.09612 17.9038C2.16024 17.9679 2.23077 18 2.3077 18H13.6922C13.7692 18 13.8397 17.9679 13.9038 17.9038C13.9679 17.8397 14 17.7692 14 17.6923V6.49995H9.5Z" fill="#FF1F00"/>
-            </svg>
-          </label>
-          <input type="file" id="p-file">
-        </div>
-        <div class="btn-con">
-          <input type="button" class="save-btn" value="Save">
-        </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>

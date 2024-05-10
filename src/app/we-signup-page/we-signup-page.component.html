@@ -1,4 +1,4 @@
-<form [formGroup]="signupForm">
+<form [formGroup]="signupForm" *ngIf="ShowSignup">
   <div class="sign-con">
     <div class="sign-center">
       <div class="sign-text">
@@ -8,45 +8,181 @@
         <div class="input-center">
           <div class="text-field-con">
             <div class="text-field">
-              <div class="top-name">How we can call you?</div>
-              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off">
+              <div class="top-name">How we can call you? <p>*</p></div>
+              <input class="input-text" type="text" [formControl]="signupForm.get('nick_name')" autocomplete="off" (focus)="onFocucsField('nick_name')">
+              <p class="info-text" *ngIf="signupForm.get('nick_name')?.hasError('required') && signupForm.get('nick_name')?.touched">This field is required</p>
             </div>
           </div>
           <div class="text-field-con">
             <div class="text-field">
-              <div class="top-name">Mobile No</div>
+              <label class="top-name">Field of interest <p>*</p></label>
+              <select class="input-text" [formControl]="signupForm.get('field_of_interest')" (focus)="onFocucsField('field_of_interest')">
+                <option value="IT">IT</option>
+                <option value="accountany">Accoutancy</option>
+                <option value="maths">Maths</option>
+              </select>
+              <p class="info-text" *ngIf="signupForm.get('field_of_interest')?.hasError('required') && signupForm.get('field_of_interest')?.touched">This field is required</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-center">
+          <div class="text-field-con">
+            <div class="text-field-country">
+              <div class="text-field">
+                <div class="top-icon">
+                  <label class="top-name">Email <p>*</p></label>
+                  <svg xmlns="http://www.w3.org/2000/svg" (click)="editEmail()" *ngIf="mailEditIcon" class="edit-icon" height="20" viewBox="0 -960 960 960" width="20">
+                    <path d="M200-200h43.92l427.93-427.92-43.93-43.93L200-243.92V-200Zm-40 40v-100.77l527.23-527.77q6.15-5.48 13.57-8.47 7.43-2.99 15.49-2.99t15.62 2.54q7.55 2.54 13.94 9.15l42.69 42.93q6.61 6.38 9.04 14 2.42 7.63 2.42 15.25 0 8.13-2.74 15.56-2.74 7.42-8.72 13.57L260.77-160H160Zm600.77-556.31-44.46-44.46 44.46 44.46ZM649.5-649.5l-21.58-22.35 43.93 43.93-22.35-21.58Z"/>
+                  </svg>
+                </div>
+                <div class="verify-icon" *ngIf="mailVerified">
+                  <img src="/assets/img/verified.svg" alt="">
+                </div>
+                <input class="input-text" type="text" [(ngModel)]="email" (input)="mailOnInputChange" [formControl]="signupForm.get('email')" autocomplete="off" (focus)="onFocucsField('email')">
+                <p class="info-text" *ngIf="signupForm.get('email')?.errors?.required && signupForm.get('email')?.touched">This field is required</p>
+                <!-- <p class="info-text" *ngIf="signupForm.get('email')?.hasError('email')">This field is required</p> -->
+                <form [formGroup]="emailOtpForm">
+                  <div class="otp-container">
+                    <div class="otp-text"> 
+                      <ul>
+                        <li *ngIf="isEmailValid() && verifyBtn"><a class="enter-otp" (click)="verifyEmail()">Verify Email</a></li>
+                        <li>
+                          <div class="otp-con" *ngIf="showEmailOtp">
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="emailOtpForm.get('otp1')" (input)="onInputE($event, Otp1, Otp2)"  #Otp1 (keydown)="onKeyDownE($event, Otp1, undefined)"> 
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="emailOtpForm.get('otp2')" (input)="onInputE($event, Otp2, Otp3)"  #Otp2 (keydown)="onKeyDownE($event, Otp2,Otp1)">
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="emailOtpForm.get('otp3')" (input)="onInputE($event, Otp3, Otp4)" #Otp3 (keydown)="onKeyDownE($event, Otp3,Otp2)"> 
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="emailOtpForm.get('otp4')" (input)="onInputE($event, Otp4, undefined)" #Otp4 (keydown)="onKeyDownE($event, Otp4,Otp3)">
+                          </div>
+                        </li>
+                        <li><a class="enter-otp" *ngIf="showEmailOtp" (click)="verifyEmail()">Resend OTP?</a></li>
+                      </ul>
+                    </div>
+                    <p class="info-text" *ngIf="invalidOtp">Please provide correct otp</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <div class="top-icon">
+                <label class="top-name two">Mobile number <p>*</p></label>
+                <svg xmlns="http://www.w3.org/2000/svg" (click)="editMobile()" *ngIf="mobileEditIcon" class="edit-icon" height="20" viewBox="0 -960 960 960" width="20">
+                  <path d="M200-200h43.92l427.93-427.92-43.93-43.93L200-243.92V-200Zm-40 40v-100.77l527.23-527.77q6.15-5.48 13.57-8.47 7.43-2.99 15.49-2.99t15.62 2.54q7.55 2.54 13.94 9.15l42.69 42.93q6.61 6.38 9.04 14 2.42 7.63 2.42 15.25 0 8.13-2.74 15.56-2.74 7.42-8.72 13.57L260.77-160H160Zm600.77-556.31-44.46-44.46 44.46 44.46ZM649.5-649.5l-21.58-22.35 43.93 43.93-22.35-21.58Z"/>
+                </svg>
+              </div>
               <div class="text-field-country">
                 <div class="country-code-con">
-                  <select class="country-codes">
-                    <option class="country-code" value="India">+91</option>
-                    <option class="country-code" value="us">+1</option>
-                    <option class="country-code" value="Uk">+44</option>
-                  </select>
+                  <input class="country-codes" type="text" [formControl]="signupForm.get('country_code')">
                 </div>
-                <input class="input-text" type="text" style="padding-left: 70px;" [formControl]="signupForm.get('mobile_no')" autocomplete="off">
+                <div class="verify-img" *ngIf="mobileVerified">
+                  <img src="/assets/img/verified.svg" alt="">
+                </div>
+                <input class="input-text" type="text" inputmode="numeric" (input)="onInputChange()" (focus)="onFocucsField('mobile_number')" [(ngModel)]="mobileNumber" maxlength="10" style="padding-left: 70px;" (keypress)="allowOnlyNumbers($event)" [formControl]="signupForm.get('mobile_number')" autocomplete="off">
+                <p class="info-text" *ngIf="signupForm.get('mobile_number')?.hasError('required') && signupForm.get('mobile_number')?.touched">This field is required</p>
+                <p class="info-text" *ngIf="signupForm.get('mobile_number')?.hasError('min')">This field is required</p>
+                <form [formGroup]="otpForm">
+                  <div class="otp-container" >
+                    <div class="otp-text">
+                      <ul>
+                        <li *ngIf="isMobileValid() && verifyText"><a class="enter-otp" (click)="verifyMobile()">Verify mobile</a></li>
+                        <li>
+                          <div class="otp-con" *ngIf="showOtp">
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="otpForm.get('otp1')" (input)="onInput($event, otp1, otp2)" #otp1 (keydown)="onKeyDown($event, otp1, undefined)">
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="otpForm.get('otp2')" (input)="onInput($event, otp2, otp3)" #otp2 (keydown)="onKeyDown($event, otp2, otp1)">
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="otpForm.get('otp3')" (input)="onInput($event, otp3, otp4)" #otp3 (keydown)="onKeyDown($event, otp3, otp2)">
+                            <input type="text" class="input-otp" maxlength="1" [formControl]="otpForm.get('otp4')" (input)="onInput($event, otp4, undefined)" #otp4 (keydown)="onKeyDown($event, otp4, otp3)">
+                          </div>
+                        </li>
+                        <li><a class="enter-otp" *ngIf="showOtp" (click)="verifyMobile()">Resend OTP?</a></li>
+                      </ul>
+                    </div>
+                    <p class="info-text two" *ngIf="wrongOtp">Please provide correct otp</p>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <div class="generate-btn-con">
-          <input class="generate-btn" type="button" value="Generate OTP" (click)="startTimerFunction()">
+        <div class="input-center">
+          <div class="text-field-con">
+            <div class="text-field">
+              <label class="top-name">Education</label>
+              <select class="input-text" [formControl]="signupForm.get('education')">
+                <option value="Bsc">Bsc</option>
+                <option value="Msc">Msc</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <label class="top-name">Department</label>
+              <select class="input-text" [formControl]="signupForm.get('department')">
+                <option value="Maths">Maths</option>
+                <option value="computer science">Computer science</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="physics">Physics</option>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="otp-container">
-        <p class="enter-otp">Please Enter the OTP</p>
-        <div class="otp-con">
-          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp1, otp2)" #otp1>
-          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp2, otp3)" #otp2>
-          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp3, otp4)" #otp3>
-          <input type="text" class="input-otp" maxlength="1" (input)="onInput($event, otp4, undefined)" #otp4>
+        <div class="input-center">
+          <div class="text-field-con">
+            <div class="text-field">
+              <label class="top-name">Experience</label>
+              <select class="input-text" [formControl]="signupForm.get('experience')">
+                <option value="0-1 years">0-1 years</option>
+                <option value="2-3 years">2-3 years</option>
+                <option value="3-4 years">3-4 years</option>
+                <option value="4-5 years">4-5 years</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-field-con">
+            <div class="text-field">
+              <label class="top-name">Skills</label>
+              <ng-multiselect-dropdown [settings]="dropdownSettings"
+              [data]="dropdownList"
+              [(ngModel)]="selectedItems"
+              (onSelect)="onItemSelect($event)"
+              (onSelectAll)="onSelectAll($event)">
+
+              </ng-multiselect-dropdown>
+            </div>
+          </div>
         </div>
-        <p class="seconds">{{seconds}} sec</p>
-        <a href="#" class="resend-otp">Resend OTP</a>
-      </div>
-      <div class="sg-button-con">
-        <input class="signup-btn" type="button" (click)="doSignup()" value="Signup">
+        <div class="text-field-con">
+          <div class="text-field">
+            <div class="top-name">Designation</div>
+            <select class="input-text" [formControl]="signupForm.get('designation')">
+              <option value="Frontend developer">Frontend developer</option>
+              <option value="Backend developer">Backend developer</option>
+              <option value="Fullstack developer">Fullstack developer</option>
+              <option value="Software developer">Software developer</option>
+              <option value="Product manager">Product manager</option>
+            </select>
+          </div>
+        </div>
+        <div class="file-upload-con">
+          <label for="file" class="update-btn">
+            Upload Resume
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 20" fill="none">
+              <path d="M4.25 15.75H11.75V14.25H4.25V15.75ZM4.25 11.75H11.75V10.25H4.25V11.75ZM2.3077 19.5C1.80257 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V2.3077C0.5 1.80257 0.675 1.375 1.025 1.025C1.375 0.675 1.80257 0.5 2.3077 0.5H10.25L15.5 5.74995V17.6923C15.5 18.1974 15.325 18.625 14.975 18.975C14.625 19.325 14.1974 19.5 13.6922 19.5H2.3077ZM9.5 6.49995V1.99998H2.3077C2.23077 1.99998 2.16024 2.03203 2.09612 2.09613C2.03202 2.16024 1.99997 2.23077 1.99997 2.3077V17.6923C1.99997 17.7692 2.03202 17.8397 2.09612 17.9038C2.16024 17.9679 2.23077 18 2.3077 18H13.6922C13.7692 18 13.8397 17.9679 13.9038 17.9038C13.9679 17.8397 14 17.7692 14 17.6923V6.49995H9.5Z" fill="#FF1F00"/>
+            </svg>
+          </label>
+          <input type="file" id="file" [formControl]="signupForm.get('resume')" (change)="getFile($event)">
+        </div>
+        <div class="sg-button-con">
+          <input class="signup-btn" type="button" (click)="doSignup()" value="Submit">
+        </div>
+        <div class="login-text-con">
+          <p>Already have an account? <a [routerLink]="['/login']"><b>Login</b></a></p>
+        </div>
       </div>
     </div>
   </div>
 </form>
-<app-we-footer></app-we-footer>
+<app-we-welcome-page *ngIf="showWelcome"></app-we-welcome-page>
+<app-toaster #toaster></app-toaster>

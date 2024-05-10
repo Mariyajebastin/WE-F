@@ -42,6 +42,7 @@
 }
 .profile-inner-con{
   position: relative;
+  padding-top: 1rem;
 }
 .swipe-up-container{
   margin-top: 1rem;
@@ -114,6 +115,7 @@
   padding-left: 7px;
   border-radius: 40px 0px 0px 40px;
   background-color: #E3E3E3;
+  text-align: center;
 }
 .country-codes:focus{
   outline: none;
@@ -191,6 +193,9 @@ input[type=file]::file-selector-button{
     background-color: #c4c4c4;
     position: relative;
   }
+  .field-details{
+    margin-bottom: 1.5rem;
+  }
   .bg-img-con{
     height: 100%;
     width: 100%;
@@ -263,7 +268,7 @@ input[type=file]::file-selector-button{
   }
   .input-center{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 1rem;
     margin-top: 1rem;
   }

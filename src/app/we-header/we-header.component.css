@@ -34,27 +34,47 @@ a{
   align-items: center;
 }
 .right-center{
-
+  
 }
 .menu-btn{
   border: none;
   background-color: transparent;
-  display: none;
+}
+.profile-menu-con{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .profile-menu{
   background-color: transparent;
   border: none;
-  display: none;
 }
 .profile-img-con{
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  position: relative;
 }
 .profile-img{
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+.nickname{
+  font-size: 14px;
+  font-weight: 400;
+}
+.dummy-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 .header-tag{
   display: flex;
@@ -85,7 +105,6 @@ a{
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
   overflow: hidden;
   transition: all 1s ease-in-out;
   transition-property: height;
@@ -148,7 +167,6 @@ a{
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
   transition: all 3s ease-in-out;
   overflow: hidden;
 }
@@ -159,6 +177,9 @@ a{
   color: var(--we);
   background-color: transparent;
   border-radius: 50%;
+  cursor: pointer;
+}
+a{
   cursor: pointer;
 }
 .menu{

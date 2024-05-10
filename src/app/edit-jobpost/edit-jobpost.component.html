@@ -1,0 +1,68 @@
+<div class="body-container">
+    <div class="body-center">
+        <app-we-back-button></app-we-back-button>
+        <div class="heading">
+            <h1>Edit job</h1>
+        </div>
+        <form>
+            <div class="child-container">
+                <div class="container">
+                  <div class="job-title-con">
+                    <div class="title">
+                      Job Title
+                    </div>
+                    <input class="input-job-title" type="text" placeholder="Add short, descriptive job title" [formControl]="jobForm.get('job_title')">
+                  </div>
+                  <div class="job-location-con">
+                    <p class="title">Job Location</p>
+                    <p class="child-job-location">Adding a specific address helps you reach near by candidates</p>
+                    <textarea rows="5" cols="5" class="input-textarea" placeholder="Add an address" [formControl]="jobForm.get('job_location')"></textarea>
+                  </div>
+                  <div class="salary-con">
+                    <div>
+                      <p class="title">Salary Range (Optional)</p>
+                      <div class="salary-range-con">
+                        <input type="text" class="input-min-salary" placeholder="₹Minimum" [formControl]="jobForm.get('min_salary')">
+                        <div class="to">TO</div>
+                        <input type="text" class="input-max-salary" placeholder="₹Maximum" [formControl]="jobForm.get('max_salary')">
+                        <select  class="period" [formControl]="jobForm.get('salary_period')">
+                          <option value="Per Year">Per Year</option>
+                          <option value="Per Month">Per Month</option>
+                          <option value="Per Hour">Per Hour</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="title">Job Type</p>
+                      <select class="time-period" [formControl]="jobForm.get('job_type')">
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                      </select>
+                    </div>
+                    <div>
+                      <p class="title">Job Description</p>
+                      <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('job_description')" placeholder="Describe the responsibilities and preferred skills for this job"></textarea>
+                    </div>
+                    <div>
+                      <p class="title">Responsibilities</p>
+                      <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('responsibilities')"></textarea>
+                    </div>
+                    <div>
+                      <p class="title">Skills</p>
+                      <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('skills')"></textarea>
+                    </div>
+                    <div>
+                      <p class="title">Company Profile</p>
+                      <textarea class="input-textarea" rows="5" cols="5" [formControl]="jobForm.get('company_profile')" placeholder="Write about your company founding idea, established year, achievements, employees..."></textarea>
+                    </div>
+                  </div>
+                  <div class="btn-con">
+                    <input class="submit-button" type="button" value="Save" (click)="doEdit()">
+                  </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<app-success-dialog #dialog></app-success-dialog>

@@ -1,117 +1,56 @@
-<form [formGroup]="jobPostForm">
+
 <div class="body-container">
   <div class="body-center">
-    <div class="nav">
+    <!-- <div class="nav">
       <app-we-navbar></app-we-navbar>
-    </div>
+    </div> -->
     <div class="create-btn">
       <app-we-back-button></app-we-back-button>
       <div class="top-btn">
         <app-we-button value="+ Create New Job" (click)="this.router.navigate(['/newjob-post'])"></app-we-button>
       </div>
     </div>
-    <div class="search-con">
-      <input class="input-search" type="text" placeholder="Search">
+    <div class="search-con" *ngIf="showData">
+      <input class="input-search" [(ngModel)]="searchText" (keyup.enter)="onSearchButtonClick()" (keydown)="onSearchKeydown($event)" (input)="onSearchInput()" type="text" placeholder="Search">
       <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
         <path d="M12.7368 13.5388L7.95944 8.7615C7.57913 9.0755 7.14176 9.32124 6.64736 9.49872C6.15295 9.6762 5.64147 9.76494 5.11294 9.76494C3.8129 9.76494 2.71263 9.31481 1.81215 8.41456C0.911667 7.5143 0.461426 6.41432 0.461426 5.11462C0.461426 3.81491 0.911553 2.71453 1.81181 1.81348C2.71206 0.912434 3.81205 0.461914 5.11176 0.461914C6.41146 0.461914 7.51184 0.912157 8.41289 1.81264C9.31394 2.71312 9.76447 3.81338 9.76447 5.11343C9.76447 5.65659 9.67329 6.17538 9.49093 6.66979C9.30857 7.1642 9.06526 7.59424 8.76101 7.95993L13.5383 12.7373L12.7368 13.5388ZM5.11294 8.62403C6.09298 8.62403 6.9231 8.28394 7.60328 7.60376C8.28346 6.92358 8.62355 6.09347 8.62355 5.11343C8.62355 4.13338 8.28346 3.30327 7.60328 2.62309C6.9231 1.94291 6.09298 1.60282 5.11294 1.60282C4.13289 1.60282 3.30278 1.94291 2.6226 2.62309C1.94243 3.30327 1.60235 4.13338 1.60235 5.11343C1.60235 6.09347 1.94243 6.92358 2.6226 7.60376C3.30278 8.28394 4.13289 8.62403 5.11294 8.62403Z" fill="#464646"/>
       </svg>
     </div>
-    <div class="job-table">
+    <div class="job-table" *ngIf="showData">
       <table>
         <thead>
         <tr>
           <th>Date</th>
           <th>Jobs</th>
-          <th>Job Details</th>
+          <th style="text-align: center;">Job Details</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Software Developer</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open" (click)="this.router.navigate(['/jobPost-details'])"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Senior Software Developer Senior Software Developer</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Software Developer</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
-        <tr>
-          <td>10.01.2024</td>
-          <td>Product Manager</td>
-          <td style="text-align: center"><input type="button" class="open-btn" value="Open"></td>
-        </tr>
+          <ng-container *ngIf="searchResultFound; else notFound">
+            <tr *ngFor="let job of filtered_job_data">
+              <td> {{ job.created_date }} </td>
+              <td> {{ job.job_title }} </td>
+              <td style="text-align: center"><input type="button" class="open-btn" value="Open" (click)="viewJobDetails(job)"></td>
+            </tr>
+          </ng-container>
+          <ng-template #notFound>
+            <tr>
+              <td colspan="6">No matching records found.</td>
+            </tr>
+            <!-- <p style="text-align: center; padding: 2rem 0; width: 100%; display: table-cell;">No matching records found.</p> -->
+          </ng-template>
         </tbody>
       </table>
     </div>
-    <div class="btn-con">
-      <input type="button" class="load-more-btn" value="Load more">
+    <div class="not-found-container" *ngIf="noData">
+      <div class="not-found-img">
+        <img src="/assets/img/not found.jpg" alt="">
+      </div>
+      <h1 class="not-found-text">Job post unavailable</h1>
     </div>
+    <!-- <div class="btn-con">
+      <input type="button" class="load-more-btn" value="Load more">
+    </div> -->
   </div>
 </div>
-</form>
+

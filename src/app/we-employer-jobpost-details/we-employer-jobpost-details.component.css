@@ -25,15 +25,25 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  position: relative;
 }
 .logo{
   height: 100%;
   width:100%;
-  background-image: url("/assets/img/capgemini logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   border-radius: 50%;
+  object-fit: contain;
+}
+.dummy-logo{
+  height: 100%;
+  width:100%;
+  border-radius: 50%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 .name-text{
   font-size: var(--headingthree);
@@ -120,6 +130,10 @@
   font-weight: 400;
   margin-top: 8px;
   margin-left:15px;
+}
+.point-para ul li{
+  margin-top: 5px;
+  line-height: 1.4;
 }
 .down-con{
   width:100%;

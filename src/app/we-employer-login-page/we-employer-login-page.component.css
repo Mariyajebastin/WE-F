@@ -44,6 +44,24 @@
 a{
   text-decoration: none;
 }
+.show-icon{
+  position: absolute;
+  right: 15px;
+  top: 37px;
+  cursor: pointer;
+}
+.hide-icon{
+  position: absolute;
+  top: 37px;
+  right: 15px;
+  cursor: pointer;
+}
+.info-text{
+  font-size: 11px;
+  font-weight: 400;
+  color: red;
+  margin-top: 3px;
+}
 .emp-lg-text{
   font-size: 13px;
   display: inline-block;
@@ -55,6 +73,7 @@ a{
 }
 .text-field{
   width:100%;
+  position: relative;
 }
 .top-name{
   font-size: var(--subtext);

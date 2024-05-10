@@ -73,6 +73,10 @@
   margin-top: 8px;
   margin-left:15px;
 }
+.point-para ul li{
+  margin-top: 5px;
+  line-height: 1.4;
+}
 .down-con{
   width:100%;
   background-color: #EEE;

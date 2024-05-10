@@ -3,16 +3,18 @@
     <div class="bg-con">
       <div class="bg-txt-con">
         <div class="bg-txt">Millions of Opportunity. Millions of Jobs. </div>
-        <div class="sl-con">
-          <div class="search-con">
-            <i class="fa fa-search"></i>
-            <input type="text" class="input-search" placeholder="Search by designation, category...">
+        <form [formGroup]="searchForm">
+          <div class="sl-con">
+            <div class="search-con">
+              <i class="fa fa-search"></i>
+              <input type="text" class="input-search" placeholder="Search by designation, category...">
+            </div>
+            <div class="location-con">
+              <i class="material-icons">place</i>
+              <input type="text" class="input-search" (click)="location()" [formControl]="searchForm.get('location')" placeholder="Location">
+            </div>
           </div>
-          <div class="location-con">
-            <i class="material-icons">place</i>
-            <input type="text" class="input-search" placeholder="Location">
-          </div>
-        </div>
+        </form>
         <div class="btn-con">
           <input class="search-btn" type="button" value="Search">
         </div>

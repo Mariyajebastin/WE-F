@@ -1,6 +1,7 @@
 .emp-sign-con{
   width:100%;
   padding-top: 55px;
+  min-height: 100dvh;
 }
 .emp-sign-center{
   width: 90%;
@@ -13,7 +14,7 @@
   color: var(--we);
 }
 .emp-txt-center{
-  margin-top:15px;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -28,6 +29,7 @@
 }
 .text-field{
   width:100%;
+  position: relative;
 }
 .top-name{
   color: #424242;
@@ -42,6 +44,7 @@
   font-size: var(--inputtext);
   padding-left: 10px;
   border-radius: 40px;
+  background-color: #fff;
 }
 .input-text:focus{
   outline: 0.3px solid #000;
@@ -80,8 +83,104 @@
   outline: 0.3px solid #000;
 }
 .btn-con{
-  margin-top: 40px;
+  margin: 1rem 0;
   text-align: center;
+}
+.info-text{
+  font-size: 11px;
+  font-weight: 400;
+  color: red;
+  margin-top: 3px;
+}
+.show-icon{
+  position: absolute;
+  right: 15px;
+  top: 37px;
+  cursor: pointer;
+}
+.hide-icon{
+  position: absolute;
+  top: 37px;
+  right: 15px;
+  cursor: pointer;
+}
+.otp-container{
+  width: 100%;
+  margin-top: 5px;
+}
+.otp-con{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.input-otp{
+  height: 35px;
+  width: 35px;
+  font-size: var(--inputtext);
+  text-align: center;
+  border: 1.055px solid #656565;
+  border-radius: 1px;
+}
+.input-otp:focus{
+  outline: 0.5px solid #656565;
+}
+.resend-otp{
+  font-size: var(--subtext);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+}
+.enter-otp{
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.two{
+  margin-top: 10px;
+}
+.verify-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 36px;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+}
+.verify-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.verify-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 26px;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+}
+.verify-icon img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.otp-text ul{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
+}
+.top-icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-icon{
+  cursor: pointer;
 }
 @media screen and (min-width: 600px) {
   .emp-sign-txt{
@@ -90,7 +189,8 @@
   }
   .text-field-con{
     flex-direction: row;
-  }
+    align-items: baseline;
+  } 
 }
 @media screen and (min-width: 1024px) {
   .emp-sign-center{

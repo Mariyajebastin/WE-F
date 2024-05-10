@@ -1,7 +1,8 @@
 .body-container{
   width: 100%;
   padding-top: 55px;
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
 }
 .body-center{
   width: 90%;
@@ -18,7 +19,14 @@
 }
 .table{
   margin-top: 1rem;
-  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100dvh - 150px);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 2rem;
+}
+.table::-webkit-scrollbar{
+  display: none;
 }
 table{
   width: 100%;
@@ -27,6 +35,8 @@ table{
 }
 thead{
   background-color: var(--we);
+  position: sticky;
+  top: -1px;
 }
 tbody tr{
   background-color: #F8F8F8;
@@ -57,5 +67,8 @@ td{
   }
   .icon{
     text-align: left;
+  }
+  .table{
+    max-height: calc(100dvh - 100px);
   }
 }

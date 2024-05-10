@@ -1,0 +1,135 @@
+.body-container{
+    width: 100%;
+    padding-top: 55px;
+}
+.body-center{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.profile-img{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.profile-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.profile-name{
+    margin-top: 12px;
+    text-align: center;
+}
+.profile-name p{
+    font-size: var(--headingtwo);
+    color: var(--headingcolor);
+}
+.btn-con{
+    margin-top: 12px;
+    text-align: center;
+}
+.edit-btn{
+    font-size: var(--subtext);
+    font-weight: 700;
+    color: var(--we);
+    background-color: var(--bgbutton);
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.profile-container{
+    margin: 1rem 0;
+}
+.input-center{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.text-field-con{
+    margin-top: 1rem;
+    width: 100%;
+}
+.text-field{
+    width: 100%;
+}
+.top-name{
+    font-size: var(--subtext);
+    display: block;
+}
+.input-text{
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    border: 0.8px solid #505050;
+    font-size: var(--inputtext);
+    padding-left: 10px;
+    border-radius: 40px;
+    color: var(--headingcolor)
+}
+.input-text:focus{
+    outline: 0.3px solid #000;
+}
+.input-textarea{
+    height: 100px;
+    width: 100%;
+    margin-top: 5px;
+    border: 0.8px solid #505050;
+    font-size: var(--inputtext);
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 8px;
+    color: var(--headingcolor);
+    resize: none;
+}
+.input-textarea:focus{
+    outline: 0.3px solid #000;
+}
+.edit-name{
+    border: none;
+    background-color: transparent;
+    font-size: var(--headingtwo);
+    color: var(--headingcolor);
+    text-align: center;
+}
+.edit-name:focus{
+    outline: none;
+}
+.text-area{
+    width: 100%;
+    margin-top: 1rem;
+}
+.btn{
+    margin: 1.5rem;
+    text-align: center;
+}
+.btn button{
+    padding: 8px 17px;
+    background-color: var(--bgbutton);
+    border: none;
+    font-size: var(--subtext);
+    font-weight: 700;
+    color: var(--we);
+    cursor: pointer;
+    min-width: 75px;
+    border-radius: 40px;
+}
+.info-text{
+    font-size: 11px;
+    font-weight: 400;
+    color: red;
+    margin-top: 3px;
+}
+@media screen and (min-width: 1024px) {
+.body-center{
+    width: 50%;
+    margin-top: 28px;
+}
+.input-center{
+    flex-direction: row;
+    gap: 1rem;
+}
+}  

@@ -6,8 +6,8 @@
         <div class="logo"></div>
       </div>
       <div>
-        <p class="name-text">Front End Web Developer</p>
-        <p class="dev-content">Capgemnini Technology Services India Limited, OMR</p>
+        <p class="name-text"> {{ job_data.job_title }} </p>
+        <p class="dev-content"> {{ job_data.min_salary + ' - ' + job_data.max_salary+ ' '+ job_data.salary_period }} </p>
       </div>
     </div>
     <div class="apply-btn-con">
@@ -16,42 +16,17 @@
     <div class="para-con">
       <div class="topic">Job brief</div>
       <div class="para">
-        We are looking for a Software Developer to build and implement functional programs.
-        You will work with other
-        Developers and Product Managers throughout the software development
-        life cycle.
-        <br>
-        <br>
-        In this role, you should be a team player with a keen eye for detail and problem-solving skills. If you also
-        have experience in Agile frameworks and popular coding languages (e.g. JavaScript), we’d like to meet you.
-        Your goal will be to build efficient programs and systems that serve user needs.
+        {{ job_data.job_description }}
       </div>
     </div>
     <div class="para-con">
       <div class="topic">Responsibilities</div>
       <div class="point-para">
-        Work with developers to design algorithms and flowcharts
-      </div>
-      <div class="point-para">
-        Produce clean, efficient code based on specifications
-      </div>
-      <div class="point-para">
-        Integrate software components and third-party programs
-      </div>
-      <div class="point-para">
-        Verify and deploy programs and systems
-      </div>
-      <div class="point-para">
-        Troubleshoot, debug and upgrade existing software
-      </div>
-      <div class="point-para">
-        Gather and evaluate user feedback
-      </div>
-      <div class="point-para">
-        Recommend and execute improvements
-      </div>
-      <div class="point-para">
-        Create technical documentation for reference and reporting
+        <ul>
+          <li *ngFor="let responsibility of job_data.responsibilities.split('\n')">
+            {{ responsibility }}
+          </li>
+        </ul>
       </div>
     </div>
     <div class="para-con">
@@ -59,31 +34,11 @@
         Requirements and skills
       </div>
       <div class="point-para">
-        Proven experience as a Software Developer,Software Engineer or similar role
-      </div>
-      <div class="point-para">
-        Familiarity with Agile development methodologies
-      </div>
-      <div class="point-para">
-        Experience with software design and development in a test-driven environment
-      </div>
-      <div class="point-para">
-        Knowledge of coding languages (e.g. C++, Jave, JavaScript) and frameworks/systems(e.g. AngularJS,Git)
-      </div>
-      <div class="point-para">
-        Experience with databases and Object-Relational Mapping (ORM)frameworks (e.g. Hibernate)
-      </div>
-      <div class="point-para">
-        Ability to learn new languages and technologies
-      </div>
-      <div class="point-para">
-        Excellent communication skills
-      </div>
-      <div class="point-para">
-        Resourcefulness and troubleshooting aptitude Attention to detail
-      </div>
-      <div class="point-para">
-        B.sc/BA in Computer Science, Engineering or a related field
+       <ul>
+        <li *ngFor="let skills of job_data.skills.split('\n')">
+          {{ skills }}
+        </li>
+       </ul>
       </div>
     </div>
   </div>
@@ -96,7 +51,7 @@
         The company was founded as the Société pour la Gestion de l'Entreprise et le Traitement de l'Information
         (Sogeti).[5]
       </div>
-      <a class="web-tag" href="" style="text-decoration: none;">www.cape.com</a>
+      <a class="web-tag" style="text-decoration: none;">www.cape.com</a>
     </div>
   </div>
   <div class="similar-con">

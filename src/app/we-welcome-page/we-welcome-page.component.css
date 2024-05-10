@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
 }
 .we-center{
   width: 70%;
@@ -48,19 +51,9 @@
   text-align: center;
 }
 .go-button-con{
-  margin-top:50px;
-  text-align: center;
-}
-.go-button{
-  padding: 8px 17px;
-  background-color: var(--bgbutton);
-  border: none;
-  border-radius: 40px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--we);
-  cursor: pointer;
-  min-width: 75px;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 600px){
   .we-texty{

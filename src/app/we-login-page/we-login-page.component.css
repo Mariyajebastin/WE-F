@@ -29,8 +29,8 @@
 }
 .lg-text{
   font-size: 13px;
-  display: inline-block;
   margin-top: 10px;
+  cursor: pointer;
 }
 .sign-tag{
   font-size: 12px;
@@ -91,11 +91,11 @@
 }
 a{
   text-decoration: none;
+  cursor: pointer;
 }
 .otp-container{
   width: 100%;
-  margin-top: 3rem;
-  display: none;
+  margin-top: 2rem;
 }
 .otp-con{
   width: 100%;
@@ -135,6 +135,37 @@ a{
   text-align: center;
   margin-bottom: 1rem;
 }
+.info-text{
+  font-size: 11px;
+  font-weight: 400;
+  color: red;
+  margin-top: 3px;
+}
+.info-text-e{
+  font-size: 11px;
+  font-weight: 400;
+  color: red;
+  margin-top: 3px;
+  text-align: center;
+}
+.otp-info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.top-icon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit-icon{
+  cursor: pointer;
+}
+.m-number{
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
 @media screen and (min-width: 600px) {
   .login-text{
     text-align: center;
@@ -147,5 +178,10 @@ a{
   .login-center{
     width:23%;
   }
-
+  .enter-otp{
+    text-align: left;
+  }
+  .info-text-e{
+    text-align: left;
+  }
 }

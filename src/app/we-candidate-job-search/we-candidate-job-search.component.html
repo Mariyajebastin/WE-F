@@ -29,75 +29,27 @@
     </div>
     <div class="jobs-container">
       <div class="heading-con">
-        <h2>Choose your preference</h2>
+        <h2>Choose your preference</h2> 
       </div>
       <div class="job-container">
         <p class="job-period">Full Time</p>
-        <div class="box-container" #boxContainer>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
+        <div class="scrollable-container" #scrollableContainer >
+          <div class="box-container" #boxContainer (scroll)="onScroll($event)">
+            <a class="job-box" *ngFor="let job of full_time_job_data" (click)="viewJob(job)">
+              <p> {{ job.job_title }} </p>
+              <p> {{ job.min_salary + ' - '+ job.max_salary}} </p>
+              <p>Stack Technologies Pvt Ltd</p>
+            </a>
+          </div>
         </div>
-        <div class="scroll-btn-con">
-          <button class="scroll-btn" (click)="doScroll(0)">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 8 8" fill="none">
+        <div class="left-scroll-btn-con" *ngIf="isLeftScrollVisible">
+          <button class="scroll-btn" (click)="doScroll(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" style="rotate: 180deg;" width="12" height="12" viewBox="0 0 8 8" fill="none">
               <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
             </svg>
           </button>
         </div>
-      </div>
-      <div class="job-container">
-        <p class="job-period">Contract</p>
-        <div class="box-container" #boxContainer>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-        </div>
-        <div class="scroll-btn-con">
+        <div class="scroll-btn-con" *ngIf="isRightScrollVisible">
           <button class="scroll-btn" (click)="doScroll(1)">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 8 8" fill="none">
               <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
@@ -106,36 +58,47 @@
         </div>
       </div>
       <div class="job-container">
-        <p class="job-period">Part Time</p>
-        <div class="box-container" #boxContainer>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
+        <p class="job-period">Contract</p>
+        <div class="box-container" #boxContainers>
+          <a class="job-box" *ngFor="let job of contract_job_data" (click)="viewJob(job)">
+            <p> {{ job.job_title }} </p>
+            <p> {{ job.min_salary + ' - ' + job.max_salary}} </p>
             <p>Stack Technologies Pvt Ltd</p>
           </a>
         </div>
-        <div class="scroll-btn-con">
-          <button class="scroll-btn" (click)="doScroll(2)">
+        <div class="left-scroll-btn-con" *ngIf="cIsLeftscrollBtn">
+          <button class="scroll-btn" (click)="cDoScroll(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" style="rotate: 180deg;" width="12" height="12" viewBox="0 0 8 8" fill="none">
+              <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
+            </svg>
+          </button>
+        </div>
+        <div class="scroll-btn-con" *ngIf="cIsRightscrollBtn">
+          <button class="scroll-btn" (click)="cDoScroll(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 8 8" fill="none">
+              <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="job-container">
+        <p class="job-period">Part Time</p>
+        <div class="box-container" #pBoxContainer>
+          <a href="/job-description" class="job-box" *ngFor="let job of part_time_job_data">
+            <p> {{ job.job_title }} </p>
+            <p> {{ job.min_salary + ' - ' + job.max_salary}} </p>
+            <p>Stack Technologies Pvt Ltd</p>
+          </a>
+        </div>
+        <div class="left-scroll-btn-con" *ngIf="pIsLeftscrollBtn">
+          <button class="scroll-btn" (click)="pDoScroll(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" style="rotate: 180deg;" width="12" height="12" viewBox="0 0 8 8" fill="none">
+              <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
+            </svg>
+          </button>
+        </div>
+        <div class="scroll-btn-con" *ngIf="pIsRightscrollBtn">
+          <button class="scroll-btn" (click)="pDoScroll(1)">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 8 8" fill="none">
               <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
             </svg>
@@ -144,35 +107,22 @@
       </div>
       <div class="job-container">
         <p class="job-period">Internship</p>
-        <div class="box-container" #boxContainer>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
-            <p>Stack Technologies Pvt Ltd</p>
-          </a>
-          <a href="/job-description" class="job-box">
-            <p>Senior Frontend Web Developer</p>
-            <p>₹7L - ₹20L</p>
+        <div class="box-container" #iBoxContainer>
+          <a class="job-box" *ngFor="let job of internship_job_data" (click)="viewJob(job)">
+            <p> {{ job.job_title }} </p>
+            <p> {{ job.min_salary + ' - ' + job.max_salary}} </p>
             <p>Stack Technologies Pvt Ltd</p>
           </a>
         </div>
-        <div class="scroll-btn-con">
-          <button class="scroll-btn" (click)="doScroll(3)">
+        <div class="left-scroll-btn-con" *ngIf="iIsLeftscrollBtn">
+          <button class="scroll-btn" (click)="iDoScroll(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" style="rotate: 180deg;" width="12" height="12" viewBox="0 0 8 8" fill="none">
+              <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
+            </svg>
+          </button>
+        </div>
+        <div class="scroll-btn-con" *ngIf="iIsRightscrollBtn">
+          <button class="scroll-btn" (click)="iDoScroll(1)">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 8 8" fill="none">
               <path d="M6.0875 4.5H0V3.5H6.0875L3.2875 0.7L4 0L8 4L4 8L3.2875 7.3L6.0875 4.5Z" fill="#464646"/>
             </svg>
