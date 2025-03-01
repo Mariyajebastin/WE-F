@@ -6,7 +6,7 @@
   font-family: Oxygen,sans-serif;
   -webkit-tap-highlight-color: transparent;
   color: #505050;
-  letter-spacing: 0.10px;
+  letter-spacing: .10px;
 }
 a{
   cursor: pointer;
