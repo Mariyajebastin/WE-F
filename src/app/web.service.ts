@@ -8,8 +8,8 @@ import {HttpClient, HttpHandler, HttpHeaders} from "@angular/common/http";
 })
 export class WebService {
 
-  //serverIp = "http://127.0.0.1:8000";
-  serverIp = 'https://web.uuksoftwares.in'
+  serverIp = "http://127.0.0.1:8000";
+
 
   constructor(private http: HttpClient) {
 
@@ -122,6 +122,11 @@ export class WebService {
 
   verifyMailOtp(data: any){
     return this.http.post(this.serverIp+'/employee/mail-verify-otp',data)
+  }
+
+  resumeCheck(data: any){
+    let headers = new HttpHeaders().set('Content-Type','application/json')
+    return this.http.post(this.serverIp+'/employee/resume-check',data,{headers})
   }
 
 }

@@ -2,6 +2,8 @@ import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 import {Router, ActivatedRoute } from "@angular/router";
 import { JobpostService } from '../jobpost.service';
 import { WebService } from '../web.service';
+import { UploadResumeComponent } from '../upload-resume/upload-resume.component';
+import { JsonpClientBackend } from '@angular/common/http';
 
 @Component({
   selector: 'app-we-candidate-job-description',
@@ -11,6 +13,9 @@ import { WebService } from '../web.service';
 export class WeCandidateJobDescriptionComponent implements OnInit{
 
   job_data : any;
+
+  @ViewChild('dialog') dialog : any;
+
   constructor(public router : Router, private route: ActivatedRoute, private http: WebService) {
   }
 
@@ -23,6 +28,25 @@ export class WeCandidateJobDescriptionComponent implements OnInit{
     }, 10); 
   }
 
+  applyJob(){
+    let employeeId = localStorage.getItem('employeeId')
+    let data = {
+      employeeId : employeeId
+    }
+    this.http.resumeCheck(data).subscribe(
+      response=>{
+        let res = JSON.parse(JSON.stringify(response));
+        console.log('from 38',res)
+        if(res.status){
+
+        }
+        else{
+          this.dialog.Dialog = true;
+
+        }
+      }
+    )
+  }
 
   fetchJobDetails(jobId: any){
     const storedJobDetails = localStorage.getItem('jobDetails_' + jobId);

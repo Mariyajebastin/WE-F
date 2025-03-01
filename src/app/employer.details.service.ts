@@ -11,6 +11,7 @@ export class EmployerDetailsService {
 
   constructor(private http: HttpClient) { 
     this.isAuthendicated = true;
+    
     this.httpOptions = {
       header :new HttpHeaders({'Content-Type': 'application/json'})
     };

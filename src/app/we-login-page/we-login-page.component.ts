@@ -169,6 +169,9 @@ export class WeLoginPageComponent {
     this.showMobileNumber = false;
   }
 
+
+ 
+
   sendOtp(){
     if(this.loginForm.valid){
       this.otpForm.reset();
@@ -177,6 +180,7 @@ export class WeLoginPageComponent {
       this.http.loginOtp(data).subscribe(
         response =>{
           let res = JSON.parse(JSON.stringify(response));
+          
           if(res.status){
             this.submitBtn = false;
             this.mobileText = true;

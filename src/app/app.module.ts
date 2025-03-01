@@ -57,6 +57,7 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 import { EditJobpostComponent } from './edit-jobpost/edit-jobpost.component';
 import { EmployerProfileDetailsComponent } from './employer-profile-details/employer-profile-details.component';
+import { UploadResumeComponent } from './upload-resume/upload-resume.component';
 
 
 const routes : Routes =[
@@ -134,6 +135,7 @@ const routes : Routes =[
     SuccessDialogComponent,
     EditJobpostComponent,
     EmployerProfileDetailsComponent,
+    UploadResumeComponent,
   ],
   imports: [
     BrowserModule,
